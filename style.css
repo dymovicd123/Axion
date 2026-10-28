@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #222;
+    background: #f8f8f8;
+}
+
+a {
+    color: #245c9e;
+}
+
+.container {
+    width: 90%;
+    max-width: 960px;
+    margin: auto;
+}
+
+header, footer {
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #222;
+    text-decoration: none;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.intro {
+    padding: 45px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+h1 {
+    font-size: 34px;
+    margin: 0 0 12px;
+}
+
+.intro p {
+    max-width: 580px;
+    margin: 0 0 22px;
+}
+
+.button {
+    display: inline-block;
+    padding: 9px 15px;
+    background: #245c9e;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.simulations, .about {
+    padding: 35px 0;
+}
+
+h2 {
+    margin: 0 0 8px;
+    font-size: 24px;
+}
+
+.note, .card p, .muted {
+    color: #555;
+}
+
+.note {
+    margin: 0 0 20px;
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 18px;
+    border-radius: 4px;
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 19px;
+}
+
+.card p {
+    margin: 0 0 15px;
+}
+
+.muted {
+    font-size: 14px;
+}
+
+.about {
+    border-top: 1px solid #ddd;
+}
+
+.about p {
+    max-width: 720px;
+    margin: 8px 0;
+}
+
+footer {
+    border-top: 1px solid #ddd;
+    border-bottom: 0;
+    padding: 18px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .card-list {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+}

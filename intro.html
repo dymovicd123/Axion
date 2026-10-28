@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to limits - Axion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lessons.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a class="logo" href="index.html">Axion</a>
+            <nav><a href="index.html">Home</a><a href="limits.html">Limits</a></nav>
+        </div>
+    </header>
+    <main class="container lesson-page">
+        <p class="breadcrumb"><a href="limits.html">Limits</a> / Introduction</p>
+        <h1>Introduction to limits</h1>
+        <section class="lesson-box">
+            <h2>What is a limit?</h2>
+            <p>Imagine moving along a graph toward a certain point. You can get closer and closer without actually reaching it. A limit describes the value the function is approaching as you do that.</p>
+            <p>Take the function <strong>f(x) = x²</strong>. If x is close to 2, then x² is close to 4:</p>
+            <p class="formula">1.9² = 3.61; 1.99² = 3.9601; 2.01² = 4.0401</p>
+            <p>As x gets closer to 2, the results get closer to 4. We write this as:</p>
+            <p class="formula">lim (x → 2) x² = 4</p>
+
+            <h2>Approaching from both sides</h2>
+            <p>We can move toward 2 from smaller values, like 1.9 and 1.99. This is approaching <strong>from the left</strong>. Or we can start with larger values, like 2.1 and 2.01, and approach <strong>from the right</strong>.</p>
+            <p>For a two-sided limit to exist, the function must approach the same value from both directions. With x², both sides approach 4, so the limit is 4.</p>
+
+            <h2>The limit is not always f(2)</h2>
+            <p>Here's something important: a limit asks what happens <em>near</em> a point, not necessarily <em>at</em> the point. Even if a function has a hole in its graph at x = 2, it can still approach 4 on both sides.</p>
+            <p>For example, imagine the graph follows y = x² everywhere except x = 2, where its value is changed to 10. The value at that exact point is now 10, but the limit is still 4.</p>
+            <p>This is why limits are useful when we study gaps in graphs and, later, continuity and derivatives.</p>
+        </section>
+        <section class="next-box">
+            <h2>Now try it</h2>
+            <p>Check the idea with a few questions, or move the points on the parabola yourself.</p>
+            <p><a class="button" href="intro-exercises.html">Practice questions</a></p>
+            <p><a href="parabola.html">Open parabola experiment</a></p>
+            <p class="next-link"><a href="calculate.html">Next: Calculating limits</a></p>
+        </section>
+    </main>
+    <footer><div class="container">Axion - Web Programming Project</div></footer>
+</body>
+</html>

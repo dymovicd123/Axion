@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction exercises - Axion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lessons.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a class="logo" href="index.html">Axion</a>
+            <nav><a href="index.html">Home</a><a href="limits.html">Limits</a></nav>
+        </div>
+    </header>
+    <main class="container lesson-page">
+        <p class="breadcrumb"><a href="intro.html">Introduction to limits</a> / Exercises</p>
+        <h1>Introduction: practice questions</h1>
+        <p>Try to work out what each function approaches before you open the answer.</p>
+        <section class="lesson-box">
+            <h2>1. A simple limit</h2>
+            <p>What value does x² approach as x gets closer to 3?</p>
+            <p class="formula">lim (x → 3) x² = ?</p>
+            <details><summary>Show answer and explanation</summary>
+                <p><strong>Answer: 9.</strong> Values close to 3 have squares close to 9. For example, 2.9² = 8.41 and 3.1² = 9.61. Both sides approach 9.</p>
+            </details>
+        </section>
+        <section class="lesson-box">
+            <h2>2. Coming from two directions</h2>
+            <p>Find the limit of f(x) = 2x + 1 as x approaches 1. Do the left and right sides agree?</p>
+            <p class="formula">lim (x → 1) (2x + 1) = ?</p>
+            <details><summary>Show answer and explanation</summary>
+                <p><strong>Answer: 3.</strong> When x is just below 1, f(x) is just below 3. When x is just above 1, f(x) is just above 3. The two sides approach the same value.</p>
+            </details>
+        </section>
+        <section class="lesson-box">
+            <h2>3. A changed value at one point</h2>
+            <p>Suppose f(x) = x² for every x except 2, but f(2) = 10. What is the limit as x approaches 2?</p>
+            <details><summary>Show answer and explanation</summary>
+                <p><strong>Answer: 4.</strong> Changing the value at exactly x = 2 does not change what happens close to 2. On both sides, x² still approaches 4.</p>
+            </details>
+        </section>
+        <section class="lesson-box">
+            <h2>4. Different left and right limits</h2>
+            <p>A function approaches 1 from the left and 3 from the right as x approaches 0. Does its two-sided limit exist?</p>
+            <details><summary>Show answer and explanation</summary>
+                <p><strong>Answer: No.</strong> A two-sided limit exists only when both sides approach the same value. Here one side approaches 1 and the other approaches 3.</p>
+            </details>
+        </section>
+        <p><a href="intro.html">Back to explanation</a> · <a href="parabola.html">Try the parabola experiment</a></p>
+    </main>
+    <footer><div class="container">Axion - Web Programming Project</div></footer>
+</body>
+</html>

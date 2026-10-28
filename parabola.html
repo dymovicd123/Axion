@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parabola experiment - Axion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lessons.css">
+    <script src="parabola.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a class="logo" href="index.html">Axion</a>
+            <nav><a href="index.html">Home</a><a href="limits.html">Limits</a></nav>
+        </div>
+    </header>
+    <main class="container lesson-page">
+        <p class="breadcrumb"><a href="intro.html">Introduction to limits</a> / Experiment</p>
+        <h1>Approaching a limit</h1>
+        <p>Move the slider toward 0. The blue point comes from the left, and the orange point comes from the right.</p>
+        <section class="lesson-box">
+            <h2>f(x) = x²</h2>
+            <canvas id="graph" width="680" height="340" aria-label="Graph of x squared with two moving points">Your browser does not support canvas.</canvas>
+            <label for="distance">Distance from x = 2: <strong id="distance-value">0.50</strong></label>
+            <input id="distance" type="range" min="0.01" max="1" value="0.50" step="0.01">
+            <div class="values">
+                <p><strong>Left:</strong> x = <span id="left-x">1.50</span>, f(x) = <span id="left-y">2.2500</span></p>
+                <p><strong>Right:</strong> x = <span id="right-x">2.50</span>, f(x) = <span id="right-y">6.2500</span></p>
+            </div>
+            <button id="reset" type="button">Reset</button>
+        </section>
+        <section class="lesson-box">
+            <h2>What do you notice?</h2>
+            <p>Both points move toward (2, 4). Their y-values get closer to 4, so the limit is 4.</p>
+            <p class="formula">lim (x → 2) x² = 4</p>
+            <p><a href="intro-exercises.html">Practice questions for this section</a></p>
+            <a href="calculate.html">Next: Calculating limits</a>
+        </section>
+    </main>
+    <footer><div class="container">Axion - Web Programming Project</div></footer>
+</body>
+</html>
