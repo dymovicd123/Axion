@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite limits exercises - Axion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lessons.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a class="logo" href="index.html">Axion</a>
+            <nav><a href="index.html">Home</a><a href="limits.html">Limits</a></nav>
+        </div>
+    </header>
+    <main class="container lesson-page">
+        <p class="breadcrumb"><a href="infinite.html">Infinite limits</a> / Exercises</p>
+        <h1>Infinite limits: practice questions</h1>
+        <p>Decide whether the function goes toward +∞, −∞ or has different behavior on the two sides.</p>
+        <section class="lesson-box">
+            <h2>1. Approaching from the left</h2>
+            <p class="formula">lim (x → 3⁻) 1 / (x − 3) = ?</p>
+            <details><summary>Show answer and explanation</summary>
+                <p><strong>Answer: −∞.</strong> From the left, x is slightly less than 3, so x − 3 is a very small negative number. Dividing 1 by it gives increasingly large negative values.</p>
+            </details>
+        </section>
+        <section class="lesson-box">
+            <h2>2. A negative numerator</h2>
+            <p class="formula">lim (x → 1⁺) −1 / (x − 1) = ?</p>
+            <details><summary>Show answer and explanation</summary>
+                <p><strong>Answer: −∞.</strong> From the right, x − 1 is a very small positive number. The numerator is negative, so the quotient decreases without bound.</p>
+            </details>
+        </section>
+        <section class="lesson-box">
+            <h2>3. Both sides going up</h2>
+            <p class="formula">lim (x → 3) 1 / (x − 3)² = ?</p>
+            <details><summary>Show answer and explanation</summary>
+                <p><strong>Answer: +∞.</strong> Squaring makes the denominator positive on both sides of 3. It approaches zero from above, so the function grows without bound from both directions.</p>
+            </details>
+        </section>
+        <section class="lesson-box">
+            <h2>4. Find the vertical asymptote</h2>
+            <p>Consider f(x) = 2 / (x + 4). Where is the vertical asymptote? Does the two-sided limit there exist?</p>
+            <details><summary>Show answer and explanation</summary>
+                <p><strong>Answer: x = −4; the two-sided limit does not exist.</strong> The denominator approaches zero at −4. From the left the quotient goes toward −∞, and from the right it goes toward +∞.</p>
+            </details>
+        </section>
+        <p><a href="infinite.html">Back to explanation</a> · <a href="asymptote.html">Try the asymptote experiment</a></p>
+    </main>
+    <footer><div class="container">Axion - Web Programming Project</div></footer>
+</body>
+</html>
