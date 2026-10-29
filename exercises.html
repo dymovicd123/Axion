@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limit exercises - Axion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lessons.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a class="logo" href="index.html">Axion</a>
+            <nav><a href="index.html">Home</a><a href="limits.html">Limits</a></nav>
+        </div>
+    </header>
+    <main class="container lesson-page">
+        <p class="breadcrumb"><a href="calculate.html">Calculating limits</a> / Exercises</p>
+        <h1>Limit exercises</h1>
+        <p>Try solving each limit on paper. Open the answer when you're ready.</p>
+        <section class="lesson-box">
+            <h2>1. Direct substitution</h2>
+            <p class="formula">lim (x → 2) (x² + 3)</p>
+            <details><summary>Show answer and explanation</summary>
+                <p><strong>Answer: 7.</strong> Substitute x = 2: 2² + 3 = 7.</p>
+            </details>
+        </section>
+        <section class="lesson-box">
+            <h2>2. A fraction</h2>
+            <p class="formula">lim (x → 3) (x² − 9) / (x − 3)</p>
+            <details><summary>Show answer and explanation</summary>
+                <p><strong>Answer: 6.</strong> Factor the numerator: (x − 3)(x + 3). Cancel (x − 3) for x ≠ 3, then use x + 3 → 6.</p>
+            </details>
+        </section>
+        <section class="lesson-box">
+            <h2>3. Another fraction</h2>
+            <p class="formula">lim (x → 1) (x² − 1) / (x − 1)</p>
+            <details><summary>Show answer and explanation</summary>
+                <p><strong>Answer: 2.</strong> Factor x² − 1 as (x − 1)(x + 1). For x ≠ 1 the expression equals x + 1, which approaches 2.</p>
+            </details>
+        </section>
+        <section class="lesson-box">
+            <h2>4. A square root</h2>
+            <p class="formula">lim (x → 4) √(x + 5)</p>
+            <details><summary>Show answer and explanation</summary>
+                <p><strong>Answer: 3.</strong> The square root is continuous here, so substitute x = 4: √9 = 3.</p>
+            </details>
+        </section>
+        <p><a href="calculate.html">Back to explanation</a> · <a href="infinite.html">Next: Infinite limits</a></p>
+    </main>
+    <footer><div class="container">Axion - Web Programming Project</div></footer>
+</body>
+</html>

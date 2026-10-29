@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite limits - Axion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lessons.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a class="logo" href="index.html">Axion</a>
+            <nav><a href="index.html">Home</a><a href="limits.html">Limits</a></nav>
+        </div>
+    </header>
+    <main class="container lesson-page">
+        <p class="breadcrumb"><a href="limits.html">Limits</a> / Infinite limits</p>
+        <h1>Infinite limits</h1>
+        <section class="lesson-box">
+            <h2>What happens when there is no finite value?</h2>
+            <p>So far, our functions have approached numbers like 4 or 10. But a function can also grow without bound. Its values might become larger and larger, or more and more negative, as x approaches a point.</p>
+            <p>Look at <strong>f(x) = 1 / (x − 2)</strong>. When x gets close to 2, the denominator becomes a very small number. Dividing 1 by a tiny number gives a result with a large magnitude.</p>
+            <p>For example, when x = 1.9, f(x) = −10. When x = 1.99, f(x) = −100. On the other side, x = 2.01 gives 100.</p>
+
+            <h2>Why does the side matter?</h2>
+            <p>To the <strong>left</strong> of 2, x − 2 is negative. The values fall toward negative infinity. To the <strong>right</strong>, x − 2 is positive, and the values rise toward positive infinity.</p>
+            <p class="formula">x → 2⁻ : f(x) → −∞</p>
+            <p class="formula">x → 2⁺ : f(x) → +∞</p>
+            <p>Because the two sides behave differently, the two-sided limit at x = 2 does not exist. Also, infinity is not an ordinary number that the function reaches. The notation describes how the values grow.</p>
+
+            <h2>Vertical asymptotes</h2>
+            <p>The vertical line <strong>x = 2</strong> is called a vertical asymptote. The graph gets closer to this line while rising or falling sharply.</p>
+            <p>Not all infinite limits behave in opposite directions. For example, <strong>1 / (x − 2)²</strong> is positive on both sides of 2. Its values grow toward +∞ from either side.</p>
+            <p>When solving these problems, pay attention to whether the denominator is positive or negative as you approach the point.</p>
+        </section>
+        <section class="next-box">
+            <h2>Practice and experiment</h2>
+            <p>Try the questions, then use the graph to see how the two sides behave.</p>
+            <p><a class="button" href="infinite-exercises.html">Practice questions</a></p>
+            <p><a href="asymptote.html">Open asymptote experiment</a></p>
+            <p class="next-link"><a href="limits.html">Back to limits topics</a></p>
+        </section>
+    </main>
+    <footer><div class="container">Axion - Web Programming Project</div></footer>
+</body>
+</html>
