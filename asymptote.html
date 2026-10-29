@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asymptote experiment - Axion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lessons.css">
+    <script src="asymptote.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a class="logo" href="index.html">Axion</a>
+            <nav><a href="index.html">Home</a><a href="limits.html">Limits</a></nav>
+        </div>
+    </header>
+    <main class="container lesson-page">
+        <p class="breadcrumb"><a href="infinite.html">Infinite limits</a> / Experiment</p>
+        <h1>Approaching an asymptote</h1>
+        <p>Move closer to x = 2. Notice that the values on the left and right go in opposite directions.</p>
+        <section class="lesson-box">
+            <h2>f(x) = 1 / (x − 2)</h2>
+            <canvas id="graph" width="680" height="340" aria-label="Graph with a vertical asymptote at x equals 2">Your browser does not support canvas.</canvas>
+            <label for="distance">Distance from x = 2: <strong id="distance-value">0.50</strong></label>
+            <input id="distance" type="range" min="0.10" max="1" value="0.50" step="0.05">
+            <div class="values">
+                <p><strong>Left:</strong> x = <span id="left-x">1.50</span>, f(x) = <span id="left-y">-2.00</span></p>
+                <p><strong>Right:</strong> x = <span id="right-x">2.50</span>, f(x) = <span id="right-y">2.00</span></p>
+            </div>
+            <button id="reset" type="button">Reset</button>
+        </section>
+        <section class="lesson-box">
+            <h2>What do you notice?</h2>
+            <p>The left side falls toward −∞, while the right side rises toward +∞. Since they do not approach the same value, the two-sided limit at x = 2 does not exist.</p>
+            <p><a href="infinite-exercises.html">Practice questions for this section</a></p>
+            <a href="limits.html">Back to limits topics</a>
+        </section>
+    </main>
+    <footer><div class="container">Axion - Web Programming Project</div></footer>
+</body>
+</html>

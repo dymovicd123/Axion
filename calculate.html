@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculating limits - Axion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lessons.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a class="logo" href="index.html">Axion</a>
+            <nav><a href="index.html">Home</a><a href="limits.html">Limits</a></nav>
+        </div>
+    </header>
+    <main class="container lesson-page">
+        <p class="breadcrumb"><a href="limits.html">Limits</a> / Calculating limits</p>
+        <h1>Calculating limits</h1>
+        <section class="lesson-box">
+            <h2>First, try substitution</h2>
+            <p>For many simple functions, calculating a limit is straightforward: replace x with the number it approaches. This works for polynomials, and it works for fractions when the denominator does not become zero.</p>
+            <p>For example, when x approaches 3:</p>
+            <p class="formula">lim (x → 3) (x² + 1) = 3² + 1 = 10</p>
+            <p>There is no problem with putting 3 into this expression, so the answer is 10.</p>
+
+            <h2>What if substitution gives 0/0?</h2>
+            <p>Sometimes direct substitution gives <strong>0/0</strong>. That is not the answer. It means we cannot evaluate the fraction this way, and we should try simplifying it.</p>
+            <p>Consider this limit:</p>
+            <p class="formula">lim (x → 2) (x² − 4) / (x − 2)</p>
+            <p>Putting x = 2 gives 0/0. But notice that x² − 4 = (x − 2)(x + 2). We can factor the numerator and cancel the common term:</p>
+            <p class="formula">(x² − 4) / (x − 2) = x + 2, &nbsp; x ≠ 2</p>
+            <p>We are allowed to cancel it for values <em>near</em> 2, not at 2 itself. That's enough for a limit. Now we can substitute:</p>
+            <p class="formula">lim (x → 2) (x + 2) = 4</p>
+            <p>The original fraction is undefined at x = 2, but its limit is 4. This connects directly to what we learned in the introduction.</p>
+
+            <h2>Which method should I use?</h2>
+            <p>Start with substitution. If you get an ordinary number, you're done. If you get 0/0, look for something you can simplify, such as factoring a polynomial. Then try substitution again.</p>
+            <p>Not every difficult limit can be solved by factoring, but these two methods are a good starting point.</p>
+        </section>
+        <section class="next-box">
+            <h2>Practice</h2>
+            <p>There are four problems. Try each one before opening the explanation.</p>
+            <p><a class="button" href="exercises.html">Practice questions</a></p>
+            <p class="next-link"><a href="infinite.html">Next: Infinite limits</a></p>
+        </section>
+    </main>
+    <footer><div class="container">Axion - Web Programming Project</div></footer>
+</body>
+</html>
