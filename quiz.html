@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limits Quiz - Axion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lessons.css">
+    <style>
+        #choices label {
+            display: block;
+            margin: 12px 0;
+        }
+
+        #choices {
+            border: 0;
+            padding: 0;
+            margin: 18px 0;
+        }
+
+        #feedback {
+            margin-top: 20px;
+        }
+    </style>
+    <script src="quiz.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a class="logo" href="index.html">Axion</a>
+            <nav><a href="index.html">Home</a><a href="limits.html">Limits</a></nav>
+        </div>
+    </header>
+
+    <main class="container lesson-page">
+        <p class="breadcrumb"><a href="limits.html">Limits</a> / Quiz</p>
+        <h1>Limits Quiz</h1>
+        <p>Try five questions from the lessons. Choose an answer and check it before moving on.</p>
+
+        <section class="lesson-box">
+            <p id="question-number">Question 1 of 5</p>
+            <h2 id="question-text"></h2>
+
+            <form id="quiz-form">
+                <fieldset id="choices">
+                    <legend>Choose one answer</legend>
+                </fieldset>
+            </form>
+
+            <button id="check-answer" type="button" disabled>Check answer</button>
+            <button id="next-question" type="button" hidden>Next question</button>
+            <button id="restart-quiz" type="button" hidden>Try again</button>
+            <p id="feedback" aria-live="polite"></p>
+        </section>
+
+        <p><a href="limits.html">Back to Limits</a></p>
+    </main>
+
+    <footer><div class="container">Axion - Web Programming Project</div></footer>
+</body>
+</html>
