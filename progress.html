@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Progress - Axion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lessons.css">
+    <style>
+        .progress-list label {
+            display: block;
+            margin: 14px 0;
+        }
+
+        progress {
+            display: block;
+            width: 100%;
+            max-width: 480px;
+            height: 20px;
+            margin: 14px 0;
+        }
+    </style>
+    <script src="progress.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a class="logo" href="index.html">Axion</a>
+            <nav><a href="index.html">Home</a><a href="limits.html">Limits</a></nav>
+        </div>
+    </header>
+
+    <main class="container lesson-page">
+        <p class="breadcrumb"><a href="limits.html">Limits</a> / My Progress</p>
+        <h1>My Progress</h1>
+        <p>Mark a topic when you feel you have finished studying it. Your choices are saved in this browser.</p>
+
+        <section class="lesson-box">
+            <h2>Limits</h2>
+            <div class="progress-list">
+                <label><input class="topic-check" type="checkbox" value="intro"> Introduction to limits</label>
+                <label><input class="topic-check" type="checkbox" value="calculate"> Calculating limits</label>
+                <label><input class="topic-check" type="checkbox" value="infinite"> Infinite limits</label>
+            </div>
+            <progress id="progress-bar" max="3" value="0"></progress>
+            <p id="progress-count" aria-live="polite">0 of 3 topics completed</p>
+            <p id="save-message"></p>
+            <button id="clear-progress" type="button">Clear progress</button>
+        </section>
+
+        <section class="next-box">
+            <h2>Go to a lesson</h2>
+            <p><a href="intro.html">Introduction to limits</a></p>
+            <p><a href="calculate.html">Calculating limits</a></p>
+            <p><a href="infinite.html">Infinite limits</a></p>
+        </section>
+
+        <p><a href="limits.html">Back to Limits</a></p>
+    </main>
+
+    <footer><div class="container">Axion - Web Programming Project</div></footer>
+</body>
+</html>
