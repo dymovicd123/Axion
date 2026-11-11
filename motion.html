@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion lab - Axion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lessons.css">
+    <script src="theme.js" defer></script>
+    <script src="motion.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-content">
+        <a class="logo" href="index.html"><span class="logo-mark">A</span> Axion</a>
+        <nav class="primary-nav" aria-label="Main navigation">
+            <a href="index.html" data-nav="home">Home</a>
+            <a href="limits.html" data-nav="limits">Limits</a>
+            <a href="derivatives.html" data-nav="derivatives" class="active" aria-current="page">Derivatives</a>
+            <a href="integrals.html" data-nav="integrals">Integrals</a>
+            <a href="quiz.html" data-nav="quiz">Practice</a>
+            <a href="progress.html" data-nav="progress">Progress</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme">Dark mode</button>
+    </div>
+</header>
+<main class="container lesson-layout">
+<aside class="course-sidebar" aria-label="Course navigation">
+    <p class="side-label">Courses</p>
+    <div class="sidebar-group">
+        <a class="side-link" href="limits.html">Limits</a>
+        <a class="side-link" href="derivatives.html">Derivatives</a>
+        <a class="side-link" href="integrals.html">Integrals</a>
+    </div>
+    <p class="side-label">Limits</p>
+    <div class="sidebar-group">
+        <a class="side-link" href="intro.html">Introduction</a>
+        <a class="side-link" href="calculate.html">Calculating limits</a>
+        <a class="side-link" href="infinite.html">Infinite limits</a>
+        <a class="side-link" href="parabola.html">Parabola lab</a>
+        <a class="side-link" href="asymptote.html">Asymptote lab</a>
+    </div>
+    <p class="side-label">Other labs</p>
+    <div class="sidebar-group">
+        <a class="side-link active" href="motion.html" aria-current="page">Motion lab</a>
+        <a class="side-link" href="tank.html">Water tank lab</a>
+    </div>
+    <p class="side-label">Practice & progress</p>
+    <div class="sidebar-group">
+        <a class="side-link" href="quiz.html">Limits quiz</a>
+        <a class="side-link" href="history.html">Quiz history</a>
+        <a class="side-link" href="progress.html">My progress</a>
+    </div>
+</aside>
+<div class="lesson-page">
+<p class="breadcrumb"><a href="derivatives.html">Derivatives</a> / Motion lab</p>
+<h1>Motion lab</h1>
+<p>Our car follows s(t) = t². Move through time and see the difference between distance travelled and speed at that moment.</p>
+<section class="lesson-box">
+    <h2>The moving car</h2>
+    <div class="road-scene" aria-label="Car moving along a straight road">
+        <div class="road-labels"><span>0 m</span><span>36 m</span></div>
+        <div class="car-track"><div id="car" class="car" aria-hidden="true"><div class="car-window"></div><div class="wheel wheel-left"></div><div class="wheel wheel-right"></div></div></div>
+        <div class="road"></div>
+    </div>
+    <label for="time">Time: <strong id="time-value">0.0 s</strong></label>
+    <input id="time" type="range" min="0" max="6" value="0" step="0.1">
+    <div class="lab-actions">
+        <button id="play" type="button">Play</button>
+        <button id="reset" type="button">Reset</button>
+    </div>
+    <div class="values">
+        <p><strong>Distance travelled</strong><span id="distance-value">0.0</span> m</p>
+        <p><strong>Instantaneous speed</strong><span id="speed-value">0.0</span> m/s</p>
+        <p><strong>Average speed from start</strong><span id="average-value">—</span> m/s</p>
+        <p><strong>Speed formula</strong>v(t) = 2t</p>
+    </div>
+</section>
+<section class="lesson-box">
+    <h2>What does this show?</h2>
+    <p>As the car moves, its distance increases, but so does its speed. The derivative v(t) = 2t tells us how fast it is moving at each moment.</p>
+    <p>Compare the average speed from the start with the instantaneous speed. They are not the same: the car is speeding up as time goes on.</p>
+    <p><a href="derivatives.html">Back to the lesson</a></p>
+</section>
+</div>
+</main>
+<footer class="footer"><div class="container footer-content"><span>Axion · Web Programming Project</span><span>Calculus Lab</span></div></footer>
+</body>
+</html>

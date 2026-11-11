@@ -5,25 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Limits Quiz - Axion</title>
     <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
     <link rel="stylesheet" href="lessons.css">
-    <style>
-        #choices label { display: block; margin: 12px 0; }
-        #choices { border: 0; padding: 0; margin: 18px 0; }
-        #feedback, #save-message { margin-top: 18px; }
-        .quiz-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-        .quiz-actions button { margin-top: 12px; }
-    </style>
     <script src="quiz.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="container header-content">
-            <a class="logo" href="index.html">Axion</a>
-            <nav><a href="index.html">Home</a><a href="limits.html">Limits</a></nav>
-        </div>
-    </header>
+    <header class="site-header">
+    <div class="container header-content">
+        <a class="logo" href="index.html"><span class="logo-mark">A</span> Axion</a>
+        <nav class="primary-nav" aria-label="Main navigation">
+            <a href="index.html" data-nav="home">Home</a>
+            <a href="limits.html" data-nav="limits">Limits</a>
+            <a href="derivatives.html" data-nav="derivatives">Derivatives</a>
+            <a href="integrals.html" data-nav="integrals">Integrals</a>
+            <a href="quiz.html" data-nav="quiz" class="active" aria-current="page">Practice</a>
+            <a href="progress.html" data-nav="progress">Progress</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme">Dark mode</button>
+    </div>
+</header>
 
-    <main class="container lesson-page">
+    <main class="container lesson-layout">
+<aside class="course-sidebar" aria-label="Course navigation">
+    <p class="side-label">Courses</p>
+    <div class="sidebar-group">
+        <a class="side-link" href="limits.html">Limits</a>
+        <a class="side-link" href="derivatives.html">Derivatives</a>
+        <a class="side-link" href="integrals.html">Integrals</a>
+    </div>
+    <p class="side-label">Limits</p>
+    <div class="sidebar-group">
+        <a class="side-link" href="intro.html">Introduction</a>
+        <a class="side-link" href="calculate.html">Calculating limits</a>
+        <a class="side-link" href="infinite.html">Infinite limits</a>
+        <a class="side-link" href="parabola.html">Parabola lab</a>
+        <a class="side-link" href="asymptote.html">Asymptote lab</a>
+    </div>
+    <p class="side-label">Other labs</p>
+    <div class="sidebar-group">
+        <a class="side-link" href="motion.html">Motion lab</a>
+        <a class="side-link" href="tank.html">Water tank lab</a>
+    </div>
+    <p class="side-label">Practice & progress</p>
+    <div class="sidebar-group">
+        <a class="side-link active" href="quiz.html" aria-current="page">Limits quiz</a>
+        <a class="side-link" href="history.html">Quiz history</a>
+        <a class="side-link" href="progress.html">My progress</a>
+    </div>
+</aside>
+<div class="lesson-page">
         <p class="breadcrumb"><a href="limits.html">Limits</a> / Quiz</p>
         <h1>Limits Quiz</h1>
         <p>Answer five questions about limits. The questions are loaded from our API.</p>
@@ -48,8 +78,9 @@
         </section>
 
         <p><a href="limits.html">Back to Limits</a></p>
-    </main>
+    </div>
+</main>
 
-    <footer><div class="container">Axion - Web Programming Project</div></footer>
+    <footer class="footer"><div class="container footer-content"><span>Axion · Web Programming Project</span><span>Calculus Lab</span></div></footer>
 </body>
 </html>

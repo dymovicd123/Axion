@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derivatives - Axion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lessons.css">
+    <script src="theme.js" defer></script>
+    
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-content">
+        <a class="logo" href="index.html"><span class="logo-mark">A</span> Axion</a>
+        <nav class="primary-nav" aria-label="Main navigation">
+            <a href="index.html" data-nav="home">Home</a>
+            <a href="limits.html" data-nav="limits">Limits</a>
+            <a href="derivatives.html" data-nav="derivatives" class="active" aria-current="page">Derivatives</a>
+            <a href="integrals.html" data-nav="integrals">Integrals</a>
+            <a href="quiz.html" data-nav="quiz">Practice</a>
+            <a href="progress.html" data-nav="progress">Progress</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme">Dark mode</button>
+    </div>
+</header>
+<main class="container lesson-layout">
+<aside class="course-sidebar" aria-label="Course navigation">
+    <p class="side-label">Courses</p>
+    <div class="sidebar-group">
+        <a class="side-link" href="limits.html">Limits</a>
+        <a class="side-link active" href="derivatives.html" aria-current="page">Derivatives</a>
+        <a class="side-link" href="integrals.html">Integrals</a>
+    </div>
+    <p class="side-label">Limits</p>
+    <div class="sidebar-group">
+        <a class="side-link" href="intro.html">Introduction</a>
+        <a class="side-link" href="calculate.html">Calculating limits</a>
+        <a class="side-link" href="infinite.html">Infinite limits</a>
+        <a class="side-link" href="parabola.html">Parabola lab</a>
+        <a class="side-link" href="asymptote.html">Asymptote lab</a>
+    </div>
+    <p class="side-label">Other labs</p>
+    <div class="sidebar-group">
+        <a class="side-link" href="motion.html">Motion lab</a>
+        <a class="side-link" href="tank.html">Water tank lab</a>
+    </div>
+    <p class="side-label">Practice & progress</p>
+    <div class="sidebar-group">
+        <a class="side-link" href="quiz.html">Limits quiz</a>
+        <a class="side-link" href="history.html">Quiz history</a>
+        <a class="side-link" href="progress.html">My progress</a>
+    </div>
+</aside>
+<div class="lesson-page">
+<p class="breadcrumb"><a href="index.html">Home</a> / Derivatives</p>
+<h1>Introduction to derivatives</h1>
+<p>A derivative tells us how quickly something changes at a particular moment. A useful example is the speed of a moving car.</p>
+<section class="lesson-box">
+    <h2>Average change and instant change</h2>
+    <p>Suppose you drive 20 metres in 5 seconds. Your average speed is 4 metres per second. But you might have been slower at the start and faster near the end. Average speed cannot tell us your exact speed at one moment.</p>
+    <p>A derivative is a way to find that <strong>instantaneous rate of change</strong>. On a distance–time graph, it is the slope of the tangent line at a point.</p>
+    <h2>A simple example</h2>
+    <p>Let the car's distance from its starting point be <strong>s(t) = t²</strong>, with time in seconds and distance in metres. After 2 seconds the car is 4 metres from the start; after 3 seconds it is 9 metres away.</p>
+    <p>The derivative of t² is 2t. This gives us the car's speed:</p>
+    <p class="formula">s(t) = t² &nbsp; → &nbsp; v(t) = 2t</p>
+    <p>At 3 seconds, its instantaneous speed is 6 m/s. The car has travelled 9 metres, but its speed is not 9 m/s. Distance and speed are different quantities.</p>
+    <h2>Where does 2t come from?</h2>
+    <p>We start with the average change over a very small time interval h:</p>
+    <p class="formula">[s(t + h) − s(t)] / h = [(t + h)² − t²] / h = 2t + h</p>
+    <p>As h approaches 0, the extra h disappears and we get <strong>v(t) = 2t</strong>. That is the main idea behind the derivative.</p>
+</section>
+<section class="next-box">
+    <h2>Try the motion lab</h2>
+    <p>Move the car through time and compare its distance, average speed and instantaneous speed. Then watch what happens when time runs automatically.</p>
+    <a class="button" href="motion.html">Open motion lab</a>
+    <p class="next-link"><a href="integrals.html">Next topic: Integrals</a></p>
+</section>
+</div>
+</main>
+<footer class="footer"><div class="container footer-content"><span>Axion · Web Programming Project</span><span>Calculus Lab</span></div></footer>
+</body>
+</html>

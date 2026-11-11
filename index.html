@@ -3,59 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Axion - Calculus Lab</title>
+    <title>Axion — Calculus Lab</title>
     <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="container header-content">
-            <a class="logo" href="index.html">Axion</a>
-            <nav>
-                <a href="#topics">Topics</a>
-                <a href="#about">About</a>
-                <a href="quiz.html">Practice</a>
-                <a href="history.html">Quiz History</a>
-                <a href="progress.html">My Progress</a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container">
-        <section class="intro">
-            <h1>Calculus Lab</h1>
-            <p>We are building a website to learn calculus through short explanations and interactive experiments.</p>
-            <a class="button" href="#topics">View topics</a>
-        </section>
-
-        <section id="topics" class="simulations">
-            <h2>Topics</h2>
-            <p class="note">We are starting with limits. More topics will be added later.</p>
-            <div class="card-list">
-                <article class="card">
-                    <h3>Limits</h3>
-                    <p>Learn how limits work, try a few problems and explore graphs.</p>
-                    <a href="limits.html">Open lessons</a>
-                </article>
-                <article class="card">
-                    <h3>Derivatives</h3>
-                    <p>Learn how to measure the rate of change of a function.</p>
-                    <span class="muted">Coming later</span>
-                </article>
-                <article class="card">
-                    <h3>Integrals</h3>
-                    <p>Explore area and accumulation.</p>
-                    <span class="muted">Coming later</span>
-                </article>
+<header class="site-header">
+    <div class="container header-content">
+        <a class="logo" href="index.html"><span class="logo-mark">A</span> Axion</a>
+        <nav class="primary-nav" aria-label="Main navigation">
+            <a href="index.html" data-nav="home" class="active" aria-current="page">Home</a>
+            <a href="limits.html" data-nav="limits">Limits</a>
+            <a href="derivatives.html" data-nav="derivatives">Derivatives</a>
+            <a href="integrals.html" data-nav="integrals">Integrals</a>
+            <a href="quiz.html" data-nav="quiz">Practice</a>
+            <a href="progress.html" data-nav="progress">Progress</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme">Dark mode</button>
+    </div>
+</header>
+<main class="container">
+    <section class="home-hero">
+        <div class="hero-copy">
+            <p class="eyebrow">Web programming project · Calculus</p>
+            <h1>Learn the idea.<br>Try it yourself.</h1>
+            <p>Short lessons, practice questions and simple experiments that make calculus easier to understand.</p>
+            <div class="hero-actions">
+                <a class="button" href="limits.html">Start with limits</a>
+                <a class="button button-outline" href="#courses">Browse topics</a>
             </div>
-        </section>
-
-        <section id="about" class="about">
-            <h2>About Axion</h2>
-            <p>Axion is our Web Programming project. Our goal is to explain calculus with examples that students can change and test themselves.</p>
-            <p>The current version includes three limits topics, two experiments, a quiz and server-saved progress.</p>
-        </section>
-    </main>
-
-    <footer><div class="container">Axion - Web Programming Project</div></footer>
+        </div>
+        <div class="diagram">
+            <div class="diagram-top"><strong>From the lab</strong><span>f(x) = x²</span></div>
+            <svg viewBox="0 0 390 255" role="img" aria-label="Parabola with two points approaching (2, 4)">
+                <path d="M24 209 H372 M77 236 V15" fill="none" stroke="currentColor" stroke-opacity=".4"/>
+                <path d="M48 217 Q187 245 325 3" fill="none" stroke="#5680a0" stroke-width="3"/>
+                <line x1="207" y1="25" x2="207" y2="223" stroke="#9cadb9" stroke-dasharray="5 5"/>
+                <circle cx="207" cy="160" r="7" fill="var(--paper)" stroke="#315f83" stroke-width="2"/>
+                <circle cx="194" cy="171" r="6" fill="#477aa1"/>
+                <circle cx="220" cy="147" r="6" fill="#cf8a55"/>
+                <text x="213" y="152" font-size="12" fill="var(--ink)">(2, 4)</text>
+                <text x="360" y="229" font-size="12" fill="var(--muted)">x</text>
+                <text x="61" y="20" font-size="12" fill="var(--muted)">y</text>
+            </svg>
+            <div class="diagram-note"><span>Introduction to limits</span><a href="parabola.html">Explore the parabola →</a></div>
+        </div>
+    </section>
+    <section class="home-section" id="courses">
+        <div class="section-heading"><h2>Course topics</h2><p>One topic at a time.</p></div>
+        <div class="card-list">
+            <article class="card"><span class="card-number">01 / AVAILABLE</span><h3>Limits</h3><p>Approach a value, calculate a limit, and see what happens near an asymptote.</p><a href="limits.html">Explore limits →</a></article>
+            <article class="card"><span class="card-number">02 / AVAILABLE</span><h3>Derivatives</h3><p>Learn how a rate of change describes motion and speed.</p><a href="derivatives.html">Explore derivatives →</a></article>
+            <article class="card"><span class="card-number">03 / AVAILABLE</span><h3>Integrals</h3><p>See how a changing flow rate adds up to a total amount.</p><a href="integrals.html">Explore integrals →</a></article>
+        </div>
+    </section>
+    <section class="home-section" style="padding-top: 0;" id="study">
+        <div class="section-heading"><h2>Continue studying</h2><p>Pick up where you left off.</p></div>
+        <div class="study-row">
+            <a class="study-link" href="intro.html">Read a lesson<small>Introduction to limits</small></a>
+            <a class="study-link" href="quiz.html">Test yourself<small>Five questions on limits</small></a>
+            <a class="study-link" href="progress.html">Track progress<small>Three limits sections</small></a>
+        </div>
+    </section>
+    <section class="about" id="about"><h2>About Axion</h2><p>Axion is a student project for learning calculus. Each topic combines an explanation with exercises and something you can explore yourself. We started with limits and now also have introductory labs for derivatives and integrals.</p></section>
+</main>
+<footer class="footer"><div class="container footer-content"><span>Axion · Web Programming Project</span><span>Calculus Lab</span></div></footer>
 </body>
 </html>
