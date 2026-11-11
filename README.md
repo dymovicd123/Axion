@@ -17,7 +17,7 @@ The quiz and progress pages need the server to be running. Stop it with `Ctrl + 
 
 You can switch between light and dark mode using the button in the header.
 
-## API (Week 3)
+## API
 
 We're using JSON Server with `db.json` to store the data.
 
