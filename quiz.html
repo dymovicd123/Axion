@@ -7,20 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="lessons.css">
     <style>
-        #choices label {
-            display: block;
-            margin: 12px 0;
-        }
-
-        #choices {
-            border: 0;
-            padding: 0;
-            margin: 18px 0;
-        }
-
-        #feedback {
-            margin-top: 20px;
-        }
+        #choices label { display: block; margin: 12px 0; }
+        #choices { border: 0; padding: 0; margin: 18px 0; }
+        #feedback, #save-message { margin-top: 18px; }
+        .quiz-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+        .quiz-actions button { margin-top: 12px; }
     </style>
     <script src="quiz.js" defer></script>
 </head>
@@ -35,22 +26,25 @@
     <main class="container lesson-page">
         <p class="breadcrumb"><a href="limits.html">Limits</a> / Quiz</p>
         <h1>Limits Quiz</h1>
-        <p>Try five questions from the lessons. Choose an answer and check it before moving on.</p>
+        <p>Answer five questions about limits. The questions are loaded from our API.</p>
 
         <section class="lesson-box">
-            <p id="question-number">Question 1 of 5</p>
+            <p id="question-number">Loading questions...</p>
             <h2 id="question-text"></h2>
 
-            <form id="quiz-form">
-                <fieldset id="choices">
-                    <legend>Choose one answer</legend>
-                </fieldset>
+            <form id="quiz-form" hidden>
+                <fieldset id="choices"><legend>Choose one answer</legend></fieldset>
             </form>
 
-            <button id="check-answer" type="button" disabled>Check answer</button>
-            <button id="next-question" type="button" hidden>Next question</button>
-            <button id="restart-quiz" type="button" hidden>Try again</button>
+            <div class="quiz-actions">
+                <button id="check-answer" type="button" hidden disabled>Check answer</button>
+                <button id="next-question" type="button" hidden>Next question</button>
+                <button id="restart-quiz" type="button" hidden>Try again</button>
+                <button id="save-result" type="button" hidden>Save result</button>
+                <a id="history-link" href="history.html" hidden>View quiz history</a>
+            </div>
             <p id="feedback" aria-live="polite"></p>
+            <p id="save-message" role="status"></p>
         </section>
 
         <p><a href="limits.html">Back to Limits</a></p>

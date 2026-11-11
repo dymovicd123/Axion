@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz History - Axion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lessons.css">
+    <script src="history.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a class="logo" href="index.html">Axion</a>
+            <nav><a href="index.html">Home</a><a href="limits.html">Limits</a></nav>
+        </div>
+    </header>
+
+    <main class="container lesson-page">
+        <p class="breadcrumb"><a href="limits.html">Limits</a> / Quiz History</p>
+        <h1>Quiz History</h1>
+        <p>Previous Limits Quiz results saved on the server. These are shared demo results, not personal accounts.</p>
+        <section class="lesson-box">
+            <h2>Saved attempts</h2>
+            <p id="history-message" role="status">Loading results...</p>
+            <ul id="history-list"></ul>
+            <button id="refresh-history" type="button">Refresh</button>
+        </section>
+        <p><a href="quiz.html">Back to Quiz</a></p>
+    </main>
+
+    <footer><div class="container">Axion - Web Programming Project</div></footer>
+</body>
+</html>
