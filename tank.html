@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water tank lab - Axion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lessons.css">
+    <script src="theme.js" defer></script>
+    <script src="tank.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-content">
+        <a class="logo" href="index.html"><span class="logo-mark">A</span> Axion</a>
+        <nav class="primary-nav" aria-label="Main navigation">
+            <a href="index.html" data-nav="home">Home</a>
+            <a href="limits.html" data-nav="limits">Limits</a>
+            <a href="derivatives.html" data-nav="derivatives">Derivatives</a>
+            <a href="integrals.html" data-nav="integrals" class="active" aria-current="page">Integrals</a>
+            <a href="quiz.html" data-nav="quiz">Practice</a>
+            <a href="progress.html" data-nav="progress">Progress</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme">Dark mode</button>
+    </div>
+</header>
+<main class="container lesson-layout">
+<aside class="course-sidebar" aria-label="Course navigation">
+    <p class="side-label">Courses</p>
+    <div class="sidebar-group">
+        <a class="side-link" href="limits.html">Limits</a>
+        <a class="side-link" href="derivatives.html">Derivatives</a>
+        <a class="side-link" href="integrals.html">Integrals</a>
+    </div>
+    <p class="side-label">Limits</p>
+    <div class="sidebar-group">
+        <a class="side-link" href="intro.html">Introduction</a>
+        <a class="side-link" href="calculate.html">Calculating limits</a>
+        <a class="side-link" href="infinite.html">Infinite limits</a>
+        <a class="side-link" href="parabola.html">Parabola lab</a>
+        <a class="side-link" href="asymptote.html">Asymptote lab</a>
+    </div>
+    <p class="side-label">Other labs</p>
+    <div class="sidebar-group">
+        <a class="side-link" href="motion.html">Motion lab</a>
+        <a class="side-link active" href="tank.html" aria-current="page">Water tank lab</a>
+    </div>
+    <p class="side-label">Practice & progress</p>
+    <div class="sidebar-group">
+        <a class="side-link" href="quiz.html">Limits quiz</a>
+        <a class="side-link" href="history.html">Quiz history</a>
+        <a class="side-link" href="progress.html">My progress</a>
+    </div>
+</aside>
+<div class="lesson-page">
+<p class="breadcrumb"><a href="integrals.html">Integrals</a> / Water tank lab</p>
+<h1>Water tank lab</h1>
+<p>Water enters a tank over time. Change the flow rate and see how much water has accumulated.</p>
+<section class="lesson-box">
+    <h2>Filling the tank</h2>
+    <label for="flow">Flow rate</label>
+    <select id="flow">
+        <option value="constant">Constant: 3 L/s</option>
+        <option value="increasing">Increasing: 1 + t L/s</option>
+    </select>
+    <div class="tank-scene">
+        <div class="tank-visual" role="img" aria-label="Water level in the tank">
+            <div class="tank-pipe"></div>
+            <div class="tank" aria-hidden="true"><div id="water" class="water"></div></div>
+        </div>
+        <div class="tank-details">
+            <p><strong>Current flow rate</strong><span id="rate-value">3.0 L/s</span></p>
+            <p><strong>Total water</strong><span id="volume-value">0.0 L</span></p>
+            <p><strong>Tank capacity</strong><span>60 L</span></p>
+            <p id="flow-formula" class="formula">V(t) = 3t</p>
+        </div>
+    </div>
+    <label for="time">Time: <strong id="time-value">0.0 s</strong></label>
+    <input id="time" type="range" min="0" max="10" step="0.1" value="0">
+    <button id="reset" type="button">Reset</button>
+</section>
+<section class="lesson-box">
+    <h2>What does this show?</h2>
+    <p>The flow rate tells us how many litres enter each second. The integral tells us the total amount of water added since the beginning.</p>
+    <p>Try setting the time to 4 seconds in both modes. With constant flow, 12 litres have entered. With increasing flow, the total is also 12 litres at that moment, but the rates are different. After that, the totals begin to separate.</p>
+    <p><a href="integrals.html">Back to the lesson</a></p>
+</section>
+</div>
+</main>
+<footer class="footer"><div class="container footer-content"><span>Axion · Web Programming Project</span><span>Calculus Lab</span></div></footer>
+</body>
+</html>

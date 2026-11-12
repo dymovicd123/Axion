@@ -1,0 +1,11 @@
+{
+  "name": "axion-calculus-lab",
+  "version": "0.3.0",
+  "private": true,
+  "scripts": {
+    "start": "json-server db.json --port 3000 --static ."
+  },
+  "devDependencies": {
+    "json-server": "1.0.0-beta.15"
+  }
+}

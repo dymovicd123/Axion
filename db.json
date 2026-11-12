@@ -1,0 +1,66 @@
+{
+  "questions": [
+    {
+      "id": "1",
+      "text": "Find the limit as x approaches 3: 2x + 1",
+      "answers": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correct": 2,
+      "explanation": "The expression is continuous, so substitute x = 3: 2(3) + 1 = 7."
+    },
+    {
+      "id": "2",
+      "text": "Find the limit as x approaches 2: (x² - 4) / (x - 2)",
+      "answers": [
+        "0",
+        "2",
+        "4",
+        "The limit does not exist"
+      ],
+      "correct": 2,
+      "explanation": "Factor the numerator: (x - 2)(x + 2). For x not equal to 2, the expression becomes x + 2. Its limit is 4."
+    },
+    {
+      "id": "3",
+      "text": "What happens to 1 / (x - 2) as x approaches 2 from the right?",
+      "answers": [
+        "It approaches 0",
+        "It approaches +∞",
+        "It approaches -∞",
+        "It approaches 2"
+      ],
+      "correct": 1,
+      "explanation": "To the right of 2, x - 2 is positive and very small. Dividing 1 by it gives increasingly large positive numbers."
+    },
+    {
+      "id": "4",
+      "text": "Does the two-sided limit of 1 / (x - 2) exist as x approaches 2?",
+      "answers": [
+        "Yes, it is 0",
+        "Yes, it is 2",
+        "Yes, it is +∞",
+        "No, the two sides behave differently"
+      ],
+      "correct": 3,
+      "explanation": "The left side goes toward -∞ and the right side toward +∞. There is no single two-sided limit."
+    },
+    {
+      "id": "5",
+      "text": "A function follows f(x) = x² near x = 2, but f(2) = 10. What is its limit as x approaches 2?",
+      "answers": [
+        "4",
+        "10",
+        "2",
+        "The limit does not exist"
+      ],
+      "correct": 0,
+      "explanation": "A limit depends on values near the point, not necessarily the value at the point. Nearby values of x² approach 4."
+    }
+  ],
+  "attempts": [],
+  "progress": []
+}
