@@ -1,11 +1,15 @@
 {
   "name": "axion-calculus-lab",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "json-server db.json --port 3000 --static ."
+    "start": "node server.js",
+    "test": "node --test"
   },
-  "devDependencies": {
-    "json-server": "1.0.0-beta.15"
+  "dependencies": {
+    "express": "4.21.2"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

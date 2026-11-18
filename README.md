@@ -1,40 +1,56 @@
 # Axion
 
-Axion is our web programming project for learning calculus. It has lessons about limits, derivatives and integrals, interactive labs, limits practice questions, a quiz, and a progress page.
+Axion is a small Calculus learning website built for a web programming course. It contains four lessons on limits, introductions to derivatives and integrals, practice problems, and interactive graphs.
 
-## Running the project
+## Run the website
 
-You'll need Node.js 22 or newer. Open a terminal in the project folder and run:
+Install Node.js 18 or newer. Open a terminal in the project folder (the one containing `package.json`) and run:
 
 ```bash
 npm install
+npm test
 npm start
 ```
 
-Then open http://localhost:3000/index.html in your browser.
+The terminal prints the website address, usually `http://127.0.0.1:3001/`. If that port is occupied, the server tries ports up to 3010. Keep the terminal open while using the site. Open the printed address, not an HTML file directly or a Live Server address.
 
-The quiz and progress pages need the server to be running. Stop it with `Ctrl + C`.
+## What's included
 
-You can switch between light and dark mode using the button in the header.
+- **Learn:** four lessons on limits, plus introductory lessons on derivatives and integrals.
+- **Practice:** 24 questions covering six topics. Questions include numerical answers, matching, finding mistakes, and algebra steps.
+- **Math Lab:** Function Studio for entering and saving functions, and additional labs for limits, slopes, and area approximations.
+- **Progress:** completed lessons, solved problems, and passed lab tasks.
+
+This project uses ordinary HTML, CSS, and JavaScript in `public/`, with an Express server in `server.js`. The browser sends requests to `/api/...`, and the server saves results in `data/db.json`. There are no accounts, so everyone using the same server shares the saved results.
 
 ## API
 
-We're using JSON Server with `db.json` to store the data.
+The main routes are:
 
-- `GET /questions` — load quiz questions
-- `POST /attempts` — save a quiz result
-- `GET /attempts` — load previous results
-- `GET /progress` — load completed lessons
-- `POST /progress` — mark a lesson as completed
-- `DELETE /progress/:id` — remove a completed mark
+| Method and path | Purpose |
+| --- | --- |
+| `GET /api/health` | Check that the server is running |
+| `GET /api/study/questions?skill=concept` | Load practice questions without answer keys |
+| `POST /api/study/check` | Check and save a submitted solution |
+| `POST /api/lesson/check` | Check a lesson's review question |
+| `GET /api/progress` | Read completed lessons |
+| `GET /api/study/status` | Read practice attempts and lab results |
+| `POST /api/study/lab` | Check a guided lab task |
+| `POST /api/studio/challenge` | Check a Function Studio challenge |
+| `GET /api/studio/experiments` | Load saved functions |
+| `POST /api/studio/experiments` | Save a function |
+| `DELETE /api/studio/experiments/:id` | Delete a saved function |
 
-To test it, finish the quiz and save your score, then check the History page. You can also mark a lesson in My Progress and refresh the page to see that it stays saved.
+You can check the API by opening `http://127.0.0.1:3001/api/health` (use the port printed by the server). It should return JSON. Then solve a problem, refresh Progress, and confirm the result was saved.
 
-There's no login yet, so the saved results and progress are shared by anyone using the same local server.
+## Project files
 
-## New topics
+- `public/` — pages, styles, browser JavaScript, and videos.
+- `server.js` — Express routes and static file serving.
+- `store.js` — reads and saves study data.
+- `practice-bank.js`, `lesson-checks.js`, `studio-check.js` — questions and answer checking.
+- `expression.js` — mathematical expression parser used by the server; `public/assets/expression.js` is its browser copy.
+- `tests/` — automatic tests, run with `npm test`.
+- `manim/` — Python source files for the mathematical animations.
 
-- `derivatives.html` — introduction to derivatives and a motion lab (`motion.html`).
-- `integrals.html` — introduction to integrals and a water tank lab (`tank.html`).
-
-The new lessons and labs run in the browser. Quiz and Progress still use the same JSON Server API.
+Math formulas are displayed with a bundled copy of MathJax. Its license is included. To render the Manim scenes on a machine with Manim installed, run `python manim/render.py`; this replaces the existing videos only after successful rendering. Manim is not needed to run the website.
