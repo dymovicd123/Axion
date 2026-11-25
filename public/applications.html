@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Applications | Axion</title>
+<link href="assets/course.css" rel="stylesheet"/>
+<link href="assets/math-field.css" rel="stylesheet"/>
+<script defer="" src="assets/course-graph.js"></script>
+<script defer="" src="assets/course-algebra-ui.js"></script>
+<script defer="" src="assets/course-model.js"></script>
+<script defer="" src="assets/course-applications-ui.js"></script>
+<script defer="" src="assets/expression.js"></script>
+<script defer="" src="assets/math-field.js"></script>
+<script defer="" src="assets/course-notebook-ui.js"></script>
+<script defer="" src="assets/course.js"></script>
+</head>
+<body data-lesson="quadratic-5" data-page="lesson">
+<header id="course-header"></header>
+<div class="lesson-shell">
+<aside class="course-sidebar">
+<a class="back-link" href="index.html">← All courses</a>
+<details class="course-outline" open="">
+<summary>Quadratic functions and equations</summary>
+<ol class="outline-lessons">
+<li><a href="quadratic.html">1. Quadratic functions</a>
+</li>
+<li><a href="completing-square.html">2. Completing the square</a>
+</li>
+<li><a href="quadratic-equations.html">3. Quadratic equations</a>
+</li>
+<li><a href="quadratic-inequalities.html">4. Quadratic inequalities</a>
+</li>
+<li class="current"><a href="#top">5. Applications</a>
+<nav aria-label="Lesson sections" class="lesson-outline"><a href="#model">Building a model</a><a href="#maximum">Finding the optimum</a><a href="#height">Height and time</a><a href="#threshold">Meeting a condition</a><a href="#trajectory">Design a trajectory</a><a href="#assessment">Lesson assessment</a>
+</nav>
+</li>
+<li><a href="quadratic-final.html">Final assessment</a>
+</li>
+</ol>
+</details>
+<div class="sidebar-progress">
+<span id="sidebar-status">0 of 5 exercises solved</span>
+<progress id="lesson-progress" max="6" value="0">
+</progress>
+<small id="sidebar-assessment">Assessment not completed</small>
+</div>
+</aside>
+<main class="lesson-main" id="top">
+<div class="lesson-header">
+<div class="breadcrumb"><a href="index.html">Algebra</a> / Quadratic functions and equations</div>
+<p class="eyebrow">Lesson 5</p>
+<h1>Applications</h1>
+<p class="lead">Build quadratic models, interpret their domains, solve optimisation problems and design your own trajectory.</p>
+<div class="prerequisites"><strong>Before starting:</strong> You should know how to find vertices and solve quadratic inequalities. <a href="quadratic-inequalities.html">Previous lesson</a>.</div>
+<p class="connection-status" id="connection-status" role="status">
+</p>
+</div>
+<section class="lesson-section" id="model">
+<h2>1. Translate a situation into a function</h2>
+<p>We have used quadratic functions to describe a shape, find roots and compare values. In applications, the hard part is often choosing the variable and building the function before doing any algebra.</p>
+<p>Suppose we have 40 m of fencing and want to enclose a rectangle. Let x be its width. Because the perimeter is twice the sum of the sides, the length must be 20 − x. The area is the product of the two lengths.</p>
+<div class="equation">2x + 2l = 40<br/>l = 20 − x<br/>A(x) = x(20 − x)</div>
+<figure class="graph-figure">
+<svg aria-label="Rectangle with sides x and twenty minus x" class="area-model" role="img" viewbox="0 0 420 180"><rect fill="var(--accent-soft)" height="120" stroke="var(--accent)" stroke-width="2" width="270" x="75" y="25"></rect><g fill="var(--ink)" font-size="15" text-anchor="middle"><text x="210" y="91">Area = x(20 − x)</text><text x="210" y="166">20 − x</text><text x="53" y="90">x</text></g>
+</svg>
+<figcaption>Only one variable is independent because the perimeter is fixed.</figcaption>
+</figure>
+<p>The physical domain is 0 &lt; x &lt; 20. The formula is defined for all real x, but a negative width or length is not a physical rectangle. Always distinguish a mathematical domain from the domain of a model.</p>
+<form class="exercise" data-exercise="model">
+<div class="exercise-head">
+<h3>1. Write an area model</h3><span class="exercise-state"></span>
+</div>
+<p>Now suppose the perimeter is 50 m. Enter the area function for width x, in standard form or factored form.</p><div class="task-instructions"><strong>How to answer: </strong>Here x is the width in metres. Enter A(x) as an expression in x only, without A(x) =.</div>
+<div class="fields">
+<label>A(x)<input autocomplete="off" maxlength="60" name="expression" placeholder="Expression in x" required="" spellcheck="false"/>
+</label>
+</div>
+<button class="primary" type="submit">Check answer</button>
+<p class="feedback" role="status">
+</p>
+</form>
+</section>
+<section class="lesson-section" id="maximum">
+<h2>2. Find a maximum or minimum</h2>
+<p>For a quadratic function with a negative leading coefficient, its vertex is the highest point. If the vertex lies inside the physical domain, it gives the maximum. This can be found without calculus.</p>
+<div class="worked">
+<h3>Example: fixed perimeter of 32 m</h3>
+<div class="equation">A(x) = x(16 − x)<br/>= −x² + 16x<br/>= −(x − 8)² + 64</div>
+<p>Since (x − 8)² ≥ 0, subtracting it cannot increase 64. Therefore A(x) ≤ 64, with equality only when x = 8. The optimal rectangle is a square with area 64 m².</p>
+<figure class="graph-figure">
+<div aria-label="Area as a function of width, with maximum at eight" class="graph" id="area-optimum">
+</div>
+<figcaption>The graph is shown for the physically meaningful widths from 0 to 16 m.</figcaption>
+</figure>
+</div>
+<p>For a restricted interval, check whether the vertex is allowed. If it is not, compare the values at the permitted endpoints. An open endpoint may prevent the maximum from being attained.</p>
+<form class="exercise" data-exercise="maximum">
+<div class="exercise-head">
+<h3>2. Maximise the area</h3><span class="exercise-state"></span>
+</div>
+<p>A rectangle has perimeter 24 m. Find the width and maximum area.</p><div class="task-instructions"><strong>How to answer: </strong>Give the width in metres and the area in square metres. Enter numbers without units.</div>
+<div class="fields">
+<label>Width (m)<input autocomplete="off" maxlength="60" name="x" required="" spellcheck="false"/>
+</label>
+<label>Maximum area (m²)<input autocomplete="off" maxlength="60" name="area" required="" spellcheck="false"/>
+</label>
+</div>
+<button class="primary" type="submit">Check answer</button>
+<p class="feedback" role="status">
+</p>
+</form>
+</section>
+<section class="lesson-section" id="height">
+<h2>3. Height as a function of time</h2>
+<p>Near Earth, under constant downward acceleration and ignoring air resistance, the height of a thrown object is h(t) = h₀ + v₀t − ½gt². Here t is time, h₀ the starting height and v₀ the initial vertical speed. The negative quadratic term describes gravity. For simple exercises we use g = 10 m/s².</p>
+<div class="worked">
+<h3>Example: h(t) = −5t² + 10t + 15</h3>
+<div class="equation">h(t) = −5(t − 1)² + 20</div>
+<p>The highest point is 20 m at t = 1 s. To find when it lands, solve h(t) = 0: −5(t − 3)(t + 1) = 0. The roots are 3 and −1. Time begins at zero, so the landing time is 3 s. The negative root is a mathematical solution, not an event during this flight.</p>
+</div>
+<form class="exercise" data-exercise="height">
+<div class="exercise-head">
+<h3>3. Find the highest point</h3><span class="exercise-state"></span>
+</div>
+<p>For h(t) = −5t² + 20t + 3, find the time and height of the maximum.</p><div class="task-instructions"><strong>How to answer: </strong>Enter the time and corresponding height separately, without units.</div>
+<div class="fields">
+<label>Time (s)<input autocomplete="off" maxlength="60" name="time" required="" spellcheck="false"/>
+</label>
+<label>Height (m)<input autocomplete="off" maxlength="60" name="height" required="" spellcheck="false"/>
+</label>
+</div>
+<button class="primary" type="submit">Check answer</button>
+<p class="feedback" role="status">
+</p>
+</form>
+</section>
+<section class="lesson-section" id="threshold">
+<h2>4. Find when a condition is satisfied</h2>
+<p>Not every application asks for the maximum. We may need to know how long a quantity remains above a minimum value, or which inputs stay below a safety limit. This leads to a quadratic inequality rather than an equation.</p>
+<div class="worked">
+<h3>Example: at least 15 m above the ground</h3>
+<p>For h(t) = −5t² + 10t + 15, solve h(t) ≥ 15.</p>
+<div class="equation">−5t² + 10t ≥ 0<br/>−5t(t − 2) ≥ 0</div>
+<p>The downward parabola is non-negative on [0, 2]. Both endpoints are included because “at least” means greater than or equal to. Intersect with the flight domain [0, 3]; the result is still [0, 2].</p>
+</div>
+<form class="exercise" data-exercise="threshold">
+<div class="exercise-head">
+<h3>4. Find the time interval</h3><span class="exercise-state"></span>
+</div>
+<p>For h(t) = −5t² + 20t + 3, determine when h(t) ≥ 18 during the flight. Give the interval of time in seconds.</p><div class="task-instructions"><strong>How to answer: </strong>Give the full set of times during the flight. Use interval notation, including the endpoints where appropriate.</div><details class="answer-format"><summary>Interval notation help</summary><p>Answer format: intervals such as (-inf, -2) U [5, inf), a single point {3}, all, or empty. Use sqrt(2) for an exact square root. These are notation examples, not answers.</p></details>
+<div class="fields">
+<label>Solution set (interval notation)<input autocomplete="off" maxlength="60" name="solution" placeholder="e.g. (-inf, 1) U (4, inf)" required="" spellcheck="false"/>
+</label>
+</div>
+<button class="primary" type="submit">Check answer</button>
+<p class="feedback" role="status">
+</p>
+</form>
+</section>
+<section class="lesson-section" id="trajectory">
+<h2>5. Design a basketball trajectory</h2>
+<p>In this investigation, x is horizontal distance in metres and y is height in metres. Instead of being given a quadratic, you will design one. An idealised throw has the form y = ax² + bx + c with a &lt; 0. Every condition below must hold for the same function.</p>
+<div class="definition">
+<h3>Design requirements</h3>
+<ul>
+<li>The ball starts at (0, 2) and passes through the hoop at (8, 3).</li>
+<li>At x = 4, it must be at least 4.5 m high to clear the obstacle.</li>
+<li>The maximum height between x = 0 and x = 8 must not exceed 6 m.</li>
+<li>The curve must be descending when it reaches the hoop.</li>
+</ul>
+</div>
+<p>Use substitution to connect the coefficients to the two fixed points. Then use the vertex formula to calculate the peak and compare the midpoint with the obstacle. More than one trajectory satisfies the brief. Try different coefficients; the preview shows what your model does, not the answer you should enter.</p>
+<p>A downward parabola is descending to the right of its vertex. This gives a way to check the last requirement without knowing derivatives.</p>
+<form class="exercise" data-exercise="trajectory">
+<div class="exercise-head">
+<h3>5. Design a successful throw</h3><span class="exercise-state"></span>
+</div>
+<p>Create one quadratic trajectory that satisfies all five design requirements above.</p><div class="task-instructions"><strong>How to answer: </strong>Enter a, b and c for y = ax² + bx + c. The preview updates as you type. Run simulation to watch the flight; compare the measurements with the five requirements. Edit your coefficients and check the final model.</div>
+<div class="fields">
+<label>Coefficient a<input autocomplete="off" maxlength="60" name="a" required="" spellcheck="false"/>
+</label>
+<label>Coefficient b<input autocomplete="off" maxlength="60" name="b" required="" spellcheck="false"/>
+</label>
+<label>Coefficient c<input autocomplete="off" maxlength="60" name="c" required="" spellcheck="false"/>
+</label>
+</div>
+<div class="graph-figure trajectory-workspace">
+<div class="graph-toolbar"><strong>Trajectory preview</strong>
+<button class="secondary" id="run-trajectory" type="button">Run simulation</button>
+</div>
+<div aria-label="Basketball trajectory with a hoop and obstacle" class="graph" id="trajectory-graph">
+</div>
+<div aria-live="polite" class="trajectory-measurements" id="trajectory-measurements">Enter all three coefficients to draw the model.</div>
+<p class="small" id="trajectory-result" role="status">
+</p>
+<figcaption>Idealised point trajectory. Horizontal position is used to trace the curve; air resistance and the size of the ball are not modelled.</figcaption>
+</div>
+<details class="optional-solution">
+<summary>Hint</summary>
+<p>Start with c = 2. Substituting the hoop position gives 64a + 8b = 1. There are many possible pairs a and b. Use the vertex and the height at x = 4 to test your choice.</p>
+</details>
+<button class="primary" type="submit">Check answer</button>
+<p class="feedback" role="status">
+</p>
+</form>
+<div class="recap">
+<h3>Summary</h3>
+<p>Define variables and the physical domain, construct the function, solve the mathematical problem, and interpret the result in its original context. The same quadratic may be used to answer questions about a maximum, roots or an interval.</p>
+</div>
+</section>
+<section class="lesson-section assessment-section" id="assessment">
+<div class="assessment-heading">
+<p class="eyebrow">Independent work</p>
+<h2>Lesson assessment</h2>
+<p>Solve these five questions independently, then submit them together. All five exercises and a 5/5 assessment are required to complete the lesson.</p>
+</div>
+<form id="assessment-form">
+<fieldset data-assessment="area">
+<legend>1. Optimise a rectangle</legend>
+<p>A rectangle has perimeter 36 m. Find the width that gives the maximum possible area, and calculate that maximum area.</p>
+<div class="fields">
+<label>Width (m)<input autocomplete="off" maxlength="60" name="x" required="" spellcheck="false"/>
+</label>
+<label>Area (m²)<input autocomplete="off" maxlength="60" name="area" required="" spellcheck="false"/>
+</label>
+</div>
+<p class="feedback" role="status">
+</p>
+</fieldset>
+<fieldset data-assessment="revenue">
+<legend>2. Revenue model</legend>
+<p>Revenue is R(x) = −2x² + 80x for 0 ≤ x ≤ 40. Find the value of x giving maximum revenue and the revenue.</p>
+<div class="fields">
+<label>x<input autocomplete="off" maxlength="60" name="x" required="" spellcheck="false"/>
+</label>
+<label>Revenue<input autocomplete="off" maxlength="60" name="revenue" required="" spellcheck="false"/>
+</label>
+</div>
+<p class="feedback" role="status">
+</p>
+</fieldset>
+<fieldset data-assessment="landing">
+<legend>3. Landing time</legend>
+<p>h(t) = −5t² + 15t + 20. At what non-negative time does the object land?</p>
+<div class="fields">
+<label>Time (s)<input autocomplete="off" maxlength="60" name="time" required="" spellcheck="false"/>
+</label>
+</div>
+<p class="feedback" role="status">
+</p>
+</fieldset>
+<fieldset data-assessment="width">
+<legend>4. Area requirement</legend>
+<p>A rectangle has perimeter 24 m. Find all widths x for which its area is at least 32 m².</p><p class="format-note">Answer format: intervals such as (-inf, -2) U [5, inf), a single point {3}, all, or empty. Use sqrt(2) for an exact square root. These are notation examples, not answers.</p>
+<div class="fields">
+<label>Solution set (interval notation)<input autocomplete="off" maxlength="60" name="solution" placeholder="e.g. (-inf, 1) U (4, inf)" required="" spellcheck="false"/>
+</label>
+</div>
+<p class="feedback" role="status">
+</p>
+</fieldset>
+<fieldset data-assessment="design">
+<legend>5. Reconstruct a model</legend>
+<p>A downward parabola has vertex (3, 16) and passes through (0, 7). Find a, b, c in standard form.</p><p class="format-note">Enter the three coefficients of ax² + bx + c separately.</p>
+<div class="fields">
+<label>Coefficient a<input autocomplete="off" maxlength="60" name="a" required="" spellcheck="false"/>
+</label>
+<label>Coefficient b<input autocomplete="off" maxlength="60" name="b" required="" spellcheck="false"/>
+</label>
+<label>Coefficient c<input autocomplete="off" maxlength="60" name="c" required="" spellcheck="false"/>
+</label>
+</div>
+<p class="feedback" role="status">
+</p>
+</fieldset>
+<button class="primary" type="submit">Submit assessment</button>
+<p class="feedback" id="assessment-result" role="status">
+</p>
+</form>
+<div class="lesson-end">
+<p id="lesson-completion">Your results will be saved automatically.</p><a class="secondary" href="course-progress.html">View progress</a><a class="primary" href="quadratic-final.html">Final assessment →</a>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Profile | Axion</title>
+        <link rel="stylesheet" href="assets/course.css">
+        <script defer src="assets/profile.js">
+        </script>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="header-inner account-header">
+                <a class="brand" href="index.html"><span class="brand-mark">A</span>Axion</a>
+                <nav class="main-nav">
+                    <a href="index.html">Courses</a><a href="course-progress.html">Progress</a>
+                </nav>
+            </div>
+        </header>
+        <main class="catalog profile-main">
+            <div class="page-intro">
+                <p class="eyebrow">Your account</p>
+                <h1 id="profile-name">Profile</h1>
+                <p id="profile-username">
+                </p>
+            </div>
+            <section class="profile-card">
+                <h2>Learning record</h2>
+                <p>Results and solution drafts are stored in your personal account, so you can continue on another browser connected to the same Axion server.</p>
+                <div class="profile-stats">
+                    <div>
+                        <strong id="profile-drafts">0</strong><span>Saved draft groups</span>
+                    </div>
+                    <div>
+                        <strong id="profile-geometry">—</strong><span>Geometry problems solved</span>
+                    </div>
+                </div>
+                <div class="catalog-actions">
+                    <a class="primary" href="course-progress.html">View learning progress</a><a class="secondary" href="index.html">Continue learning</a>
+                </div>
+            </section>
+            <section class="profile-card" id="legacy-import" hidden>
+                <h2>Previous browser drafts</h2>
+                <p>If you used Axion before accounts were introduced, you can import drafts from this browser. Existing account drafts are never overwritten.</p>
+                <button class="secondary" id="import-old" type="button">Import old drafts</button>
+                <p id="import-status" role="status" class="small">
+                </p>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Quadratic inequalities | Axion</title>
+<link href="assets/course.css" rel="stylesheet"/>
+<link href="assets/math-field.css" rel="stylesheet"/>
+<script defer="" src="assets/course-graph.js"></script>
+<script defer="" src="assets/course-algebra-ui.js"></script>
+<script defer="" src="assets/course-model.js"></script>
+<script defer="" src="assets/course-applications-ui.js"></script>
+<script defer="" src="assets/expression.js"></script>
+<script defer="" src="assets/math-field.js"></script>
+<script defer="" src="assets/course-notebook-ui.js"></script>
+<script defer="" src="assets/course.js"></script>
+</head>
+<body data-lesson="quadratic-4" data-page="lesson">
+<header id="course-header"></header>
+<div class="lesson-shell">
+<aside class="course-sidebar">
+<a class="back-link" href="index.html">← All courses</a>
+<details class="course-outline" open="">
+<summary>Quadratic functions and equations</summary>
+<ol class="outline-lessons">
+<li><a href="quadratic.html">1. Quadratic functions</a>
+</li>
+<li><a href="completing-square.html">2. Completing the square</a>
+</li>
+<li><a href="quadratic-equations.html">3. Quadratic equations</a>
+</li>
+<li class="current"><a href="#top">4. Quadratic inequalities</a>
+<nav aria-label="Lesson sections" class="lesson-outline"><a href="#signs">Signs and roots</a><a href="#downward">Direction and endpoints</a><a href="#rearrange">Rearranging inequalities</a><a href="#special">Special cases</a><a href="#combined">Intersecting conditions</a><a href="#assessment">Lesson assessment</a>
+</nav>
+</li>
+<li><a href="applications.html">5. Applications</a>
+</li>
+<li><a href="quadratic-final.html">Final assessment</a>
+</li>
+</ol>
+</details>
+<div class="sidebar-progress">
+<span id="sidebar-status">0 of 5 exercises solved</span>
+<progress id="lesson-progress" max="6" value="0">
+</progress>
+<small id="sidebar-assessment">Assessment not completed</small>
+</div>
+</aside>
+<main class="lesson-main" id="top">
+<div class="lesson-header">
+<div class="breadcrumb"><a href="index.html">Algebra</a> / Quadratic functions and equations</div>
+<p class="eyebrow">Lesson 4</p>
+<h1>Quadratic inequalities</h1>
+<p class="lead">Solve quadratic inequalities using graphs, sign analysis and exact intervals. Learn how to handle repeated roots and restrictions.</p>
+<div class="prerequisites"><strong>Before starting:</strong> You should be able to solve quadratic equations. <a href="quadratic-equations.html">Previous lesson</a>.</div>
+<p class="connection-status" id="connection-status" role="status">
+</p>
+</div>
+<section class="lesson-section" id="signs">
+<h2>1. What does an inequality ask?</h2>
+<p>An equation such as f(x) = 0 asks where a graph crosses or touches the x-axis. An inequality asks for a whole set of inputs: f(x) &gt; 0 means the graph lies above the x-axis, and f(x) &lt; 0 means it lies below. Unlike an equation, the answer is usually an interval rather than one or two numbers.</p>
+<p>Consider f(x) = x² − x − 6 = (x + 2)(x − 3). Its roots divide the number line into three intervals. Within each interval the polynomial has a constant sign: it is continuous and cannot change sign without crossing zero.</p>
+<figure class="graph-figure">
+<div aria-label="Graph of x squared minus x minus six with two roots" class="graph interactive-graph" id="sign-graph">
+</div>
+<div class="choice-buttons" id="sign-samples">
+<button class="secondary" data-x="-3" type="button">Test x = −3</button>
+<button class="secondary" data-x="0" type="button">Test x = 0</button>
+<button class="secondary" data-x="4" type="button">Test x = 4</button>
+</div>
+<figcaption aria-live="polite" id="sign-caption">Select a test value or click the graph at an integer x.</figcaption>
+</figure>
+<table class="lesson-table">
+<thead>
+<tr><th>Interval</th><th>x + 2</th><th>x − 3</th><th>Product</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>x &lt; −2</td><td>−</td><td>−</td><td>+</td>
+</tr>
+<tr><td>−2 &lt; x &lt; 3</td><td>+</td><td>−</td><td>−</td>
+</tr>
+<tr><td>x &gt; 3</td><td>+</td><td>+</td><td>+</td>
+</tr>
+</tbody>
+</table>
+<p>For example, f(x) &lt; 0 has solution (−2, 3). We do not include the roots, because at those points f(x) = 0, not a negative number.</p>
+<div class="definition">
+<h3>Writing solution sets</h3>
+<p>Use parentheses for excluded endpoints and square brackets for included endpoints: (−2, 3) and [−2, 3]. Write <code>inf</code> or ∞ for infinity (always use a parenthesis). Join separate intervals with <code>U</code>. For a single point write <code>{2}</code>; for no solution write <code>empty</code>; for all real numbers write <code>all</code>. Use <code>sqrt(3)</code> for √3.</p>
+</div>
+<form class="exercise" data-exercise="signs">
+<div class="exercise-head">
+<h3>1. Choose positive intervals</h3><span class="exercise-state"></span>
+</div>
+<p>Solve x² − x − 6 &gt; 0.</p><div class="task-instructions"><strong>How to answer: </strong>Give the complete set of x-values as intervals, not just the roots.</div><details class="answer-format"><summary>Interval notation help</summary><p>Answer format: intervals such as (-inf, -2) U [5, inf), a single point {3}, all, or empty. Use sqrt(2) for an exact square root. These are notation examples, not answers.</p></details>
+<div class="fields">
+<label>Solution set (interval notation)<input autocomplete="off" maxlength="60" name="solution" placeholder="e.g. (-inf, 1) U (4, inf)" required="" spellcheck="false"/>
+</label>
+</div>
+<button class="primary" type="submit">Check answer</button>
+<p class="feedback" role="status">
+</p>
+</form>
+</section>
+<section class="lesson-section" id="downward">
+<h2>2. Direction and endpoints</h2>
+<p>Do not memorise “positive outside” without checking the leading coefficient. If a &lt; 0, the parabola opens downwards. Its sign pattern is reversed: positive between two distinct roots, negative outside.</p>
+<div class="worked">
+<h3>Example: −x² + 3x + 4 ≥ 0</h3>
+<p>Factor the expression: −x² + 3x + 4 = −(x + 1)(x − 4). The roots are −1 and 4. At x = 0 the expression is 4, so the middle interval is positive. At the roots it is zero. Because the inequality includes equality, the solution is [−1, 4].</p>
+<figure class="graph-figure">
+<div aria-label="Downward parabola with roots minus one and four" class="graph" id="downward-graph">
+</div>
+<figcaption>The graph is above the x-axis between the roots.</figcaption>
+</figure>
+</div>
+<p>In general, multiplying or dividing an inequality by a negative number reverses its direction. Thus −(x + 1)(x − 4) ≥ 0 becomes (x + 1)(x − 4) ≤ 0. The roots do not change, but the required sign does.</p>
+<form class="exercise" data-exercise="downward">
+<div class="exercise-head">
+<h3>2. Choose nonnegative intervals</h3><span class="exercise-state"></span>
+</div>
+<p>Solve −2x² + 8x + 10 ≥ 0.</p><div class="task-instructions"><strong>How to answer: </strong>Enter the full interval or union of intervals and include endpoints only if allowed.</div><details class="answer-format"><summary>Interval notation help</summary><p>Answer format: intervals such as (-inf, -2) U [5, inf), a single point {3}, all, or empty. Use sqrt(2) for an exact square root. These are notation examples, not answers.</p></details>
+<div class="fields">
+<label>Solution set (interval notation)<input autocomplete="off" maxlength="60" name="solution" placeholder="e.g. (-inf, 1) U (4, inf)" required="" spellcheck="false"/>
+</label>
+</div>
+<button class="primary" type="submit">Check answer</button>
+<p class="feedback" role="status">
+</p>
+</form>
+</section>
+<section class="lesson-section" id="rearrange">
+<h2>3. Put zero on one side</h2>
+<p>When both sides contain variables, first subtract the right-hand side. We need to compare a single expression with zero before using its roots and sign. Adding or subtracting the same expression on both sides preserves the inequality. Dividing by an expression with unknown sign does not.</p>
+<div class="worked">
+<h3>Example: x² + 2x ≤ x + 12</h3>
+<div class="equation">x² + x − 12 ≤ 0<br/>(x + 4)(x − 3) ≤ 0</div>
+<p>The roots are −4 and 3. The leading coefficient is positive, so the expression is negative inside the interval and zero at both ends. The solution is [−4, 3].</p>
+</div>
+<p>If factorisation is difficult, use the quadratic formula from the previous lesson. Irrational endpoints are still exact numbers. For x² &lt; 5, the solution is (−√5, √5), not merely an interval rounded to one decimal place.</p>
+<form class="exercise" data-exercise="rearrange">
+<div class="exercise-head">
+<h3>3. Rearrange and solve</h3><span class="exercise-state"></span>
+</div>
+<p>Solve x² + 3x &lt; 2x + 6.</p><div class="task-instructions"><strong>How to answer: </strong>Enter the set of x-values satisfying the original inequality.</div><details class="answer-format"><summary>Interval notation help</summary><p>Answer format: intervals such as (-inf, -2) U [5, inf), a single point {3}, all, or empty. Use sqrt(2) for an exact square root. These are notation examples, not answers.</p></details>
+<div class="fields">
+<label>Solution set (interval notation)<input autocomplete="off" maxlength="60" name="solution" placeholder="e.g. (-inf, 1) U (4, inf)" required="" spellcheck="false"/>
+</label>
+</div>
+<button class="primary" type="submit">Check answer</button>
+<p class="feedback" role="status">
+</p>
+</form>
+</section>
+<section class="lesson-section" id="special">
+<h2>4. One repeated root or no real roots</h2>
+<p>When D = 0, a quadratic is a constant multiple of a perfect square. It touches the x-axis but does not cross it. When D &lt; 0, it never meets the x-axis, so its sign is the same for every real number.</p>
+<div class="worked">
+<h3>Example: (x + 1)² &gt; 0</h3>
+<p>A square is zero only at x = −1 and positive everywhere else. The answer is (−∞, −1) ∪ (−1, ∞). If the sign were ≥ instead, every real number would be included.</p>
+</div>
+<div class="worked">
+<h3>Example: x² + 2x + 3 &lt; 0</h3>
+<div class="equation">(x + 1)² + 2 &lt; 0</div>
+<p>The left side is at least 2, so no real number satisfies the inequality. The solution set is empty.</p>
+</div>
+<form class="exercise" data-exercise="special">
+<div class="exercise-head">
+<h3>4. Handle a repeated root</h3><span class="exercise-state"></span>
+</div>
+<p>Solve (x − 2)² ≤ 0.</p><div class="task-instructions"><strong>How to answer: </strong>Use interval notation, all, empty or a single point such as {3}, as appropriate.</div><details class="answer-format"><summary>Interval notation help</summary><p>Answer format: intervals such as (-inf, -2) U [5, inf), a single point {3}, all, or empty. Use sqrt(2) for an exact square root. These are notation examples, not answers.</p></details>
+<div class="fields">
+<label>Solution set (interval notation)<input autocomplete="off" maxlength="60" name="solution" placeholder="e.g. (-inf, 1) U (4, inf)" required="" spellcheck="false"/>
+</label>
+</div>
+<button class="primary" type="submit">Check answer</button>
+<p class="feedback" role="status">
+</p>
+</form>
+</section>
+<section class="lesson-section" id="combined">
+<h2>5. More than one condition</h2>
+<p>Sometimes a mathematical model or a system of inequalities restricts the allowed values. If both conditions must hold, take their intersection: keep only values that belong to both sets.</p>
+<div class="worked">
+<h3>Example: x² − 9 ≤ 0 and x &gt; 1</h3>
+<p>The quadratic inequality gives [−3, 3]. The second condition gives (1, ∞). Their overlap is (1, 3]. Notice that the endpoint 1 is excluded by the second condition, even though it satisfies the first.</p>
+</div>
+<form class="exercise" data-exercise="combined">
+<div class="exercise-head">
+<h3>5. Combine conditions</h3><span class="exercise-state"></span>
+</div>
+<p>Solve x² − 4x + 3 ≤ 0 and x &lt; 3.</p><div class="task-instructions"><strong>How to answer: </strong>Enter only the x-values that satisfy both inequalities at the same time.</div><details class="answer-format"><summary>Interval notation help</summary><p>Answer format: intervals such as (-inf, -2) U [5, inf), a single point {3}, all, or empty. Use sqrt(2) for an exact square root. These are notation examples, not answers.</p></details>
+<div class="fields">
+<label>Solution set (interval notation)<input autocomplete="off" maxlength="60" name="solution" placeholder="e.g. (-inf, 1) U (4, inf)" required="" spellcheck="false"/>
+</label>
+</div>
+<button class="primary" type="submit">Check answer</button>
+<p class="feedback" role="status">
+</p>
+</form>
+<div class="recap">
+<h3>Summary</h3>
+<p>Move everything to one side, find real roots, test signs, choose the intervals and decide which endpoints are included. When a condition restricts the domain, intersect the solution with that domain.</p>
+</div>
+</section>
+<section class="lesson-section assessment-section" id="assessment">
+<div class="assessment-heading">
+<p class="eyebrow">Independent work</p>
+<h2>Lesson assessment</h2>
+<p>Solve these five questions independently, then submit them together. All five exercises and a 5/5 assessment are required to complete the lesson.</p>
+</div>
+<form id="assessment-form">
+<fieldset data-assessment="outside">
+<legend>1. Outside the roots</legend>
+<p>Solve x² + 2x − 8 ≥ 0.</p><p class="format-note">Answer format: intervals such as (-inf, -2) U [5, inf), a single point {3}, all, or empty. Use sqrt(2) for an exact square root. These are notation examples, not answers.</p>
+<div class="fields">
+<label>Solution set (interval notation)<input autocomplete="off" maxlength="60" name="solution" placeholder="e.g. (-inf, 1) U (4, inf)" required="" spellcheck="false"/>
+</label>
+</div>
+<p class="feedback" role="status">
+</p>
+</fieldset>
+<fieldset data-assessment="inside">
+<legend>2. Negative leading coefficient</legend>
+<p>Solve −x² + 3x + 10 &gt; 0.</p><p class="format-note">Answer format: intervals such as (-inf, -2) U [5, inf), a single point {3}, all, or empty. Use sqrt(2) for an exact square root. These are notation examples, not answers.</p>
+<div class="fields">
+<label>Solution set (interval notation)<input autocomplete="off" maxlength="60" name="solution" placeholder="e.g. (-inf, 1) U (4, inf)" required="" spellcheck="false"/>
+</label>
+</div>
+<p class="feedback" role="status">
+</p>
+</fieldset>
+<fieldset data-assessment="irrational">
+<legend>3. Exact endpoints</legend>
+<p>Solve x² ≤ 3.</p><p class="format-note">Answer format: intervals such as (-inf, -2) U [5, inf), a single point {3}, all, or empty. Use sqrt(2) for an exact square root. These are notation examples, not answers.</p>
+<div class="fields">
+<label>Solution set (interval notation)<input autocomplete="off" maxlength="60" name="solution" placeholder="e.g. (-inf, 1) U (4, inf)" required="" spellcheck="false"/>
+</label>
+</div>
+<p class="feedback" role="status">
+</p>
+</fieldset>
+<fieldset data-assessment="noRoots">
+<legend>4. No real roots</legend>
+<p>Solve x² − 4x + 5 &lt; 0.</p><p class="format-note">Answer format: intervals such as (-inf, -2) U [5, inf), a single point {3}, all, or empty. Use sqrt(2) for an exact square root. These are notation examples, not answers.</p>
+<div class="fields">
+<label>Solution set (interval notation)<input autocomplete="off" maxlength="60" name="solution" placeholder="e.g. (-inf, 1) U (4, inf)" required="" spellcheck="false"/>
+</label>
+</div>
+<p class="feedback" role="status">
+</p>
+</fieldset>
+<fieldset data-assessment="intersection">
+<legend>5. Two conditions</legend>
+<p>Solve x² − 4 ≤ 0 and x &gt; 0.</p><p class="format-note">Answer format: intervals such as (-inf, -2) U [5, inf), a single point {3}, all, or empty. Use sqrt(2) for an exact square root. These are notation examples, not answers.</p>
+<div class="fields">
+<label>Solution set (interval notation)<input autocomplete="off" maxlength="60" name="solution" placeholder="e.g. (-inf, 1) U (4, inf)" required="" spellcheck="false"/>
+</label>
+</div>
+<p class="feedback" role="status">
+</p>
+</fieldset>
+<button class="primary" type="submit">Submit assessment</button>
+<p class="feedback" id="assessment-result" role="status">
+</p>
+</form>
+<div class="lesson-end">
+<p id="lesson-completion">Your results will be saved automatically.</p><a class="secondary" href="course-progress.html">View progress</a><a class="primary" href="applications.html">Next lesson: Applications →</a>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>
+

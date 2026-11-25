@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sign in | Axion</title>
+        <link rel="stylesheet" href="/assets/course.css">
+        <link rel="stylesheet" href="/assets/account.css">
+        <script defer src="/assets/login.js">
+        </script>
+    </head>
+    <body>
+        <main class="auth-shell">
+            <section class="auth-intro">
+                <a class="brand" href="/login.html"><span class="brand-mark">A</span> Axion</a>
+                <p class="eyebrow">Your learning space</p>
+                <h1>Mathematics, at your own pace.</h1>
+                <p>Study algebra, calculus and solid geometry. Save your progress, constructions and solutions in one account.</p>
+                <div class="auth-art" aria-hidden="true">
+                    <svg viewBox="0 0 280 170" fill="none"><path d="M18 140H262M140 15V157" stroke="currentColor" opacity=".35"/><path d="M50 24Q140 250 230 24" stroke="currentColor" stroke-width="2.5"/><path d="M70 107L140 54 211 107 140 150Z M140 54V15L211 60 211 107 M140 15L70 60V107" stroke="currentColor" stroke-width="1.5" opacity=".65"/>
+                    </svg>
+                </div>
+            </section>
+            <section class="auth-panel">
+                <p class="eyebrow">Account</p>
+                <h2 id="auth-title">Sign in</h2>
+                <p id="setup-note" class="auth-note" hidden>The first account will keep the existing local learning progress. Create your own account first.</p>
+                <div class="auth-tabs" role="group" aria-label="Account action">
+                    <button type="button" id="login-tab" aria-pressed="true">Sign in</button><button type="button" id="register-tab" aria-pressed="false">Create account</button>
+                </div>
+                <form id="auth-form">
+                    <label id="name-field" hidden>Display name<input name="displayName" maxlength="60" autocomplete="name"></label><label>Username<input name="username" required minlength="3" maxlength="32" pattern="[a-zA-Z0-9_]+" autocomplete="username" placeholder="your_username"></label><label>Password<input name="password" type="password" required maxlength="128" autocomplete="current-password"></label>
+                    <p class="small" id="password-hint" hidden>At least 8 characters.</p>
+                    <button type="submit" class="primary" id="auth-submit">Sign in</button>
+                    <p role="alert" id="auth-error">
+                    </p>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Quadratic functions | Axion</title>
+<link href="assets/course.css" rel="stylesheet"/>
+<link href="assets/math-field.css" rel="stylesheet"/>
+<script defer="" src="assets/course-graph.js"></script>
+<script defer="" src="assets/expression.js"></script>
+<script defer="" src="assets/math-field.js"></script>
+<script defer="" src="assets/course-notebook-ui.js"></script>
+<script defer="" src="assets/course.js"></script>
+</head>
+<body data-lesson="quadratic-1" data-page="lesson">
+<header id="course-header"></header>
+<div class="lesson-shell">
+<aside class="course-sidebar">
+<a class="back-link" href="index.html">← All courses</a>
+<details class="course-outline" open="">
+<summary>Quadratic functions and equations</summary>
+<ol class="outline-lessons">
+<li class="current"><a href="#top">1. Quadratic functions</a>
+<nav aria-label="Lesson sections" class="lesson-outline">
+<a href="#definition">What makes a function quadratic?</a>
+<a href="#parabola">Reading a parabola</a>
+<a href="#vertex-form">Vertex form</a>
+<a href="#standard-form">Finding the vertex</a>
+<a href="#construction">Construct a parabola</a>
+<a href="#assessment">Lesson assessment</a>
+</nav>
+</li>
+<li><a href="completing-square.html">2. Completing the square</a></li>
+<li><a href="quadratic-equations.html">3. Quadratic equations</a></li>
+<li><a href="quadratic-inequalities.html">4. Quadratic inequalities</a></li>
+<li><a href="applications.html">5. Applications</a></li>
+<li><a href="quadratic-final.html">Final assessment</a></li>
+</ol>
+</details>
+<div class="sidebar-progress">
+<span id="sidebar-status">0 of 5 exercises solved</span>
+<progress id="lesson-progress" max="6" value="0"></progress>
+<small id="sidebar-assessment">Assessment not completed</small>
+</div>
+</aside>
+<main class="lesson-main" id="top">
+<div class="lesson-header">
+<div class="breadcrumb"><a href="index.html">Algebra</a> / Quadratic functions and equations</div>
+<p class="eyebrow">Lesson 1</p>
+<h1>Quadratic functions</h1>
+<p class="lead">Learn to recognise a quadratic function, understand the shape of its graph, and find or construct a parabola from its defining properties.</p>
+<div class="prerequisites"><strong>Before starting:</strong> You should know how to substitute numbers into expressions, expand brackets and plot points on a coordinate plane.</div>
+<p class="connection-status" id="connection-status" role="status"></p>
+</div>
+<section class="lesson-section" id="definition">
+<h2>1. What makes a function quadratic?</h2>
+<p>Imagine a square garden with side length <i>x</i> metres. Its area is <i>x</i>² square metres. If you double the side length, the area does not merely double: it becomes four times as large. This is a simple example of a quadratic relationship.</p>
+<p>A linear function changes by the same amount whenever <i>x</i> increases by 1. A quadratic function generally does not. The rate at which the output changes itself changes.</p>
+<div class="math-table-scroll"><table class="math-table"><thead><tr><th>x</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead><tbody><tr><th>Linear: 2x</th><td>0</td><td>2</td><td>4</td><td>6</td><td>8</td></tr><tr><th>Change</th><td>—</td><td>+2</td><td>+2</td><td>+2</td><td>+2</td></tr><tr><th>Quadratic: x²</th><td>0</td><td>1</td><td>4</td><td>9</td><td>16</td></tr><tr><th>Change</th><td>—</td><td>+1</td><td>+3</td><td>+5</td><td>+7</td></tr></tbody></table></div>
+<p>Notice that the second row of changes for <i>x</i>² increases by 2 each time. For equally spaced inputs, a quadratic has constant second differences. This is another way to recognise a quadratic pattern.</p>
+<div class="definition"><strong>Definition</strong><div class="equation">f(x) = ax² + bx + c,   a ≠ 0</div><p>The numbers <i>a</i>, <i>b</i> and <i>c</i> are constants. The condition <i>a</i> ≠ 0 matters: if <i>a</i> is zero, the squared term disappears and the function is no longer quadratic.</p></div>
+<p>For example, <i>f(x)</i> = −2x² + 3 is quadratic, even though the <i>x</i> term is missing. Here <i>a</i> = −2, <i>b</i> = 0 and <i>c</i> = 3. An expression does not have to be written in standard form to be quadratic: expand and simplify it first.</p>
+<div class="worked"><h3>Example</h3><p>Is (x + 1)² + 2x quadratic?</p><div class="equation">(x + 1)² + 2x<br/>= x² + 2x + 1 + 2x<br/>= x² + 4x + 1</div><p>Yes. The highest remaining power is 2, with a non-zero coefficient.</p></div>
+<form class="exercise" data-exercise="classify">
+<div class="exercise-head"><h3>1. Recognise a quadratic</h3><span class="exercise-state"></span></div>
+<p>Which expression is quadratic after simplification?</p><div class="task-instructions"><strong>How to answer: </strong>Select one expression. The expression must still contain a nonzero x² term after simplification.</div>
+<label class="radio-option"><input name="quadratic" required="" type="radio" value="yes"/> (x + 2)² − x</label>
+<label class="radio-option"><input name="quadratic" required="" type="radio" value="no"/> (x + 2)² − x²</label>
+<button class="primary" type="submit">Check answer</button><p class="feedback" role="status"></p>
+</form>
+</section>
+<section class="lesson-section" id="parabola">
+<h2>2. Reading a parabola</h2>
+<p>The graph of every quadratic function is called a <strong>parabola</strong>. Start with the simplest one: <i>y</i> = x². Squaring −2 and 2 gives the same result, 4. Likewise, −1 and 1 both give 1. Points at opposite distances from 0 lie at the same height, so the graph is symmetric about the vertical line x = 0.</p>
+<figure class="graph-figure">
+<div class="graph-toolbar"><span>Compare the graphs</span><div class="segmented" id="compare-buttons"><button aria-pressed="true" data-a="1" type="button">x²</button><button aria-pressed="false" data-a="-1" type="button">−x²</button><button aria-pressed="false" data-a="2" type="button">2x²</button><button aria-pressed="false" data-a="0.5" type="button">½x²</button></div></div>
+<div aria-label="Graph of quadratic functions" class="graph" id="comparison-graph"></div>
+<figcaption id="comparison-caption">The graph y = x² opens upwards. Its lowest point is (0, 0).</figcaption>
+</figure>
+<p>In the model above, the sign of <i>a</i> determines the direction in which the parabola opens. When <i>a</i> is positive, the graph opens upwards and has a minimum. When <i>a</i> is negative, it opens downwards and has a maximum. A larger |a| makes the graph narrower: for the same distance from the axis, the vertical change is greater.</p>
+<p>The <strong>vertex</strong> is the turning point. The <strong>axis of symmetry</strong> is the vertical line through that point. The <strong>y-intercept</strong> is where the graph crosses the vertical axis, and is found by substituting x = 0. An <strong>x-intercept</strong> occurs where y = 0. A parabola can have zero, one or two distinct x-intercepts; solving for them is the subject of a later lesson.</p>
+<form class="exercise" data-exercise="table">
+<div class="exercise-head"><h3>2. Complete a value table</h3><span class="exercise-state"></span></div>
+<p>Calculate the three values of <i>f(x)</i> = 2(x − 1)² − 1. Pay attention to the symmetry.</p><div class="task-instructions"><strong>How to answer: </strong>Enter the three output values in the table, one under each given x.</div>
+<table class="math-table input-table"><thead><tr><th>x</th><th>0</th><th>1</th><th>2</th></tr></thead><tbody><tr><th>f(x)</th><td><input aria-label="f(0)" inputmode="decimal" name="left" required=""/></td><td><input aria-label="f(1)" inputmode="decimal" name="center" required=""/></td><td><input aria-label="f(2)" inputmode="decimal" name="right" required=""/></td></tr></tbody></table>
+<button class="primary" type="submit">Check values</button><p class="feedback" role="status"></p>
+</form>
+</section>
+<section class="lesson-section" id="vertex-form">
+<h2>3. Vertex form</h2>
+<p>Suppose the vertex is no longer at the origin. We can write a quadratic so that its vertex is visible directly in the formula.</p>
+<div class="definition"><div class="equation">f(x) = a(x − h)² + k,   a ≠ 0</div><p>The vertex is (h, k), the axis of symmetry is x = h, and <i>a</i> determines the opening direction and vertical stretch.</p></div>
+<p>Why? When x = h, the squared part becomes zero. At any other x, (x − h)² is strictly positive. If <i>a</i> &gt; 0, that makes f(x) greater than k; if <i>a</i> &lt; 0, it makes f(x) smaller than k. The turning point must therefore be (h, k).</p>
+<figure class="graph-figure"><div class="graph-toolbar"><span>Translation of y = x²</span><div class="segmented" id="translation-buttons"><button aria-pressed="true" data-h="0" data-k="0" type="button">Original</button><button aria-pressed="false" data-h="2" data-k="0" type="button">Right 2</button><button aria-pressed="false" data-h="2" data-k="-3" type="button">Down 3</button></div></div><div aria-label="Translation of a parabola" class="graph" id="translation-graph"></div><figcaption id="translation-caption">y = x²; vertex (0, 0).</figcaption></figure>
+<p>Moving the graph to the right by 2 replaces x with x − 2. It is easy to make a sign error here: in (x − 2)² the expression is zero at x = 2, not x = −2. Subtracting 3 outside the brackets then moves every point down by 3.</p>
+<div class="worked"><h3>Example: domain, range and intercept</h3><p>Consider f(x) = −2(x + 1)² + 5. Rewrite x + 1 as x − (−1). The vertex is (−1, 5). Because a = −2, the parabola opens down and has a maximum of 5.</p><p>The <strong>domain</strong> (allowed x-values) is all real numbers. The <strong>range</strong> (possible outputs) is y ≤ 5. To find the y-intercept, substitute x = 0:</p><div class="equation">f(0) = −2(0 + 1)² + 5 = 3</div><p>So the graph passes through (0, 3).</p></div>
+<form class="exercise" data-exercise="features"><div class="exercise-head"><h3>3. Read the vertex form</h3><span class="exercise-state"></span></div><p>For f(x) = 2(x − 2)² − 3, find the vertex and the y-intercept.</p><div class="task-instructions"><strong>How to answer: </strong>Enter the two vertex coordinates separately and the numerical height of the y-intercept.</div><div class="fields"><label>Vertex x<input inputmode="decimal" name="h" required=""/></label><label>Vertex y<input inputmode="decimal" name="k" required=""/></label><label>f(0)<input inputmode="decimal" name="intercept" required=""/></label></div><button class="primary" type="submit">Check answer</button><p class="feedback" role="status"></p></form>
+</section>
+<section class="lesson-section" id="standard-form">
+<h2>4. Finding the vertex from standard form</h2>
+<p>In the standard form f(x) = ax² + bx + c, the vertex is not obvious. We need a method that works without drawing the whole graph. In the next lesson we will learn to convert standard form into vertex form by completing the square. For now, use symmetry.</p>
+<p>Let x = h + t and x = h − t be equally far from the axis x = h. Their outputs must be equal. Substitute into the quadratic and subtract:</p>
+<div class="equation">f(h + t) − f(h − t)<br/>= a[(h + t)² − (h − t)²] + 2bt<br/>= 4aht + 2bt<br/>= 2t(2ah + b)</div>
+<p>For any non-zero t, this difference is zero only if 2ah + b = 0. Solving for h gives the x-coordinate of the vertex. Then substitute h into the original function to obtain its y-coordinate.</p>
+<div class="definition"><div class="equation"><span class="fraction"><span>−b</span><span>2a</span></span> = h,   k = f(h)</div><p>The x-coordinate is not the minimum or maximum value itself. It tells us where that value occurs.</p></div>
+<div class="worked"><h3>Example: find the vertex of f(x) = 2x² − 8x + 3</h3><ol class="solution-steps"><li>Identify a = 2, b = −8, c = 3.</li><li>Calculate h = −(−8)/(2·2) = 2.</li><li>Calculate k = f(2) = 2·4 − 8·2 + 3 = −5.</li><li>Since a &gt; 0, the vertex (2, −5) is a minimum. The range is y ≥ −5.</li></ol><div aria-label="Graph of 2x squared minus 8x plus 3" class="graph" id="example-graph"></div><p>The y-intercept is (0, 3). Its reflection across x = 2 is (4, 3), a useful way to check the sketch.</p></div>
+<form class="exercise" data-exercise="standard"><div class="exercise-head"><h3>4. Find a turning point</h3><span class="exercise-state"></span></div><p>Find the vertex of f(x) = −x² + 4x − 3.</p><div class="task-instructions"><strong>How to answer: </strong>Enter the vertex as two numbers, not as a single ordered pair.</div><div class="fields"><label>Vertex x<input inputmode="decimal" name="h" required=""/></label><label>Vertex y<input inputmode="decimal" name="k" required=""/></label></div><button class="primary" type="submit">Check answer</button><p class="feedback" role="status"></p></form>
+</section>
+<section class="lesson-section" id="construction">
+<h2>5. Construct a parabola from its properties</h2>
+<p>Finding features from a formula is one direction of the problem. We can also work backwards. If the vertex (h, k) and one other point (p, q) with p ≠ h are known, the equation q = a(p − h)² + k determines the remaining coefficient.</p>
+<div class="worked"><h3>Example</h3><p>Find a parabola with a minimum at (1, −2) that passes through (3, 6).</p><div class="equation">f(x) = a(x − 1)² − 2<br/>6 = a(3 − 1)² − 2<br/>8 = 4a<br/>a = 2</div><p>The function is f(x) = 2(x − 1)² − 2. Its coefficient is positive, which agrees with the given minimum. Substituting x = 3 gives 6, so both conditions hold.</p></div>
+<form class="exercise construction" data-exercise="construct">
+<div class="exercise-head"><h3>5. Draw a parabola</h3><span class="exercise-state"></span></div>
+<p>Construct a parabola whose maximum is 2 at x = −1 and which passes through (1, −6).</p><div class="task-instructions"><strong>How to answer: </strong>On the graph, click the vertex and then another point satisfying the condition. Alternatively type h and k (the vertex coordinates) and a (the coefficient). Clear drawing starts over.</div>
+<p class="small">Select the vertex on the grid, then select a second point on the parabola. You can also enter the coefficients directly. The point selection is rounded to integer coordinates.</p>
+<div class="graph-toolbar"><span aria-live="polite" id="construct-mode">Select the vertex</span><button class="secondary" id="clear-construction" type="button">Clear drawing</button></div>
+<div aria-label="Parabola construction grid; use the fields below as a keyboard alternative" class="graph interactive-graph" id="construction-graph"></div>
+<div class="fields"><label>h (vertex x)<input inputmode="decimal" name="h" required=""/></label><label>k (vertex y)<input inputmode="decimal" name="k" required=""/></label><label>a (leading coefficient)<input inputmode="decimal" name="a" required=""/></label></div>
+<div aria-live="polite" class="equation" id="construction-equation">f(x) = a(x − h)² + k</div>
+<button class="primary" type="submit">Check construction</button><p class="feedback" role="status"></p>
+</form>
+<div class="recap"><h3>What to remember</h3><p>Standard form gives the coefficients and the y-intercept. Vertex form gives the turning point and its axis directly. The sign of a tells you whether the vertex is a minimum or a maximum. To determine a parabola from its vertex and a second point, substitute the point and solve for a.</p></div>
+</section>
+<section class="lesson-section assessment-section" id="assessment">
+<div class="assessment-heading"><p class="eyebrow">Independent work</p><h2>Lesson assessment</h2><p>Answer all five questions without using the worked examples. You can retry after checking your answers. Complete all five exercises and score 5/5 here to finish the lesson.</p></div>
+<form id="assessment-form">
+<fieldset data-assessment="shape"><legend>1. Read the vertex form</legend><p>For f(x) = −3(x + 2)² + 3, determine the opening direction and vertex.</p><p class="format-note">Enter the two coordinates separately; write the y-intercept as a height if requested.</p><div class="fields"><label>Opens<select name="direction" required=""><option value="">Select</option><option value="up">Upwards</option><option value="down">Downwards</option></select></label><label>Vertex x<input inputmode="decimal" name="h" required=""/></label><label>Vertex y<input inputmode="decimal" name="k" required=""/></label></div><p class="feedback"></p></fieldset>
+<fieldset data-assessment="calculate"><legend>2. Analyse standard form</legend><p>Find the vertex and y-intercept of f(x) = 2x² − 12x + 14.</p><p class="format-note">Enter the two coordinates separately; write the y-intercept as a height if requested.</p><div class="fields"><label>Vertex x<input inputmode="decimal" name="h" required=""/></label><label>Vertex y<input inputmode="decimal" name="k" required=""/></label><label>f(0)<input inputmode="decimal" name="intercept" required=""/></label></div><p class="feedback"></p></fieldset>
+<fieldset data-assessment="symmetry"><legend>3. Use symmetry</legend><p>A parabola has axis x = −1 and passes through (3, 7). Find the x-coordinate of the other point at height 7.</p><div class="fields"><label>x<input inputmode="decimal" name="otherX" required=""/></label></div><p class="feedback"></p></fieldset>
+<fieldset data-assessment="range"><legend>4. Determine the range</legend><p>Find the range of f(x) = −(x − 4)² + 6.</p><div class="fields"><label>Relation<select name="relation" required=""><option value="">Select</option><option value="le">y ≤</option><option value="ge">y ≥</option></select></label><label>Boundary value<input inputmode="decimal" name="bound" required=""/></label></div><p class="feedback"></p></fieldset>
+<fieldset data-assessment="build"><legend>5. Find a function</legend><p>Find f(x) = a(x − h)² + k with a minimum of −1 at x = 2 and y-intercept 11.</p><p class="format-note">Enter a, h and k separately as the coefficients of a(x − h)² + k.</p><div class="fields"><label>a (leading coefficient)<input inputmode="decimal" name="a" required=""/></label><label>h (vertex x)<input inputmode="decimal" name="h" required=""/></label><label>k (vertex y)<input inputmode="decimal" name="k" required=""/></label></div><p class="feedback"></p></fieldset>
+<button class="primary" type="submit">Submit assessment</button><p class="feedback" id="assessment-result" role="status"></p>
+</form>
+<div class="lesson-end"><p id="lesson-completion">Your results will be saved automatically.</p><a class="secondary" href="course-progress.html">View progress</a><a class="primary" href="completing-square.html">Next lesson: Completing the square →</a></div>
+</section>
+</main>
+</div>
+</body>
+</html>
+

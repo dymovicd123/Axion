@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Completing the square | Axion</title>
+<link href="assets/course.css" rel="stylesheet"/>
+<link href="assets/math-field.css" rel="stylesheet"/>
+<script defer="" src="assets/course-graph.js"></script>
+<script defer="" src="assets/course-algebra-ui.js"></script>
+<script defer="" src="assets/expression.js"></script>
+<script defer="" src="assets/math-field.js"></script>
+<script defer="" src="assets/course-notebook-ui.js"></script>
+<script defer="" src="assets/course.js"></script>
+</head>
+<body data-lesson="quadratic-2" data-page="lesson">
+<header id="course-header"></header>
+<div class="lesson-shell">
+<aside class="course-sidebar">
+<a class="back-link" href="index.html">← All courses</a>
+<details class="course-outline" open="">
+<summary>Quadratic functions and equations</summary>
+<ol class="outline-lessons">
+<li><a href="quadratic.html">1. Quadratic functions</a></li>
+<li class="current"><a href="#top">2. Completing the square</a>
+<nav aria-label="Lesson sections" class="lesson-outline">
+<a href="#identity">Where the square comes from</a>
+<a href="#balance">Adding without changing the expression</a>
+<a href="#leading">When the leading coefficient is not 1</a>
+<a href="#rewrite">Checking a transformation</a>
+<a href="#minimum">Using the vertex form</a>
+<a href="#assessment">Lesson assessment</a>
+</nav>
+</li>
+<li><a href="quadratic-equations.html">3. Quadratic equations</a></li>
+<li><a href="quadratic-inequalities.html">4. Quadratic inequalities</a></li>
+<li><a href="applications.html">5. Applications</a></li>
+<li><a href="quadratic-final.html">Final assessment</a></li>
+</ol>
+</details>
+<div class="sidebar-progress">
+<span id="sidebar-status">0 of 5 exercises solved</span>
+<progress id="lesson-progress" max="6" value="0"></progress>
+<small id="sidebar-assessment">Assessment not completed</small>
+</div>
+</aside>
+<main class="lesson-main" id="top">
+<div class="lesson-header">
+<div class="breadcrumb"><a href="index.html">Algebra</a> / Quadratic functions and equations</div>
+<p class="eyebrow">Lesson 2</p>
+<h1>Completing the square</h1>
+<p class="lead">Learn why completing the square works, convert between standard and vertex form, and use the result to analyse a quadratic.</p>
+<div class="prerequisites"><strong>Before starting:</strong> You should know how to expand brackets and read vertex form. <a href="quadratic.html">Previous lesson</a>.</div>
+<p class="connection-status" id="connection-status" role="status"></p>
+</div>
+<section class="lesson-section" id="identity">
+<h2>1. Where the square comes from</h2>
+<p>Last lesson we learned that vertex form, a(x − h)² + k, makes the minimum or maximum easy to read. But most quadratic functions are given as ax² + bx + c. Completing the square is the bridge between these forms.</p>
+<p>Start with a familiar identity:</p><div class="equation">(x + p)² = (x + p)(x + p) = x² + 2px + p²</div><p>The middle term is twice the product of x and p. If the middle coefficient is 6, then 2p = 6, so p = 3. The constant required to complete the square is p² = 9. This is why we halve the linear coefficient before squaring it.</p><figure class="graph-figure"><div class="graph-toolbar"><span>Area model: (x + 3)²</span><button aria-pressed="false" class="secondary" id="square-toggle" type="button">Add missing square</button></div>
+<svg aria-label="A square of area x squared, two rectangles of area 3x and a missing square of area 9" class="area-model" role="img" viewbox="0 0 420 235">
+<rect fill="var(--accent-soft)" height="140" stroke="var(--accent)" width="140" x="25" y="20"></rect><rect fill="var(--subtle)" height="140" stroke="var(--accent)" width="55" x="165" y="20"></rect><rect fill="var(--subtle)" height="55" stroke="var(--accent)" width="140" x="25" y="160"></rect><rect fill="none" height="55" id="missing-square" stroke="var(--accent)" stroke-dasharray="5 4" width="55" x="165" y="160"></rect>
+<g fill="var(--ink)" font-size="15" text-anchor="middle"><text x="95" y="95">x²</text><text x="192" y="95">3x</text><text x="95" y="192">3x</text><text id="missing-label" x="192" y="192">?</text><text id="area-label" x="315" y="90">x² + 6x</text><text id="area-result" x="315" y="116"></text></g></svg>
+<figcaption>The pieces represent areas when x is positive. The resulting algebraic identity is valid for every real x.</figcaption></figure><p>For a negative coefficient, the same reasoning gives (x − 3)² = x² − 6x + 9. The middle term changes sign, but the constant is still positive. Notice that the geometric picture above is an explanation of the identity, not a restriction on x.</p><form class="exercise" data-exercise="identity">
+<div class="exercise-head"><h3>1. Complete the identity</h3><span class="exercise-state"></span></div>
+<p>Complete x² + 10x + □ = (x + p)². Find p and the missing constant.</p><div class="task-instructions"><strong>How to answer: </strong>Enter the number p and the missing constant separately.</div>
+<div class="fields"><label>p<input inputmode="decimal" maxlength="60" name="half" required=""/></label><label>Missing constant<input inputmode="decimal" maxlength="60" name="missing" required=""/></label></div>
+<button class="primary" type="submit">Check answer</button><p class="feedback" role="status"></p>
+</form>
+</section>
+<section class="lesson-section" id="balance">
+<h2>2. Adding without changing the expression</h2>
+<p>Suppose we want to rewrite x² + 6x + 5. Adding 9 to complete the square seems to change the expression. To keep its value unchanged, add and subtract the same number.</p><div class="equation">x² + 6x + 5<br/>= x² + 6x + 9 − 9 + 5<br/>= (x + 3)² − 4</div><p>Nothing has been added overall: +9 and −9 cancel. The result is an identity, meaning both forms have the same value at every x. The minimum is −4 at x = −3, because the squared part is never negative.</p><div class="worked"><h3>Example: a negative middle term</h3><p>Rewrite x² − 10x + 18. Half of −10 is −5 and its square is 25.</p><div class="equation">x² − 10x + 18<br/>= (x − 5)² − 25 + 18<br/>= (x − 5)² − 7</div><p>The vertex is (5, −7), not (−5, −7). The expression inside the brackets vanishes when x = 5.</p></div><form class="exercise" data-exercise="balance">
+<div class="exercise-head"><h3>2. Rewrite in vertex form</h3><span class="exercise-state"></span></div>
+<p>Rewrite x² − 8x + 7 in the form (x − h)² + k.</p><div class="task-instructions"><strong>How to answer: </strong>Enter h and k in (x − h)² + k, including their signs.</div>
+<div class="fields"><label>h (vertex x)<input inputmode="decimal" maxlength="60" name="h" required=""/></label><label>k (vertex y)<input inputmode="decimal" maxlength="60" name="k" required=""/></label></div>
+<button class="primary" type="submit">Check answer</button><p class="feedback" role="status"></p>
+</form>
+</section>
+<section class="lesson-section" id="leading">
+<h2>3. When the leading coefficient is not 1</h2>
+<p>If the leading coefficient is not 1, do not simply halve b. First factor a from the quadratic and linear terms. The expression inside the brackets then has leading coefficient 1.</p><div class="worked"><h3>Example: 2x² + 12x + 11</h3><div class="equation">2(x² + 6x) + 11<br/>= 2[(x + 3)² − 9] + 11<br/>= 2(x + 3)² − 18 + 11<br/>= 2(x + 3)² − 7</div><p>The subtraction of 9 happens inside the brackets. Multiplying by 2 changes it to −18. Forgetting this multiplication gives an incorrect constant.</p></div><p>The same method works when a is negative.</p><div class="worked"><h3>Example: −x² + 8x − 9</h3><div class="equation">−(x² − 8x) − 9<br/>= −[(x − 4)² − 16] − 9<br/>= −(x − 4)² + 7</div><p>The vertex is (4, 7), a maximum. Factoring a negative number reverses the sign of every term inside the brackets.</p></div><div class="definition"><p>In general, for a ≠ 0:</p><div class="equation">ax² + bx + c = a(x + b/(2a))² + c − b²/(4a)</div><p>It is often easier to perform the steps than to memorise this identity.</p></div><form class="exercise" data-exercise="leading">
+<div class="exercise-head"><h3>3. Include the leading coefficient</h3><span class="exercise-state"></span></div>
+<p>Rewrite 3x² − 12x + 5 as a(x − h)² + k.</p><div class="task-instructions"><strong>How to answer: </strong>Enter the three numbers in a(x − h)² + k.</div>
+<div class="fields"><label>a (leading coefficient)<input inputmode="decimal" maxlength="60" name="a" required=""/></label><label>h (vertex x)<input inputmode="decimal" maxlength="60" name="h" required=""/></label><label>k (vertex y)<input inputmode="decimal" maxlength="60" name="k" required=""/></label></div>
+<button class="primary" type="submit">Check answer</button><p class="feedback" role="status"></p>
+</form>
+</section>
+<section class="lesson-section" id="rewrite">
+<h2>4. Checking a transformation</h2>
+<p>You can check a completed square by expanding it back into standard form. Compare all three coefficients; matching a few graph points alone is not the usual algebraic proof.</p><div class="worked"><h3>Example: verify a proposed answer</h3><p>A student claims 2x² − 4x + 9 = 2(x − 1)² + 9. Expand the right-hand side:</p><div class="equation">2(x² − 2x + 1) + 9 = 2x² − 4x + 11</div><p>The constant differs by 2. The correct vertex form is 2(x − 1)² + 7. The following graph compares the two functions.</p><figure class="graph-figure"><div aria-label="Two parabolas with vertices at heights 7 and 9" class="graph" id="square-compare"></div><figcaption>Solid: original function. Dashed: incorrect proposed answer.</figcaption></figure></div><form class="exercise" data-exercise="rewrite">
+<div class="exercise-head"><h3>4. Expand the expression</h3><span class="exercise-state"></span></div>
+<p>Expand −2(x − 1)² + 8 into standard form. Enter the polynomial using the exponent button for powers.</p><div class="task-instructions"><strong>How to answer: </strong>Enter only the polynomial, not y = or an equation. Use x^2 for x².</div>
+<div class="fields"><label>Expression in x<input autocomplete="off" maxlength="60" name="expression" placeholder="Expression in x" required="" spellcheck="false"/></label></div>
+<button class="primary" type="submit">Check answer</button><p class="feedback" role="status"></p>
+</form>
+</section>
+<section class="lesson-section" id="minimum">
+<h2>5. Using the vertex form</h2>
+<p>Completing the square gives more than a new way to write a function. It tells us the range, the axis of symmetry, and how to find inputs that give a particular output.</p><div class="worked"><h3>Example: find the minimum and a pair of points</h3><p>Consider f(x) = x² − 6x + 5. Completing the square gives (x − 3)² − 4. The minimum is −4, and the range is y ≥ −4.</p><p>Suppose f(x) = 5. Then (x − 3)² = 9. Since both 3 and −3 have square 9, x − 3 = 3 or −3. Thus x = 6 or x = 0. These points are equally far from the axis x = 3.</p><div aria-label="Parabola with points (0,5) and (6,5)" class="graph" id="square-level"></div></div><form class="exercise" data-exercise="minimum">
+<div class="exercise-head"><h3>5. Find a symmetric point</h3><span class="exercise-state"></span></div>
+<p>Write f(x) = 2x² + 12x + 5 in vertex form. One point with output −5 has x = −5. Find the other x-value.</p><div class="task-instructions"><strong>How to answer: </strong>Enter a, h, k in vertex form, then the other input x with the specified output.</div>
+<div class="fields"><label>a (leading coefficient)<input inputmode="decimal" maxlength="60" name="a" required=""/></label><label>h (vertex x)<input inputmode="decimal" maxlength="60" name="h" required=""/></label><label>k (vertex y)<input inputmode="decimal" maxlength="60" name="k" required=""/></label><label>Other x<input inputmode="decimal" maxlength="60" name="other" required=""/></label></div>
+<button class="primary" type="submit">Check answer</button><p class="feedback" role="status"></p>
+</form><div class="recap"><h3>Summary</h3><p>Make the coefficient of x² equal to 1 inside brackets, halve the linear coefficient, add and subtract its square, and distribute the leading coefficient. Check by expanding. The next lesson uses the same idea to solve equations.</p></div>
+</section>
+<section class="lesson-section assessment-section" id="assessment">
+<div class="assessment-heading"><p class="eyebrow">Independent work</p><h2>Lesson assessment</h2><p>Solve these five questions without the worked examples. Submit all your answers together. Solve every exercise and pass this assessment with 5/5 to complete the lesson.</p></div>
+<form id="assessment-form">
+<fieldset data-assessment="monic"><legend>1. Complete the square</legend><p>Rewrite x² + 12x + 11 as (x − h)² + k.</p><p class="format-note">Enter the two coordinates separately; write the y-intercept as a height if requested.</p><div class="fields"><label>h (vertex x)<input inputmode="decimal" maxlength="60" name="h" required=""/></label><label>k (vertex y)<input inputmode="decimal" maxlength="60" name="k" required=""/></label></div><p class="feedback" role="status"></p></fieldset>
+<fieldset data-assessment="fractional"><legend>2. An odd linear coefficient</legend><p>Rewrite x² + 5x + 6 as (x − h)² + k. Fractions or decimals are accepted.</p><p class="format-note">Enter the two coordinates separately; write the y-intercept as a height if requested.</p><div class="fields"><label>h (vertex x)<input inputmode="decimal" maxlength="60" name="h" required=""/></label><label>k (vertex y)<input inputmode="decimal" maxlength="60" name="k" required=""/></label></div><p class="feedback" role="status"></p></fieldset>
+<fieldset data-assessment="negative"><legend>3. Negative leading coefficient</legend><p>Rewrite −3x² + 18x − 8 as a(x − h)² + k.</p><p class="format-note">Enter a, h and k separately as the coefficients of a(x − h)² + k.</p><div class="fields"><label>a (leading coefficient)<input inputmode="decimal" maxlength="60" name="a" required=""/></label><label>h (vertex x)<input inputmode="decimal" maxlength="60" name="h" required=""/></label><label>k (vertex y)<input inputmode="decimal" maxlength="60" name="k" required=""/></label></div><p class="feedback" role="status"></p></fieldset>
+<fieldset data-assessment="compare"><legend>4. Expand an expression</legend><p>Expand 2(x − 3)² − 23 into standard form.</p><p class="format-note">Enter an expression in x, without an equals sign. Use the exponent button for powers and parentheses for grouping.</p><div class="fields"><label>Expression in x<input autocomplete="off" maxlength="60" name="expression" placeholder="Expression in x" required="" spellcheck="false"/></label></div><p class="feedback" role="status"></p></fieldset>
+<fieldset data-assessment="level"><legend>5. Use symmetry</legend><p>Rewrite 4x² − 16x + 13 in vertex form. Find the other x-value with the same output as x = 1.</p><p class="format-note">Enter a, h and k separately as the coefficients of a(x − h)² + k.</p><div class="fields"><label>a (leading coefficient)<input inputmode="decimal" maxlength="60" name="a" required=""/></label><label>h (vertex x)<input inputmode="decimal" maxlength="60" name="h" required=""/></label><label>k (vertex y)<input inputmode="decimal" maxlength="60" name="k" required=""/></label><label>Other x<input inputmode="decimal" maxlength="60" name="other" required=""/></label></div><p class="feedback" role="status"></p></fieldset>
+<button class="primary" type="submit">Submit assessment</button><p class="feedback" id="assessment-result" role="status"></p>
+</form>
+<div class="lesson-end"><p id="lesson-completion">Your results will be saved automatically.</p><a class="secondary" href="course-progress.html">View progress</a><a class="primary" href="quadratic-equations.html">Next lesson: Quadratic equations →</a></div>
+</section>
+</main>
+</div>
+</body>
+</html>

@@ -1,2 +1,91 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Home · Axion</title><link rel="stylesheet" href="assets/style.css"><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["$$","$$"]]},svg:{fontCache:"global"},options:{enableMenu:false},startup:{typeset:false}};</script><script defer src="assets/mathjax.js"></script><script defer src="assets/ui.js"></script><script defer src="assets/home.js"></script></head><body><div id="site-header"></div><div class="app-shell"><aside id="site-sidebar"></aside><main id="app" class="content"></main></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Courses | Axion</title>
+    <link rel="stylesheet" href="assets/course.css">
+    <script defer src="assets/course-limits-meta.js"></script>
+    <script defer src="assets/course.js"></script>
+</head>
+<body data-page="home">
+    <header id="course-header"></header>
+    <main class="catalog">
+        <div class="page-intro">
+            <h1>Mathematics</h1>
+            <p>Self-paced courses for high school students.</p>
+        </div>
+        <section class="catalog-section">
+            <h2>Courses</h2>
+            <article class="course-card">
+                <div class="course-art" aria-hidden="true">
+                    <svg viewBox="0 0 270 200" role="img">
+                        <defs><pattern id="grid" width="27" height="27" patternUnits="userSpaceOnUse"><path d="M27 0H0V27" fill="none" stroke="currentColor" opacity=".12"/></pattern></defs>
+                        <rect width="270" height="200" fill="url(#grid)"/>
+                        <path d="M20 142H252M108 15V184" stroke="currentColor" opacity=".45" stroke-width="1.4"/>
+                        <path d="M49 18 Q135 306 221 18" fill="none" stroke="var(--accent)" stroke-width="3"/>
+                        <path d="M135 25V180" stroke="var(--accent)" stroke-dasharray="4 5" opacity=".5"/>
+                        <circle cx="135" cy="162" r="4.5" fill="var(--accent)"/>
+                        <text x="148" y="177" fill="currentColor" font-size="12">vertex</text>
+                        <text x="221" y="131" fill="currentColor" font-size="13">x</text>
+                        <text x="115" y="20" fill="currentColor" font-size="13">y</text>
+                    </svg>
+                </div>
+                <div class="course-card-body">
+                    <p class="eyebrow">Algebra</p>
+                    <h3>Quadratic functions and equations</h3>
+                    <p>Read and construct parabolas, solve quadratic equations and inequalities, and use quadratic models to find maximum and minimum values.</p>
+                    <p class="course-meta">5 lessons · Final assessment</p>
+                    <p data-summary="quadratic" class="small">Start with quadratic functions.</p>
+                    <div class="catalog-actions"><a class="primary" data-resume="quadratic" href="quadratic.html">Start course →</a><a class="secondary" href="quadratic.html?mode=practice">Practice</a><a class="secondary" href="quadratic.html?mode=labs">Labs</a></div>
+                </div>
+            </article>
+            <article class="course-card">
+                <div class="course-art" aria-hidden="true">
+                    <svg viewBox="0 0 270 200">
+                        <path d="M20 152H250M80 15V185" stroke="currentColor" opacity=".4" stroke-width="1.4"/>
+                        <path d="M22 165 Q68 108 135 83 M145 79 Q195 55 248 42" fill="none" stroke="var(--accent)" stroke-width="3"/>
+                        <path d="M140 17V180M20 81H250" stroke="var(--axis)" stroke-dasharray="5 5"/>
+                        <circle cx="140" cy="81" r="5" fill="var(--paper)" stroke="var(--accent)" stroke-width="2.5"/>
+                        <circle cx="140" cy="37" r="4.5" fill="var(--accent)"/>
+                        <text x="151" y="76" fill="currentColor" font-size="12">limit</text>
+                    </svg>
+                </div>
+                <div class="course-card-body">
+                    <p class="eyebrow">Calculus</p>
+                    <h3>Limits and continuity</h3>
+                    <p>Investigate how functions approach values, construct discontinuities, calculate limits and design curves with asymptotes.</p>
+                    <p class="course-meta">4 lessons · Final assessment</p>
+                    <p data-summary="limits" class="small">Start with the meaning of a limit.</p>
+                    <div class="catalog-actions"><a class="primary" data-resume="limits" href="limits-1.html">Start course →</a><a class="secondary" href="limits-1.html?mode=practice">Practice</a><a class="secondary" href="limits-1.html?mode=labs">Labs</a></div>
+                </div>
+            </article>
+            <article class="course-card">
+                <div class="course-art" aria-hidden="true"><svg viewBox="0 0 270 200"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M65 70L165 70 210 35 110 35Z M65 70V155H165V70 M165 155L210 120V35 M65 155L110 120V35 M110 120H210"/></g><path d="M65 110L115 70 190 50 210 80 165 120 90 145Z" fill="var(--accent)" opacity=".35"/></svg></div>
+                <div class="course-card-body"><p class="eyebrow">Geometry</p><h3>Solid geometry</h3><p>Explore points, lines, planes, angles, cross-sections and solids in interactive 3D.</p><p class="course-meta">5 lessons · 5 labs · Final assessment</p><div class="catalog-actions"><a class="primary" href="stereometry.html">Start course →</a><a class="secondary" href="stereometry.html?mode=practice">Practice</a><a class="secondary" href="stereometry.html?mode=labs">Labs</a><a class="secondary" href="stereometry.html?mode=generator">Generator</a></div></div>
+            </article>
+        </section>
+        <section class="catalog-section">
+            <h2>Course programmes</h2>
+            <details class="course-program"><summary>Solid geometry</summary><ol class="syllabus-list"><li><a href="stereometry.html?lesson=1"><strong>Points, lines and planes</strong><span>Study · Practice · Lab</span></a></li><li><a href="stereometry.html?lesson=2"><strong>Parallelism and perpendicularity</strong><span>Study · Practice · Lab</span></a></li><li><a href="stereometry.html?lesson=3"><strong>Angles and distances</strong><span>Study · Practice · Lab</span></a></li><li><a href="stereometry.html?lesson=4"><strong>Cross-sections</strong><span>Study · Practice · Lab</span></a></li><li><a href="stereometry.html?lesson=5"><strong>Surface area and volume</strong><span>Study · Practice · Lab</span></a></li><li><a href="stereometry.html?mode=final"><strong>Final assessment</strong><span>5 construction problems</span></a></li></ol></details>
+            <details class="course-program"><summary>Quadratic functions and equations</summary>            <ol class="syllabus-list">
+                <li><a href="quadratic.html"><strong>Quadratic functions</strong><span data-course-lesson="quadratic-1">Available · 5 exercises and a lesson assessment</span></a></li>
+                <li><a href="completing-square.html"><strong>Completing the square</strong><span data-course-lesson="quadratic-2">Available · 5 exercises and a lesson assessment</span></a></li>
+                <li><a href="quadratic-equations.html"><strong>Quadratic equations</strong><span data-course-lesson="quadratic-3">Available · 5 exercises and a lesson assessment</span></a></li>
+                <li><a href="quadratic-inequalities.html"><strong>Quadratic inequalities</strong><span data-course-lesson="quadratic-4">Available · 5 exercises and a lesson assessment</span></a></li>
+                <li><a href="applications.html"><strong>Applications</strong><span data-course-lesson="quadratic-5">Available · 5 exercises and a lesson assessment</span></a></li>
+                <li><a href="quadratic-final.html"><strong>Final assessment</strong><span data-course-lesson="quadratic-final">10 independent problems</span></a></li>
+            </ol></details>
+            <details class="course-program"><summary>Limits and continuity</summary>
+            <ol class="syllabus-list">
+                <li><a href="limits-1.html"><strong>Understanding limits</strong><span data-course-lesson="limits-1">Available</span></a></li>
+                <li><a href="limits-2.html"><strong>One-sided limits and continuity</strong><span data-course-lesson="limits-2">Available</span></a></li>
+                <li><a href="limits-3.html"><strong>Calculating limits</strong><span data-course-lesson="limits-3">Available</span></a></li>
+                <li><a href="limits-4.html"><strong>Infinity and asymptotes</strong><span data-course-lesson="limits-4">Available</span></a></li>
+                <li><a href="limits-final.html"><strong>Final assessment</strong><span data-course-lesson="limits-final">8 independent problems</span></a></li>
+            </ol></details>
+        </section>
+        <footer class="site-footer"><a href="archive.html">Previous materials and tools</a><span>Development archive · not part of this course</span></footer>
+    </main>
+</body>
+</html>

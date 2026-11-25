@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Quadratic equations | Axion</title>
+<link href="assets/course.css" rel="stylesheet"/>
+<link href="assets/math-field.css" rel="stylesheet"/>
+<script defer="" src="assets/course-graph.js"></script>
+<script defer="" src="assets/course-algebra-ui.js"></script>
+<script defer="" src="assets/expression.js"></script>
+<script defer="" src="assets/math-field.js"></script>
+<script defer="" src="assets/course-notebook-ui.js"></script>
+<script defer="" src="assets/course.js"></script>
+</head>
+<body data-lesson="quadratic-3" data-page="lesson">
+<header id="course-header"></header>
+<div class="lesson-shell">
+<aside class="course-sidebar">
+<a class="back-link" href="index.html">← All courses</a>
+<details class="course-outline" open="">
+<summary>Quadratic functions and equations</summary>
+<ol class="outline-lessons">
+<li><a href="quadratic.html">1. Quadratic functions</a></li>
+<li><a href="completing-square.html">2. Completing the square</a></li>
+<li class="current"><a href="#top">3. Quadratic equations</a>
+<nav aria-label="Lesson sections" class="lesson-outline">
+<a href="#factor">Roots and factorisation</a>
+<a href="#zero">Equations with a missing term</a>
+<a href="#square">Solving by completing the square</a>
+<a href="#formula">The quadratic formula</a>
+<a href="#discriminant">The discriminant and the graph</a>
+<a href="#assessment">Lesson assessment</a>
+</nav>
+</li>
+<li><a href="quadratic-inequalities.html">4. Quadratic inequalities</a></li>
+<li><a href="applications.html">5. Applications</a></li>
+<li><a href="quadratic-final.html">Final assessment</a></li>
+</ol>
+</details>
+<div class="sidebar-progress">
+<span id="sidebar-status">0 of 5 exercises solved</span>
+<progress id="lesson-progress" max="6" value="0"></progress>
+<small id="sidebar-assessment">Assessment not completed</small>
+</div>
+</aside>
+<main class="lesson-main" id="top">
+<div class="lesson-header">
+<div class="breadcrumb"><a href="index.html">Algebra</a> / Quadratic functions and equations</div>
+<p class="eyebrow">Lesson 3</p>
+<h1>Quadratic equations</h1>
+<p class="lead">Learn to solve quadratic equations by factoring, completing the square and using the quadratic formula. Determine the number of real roots before solving.</p>
+<div class="prerequisites"><strong>Before starting:</strong> You should know how to complete the square. <a href="completing-square.html">Previous lesson</a>.</div>
+<p class="connection-status" id="connection-status" role="status"></p>
+</div>
+<section class="lesson-section" id="factor">
+<h2>1. Roots and factorisation</h2>
+<p>A quadratic function describes a whole curve. A quadratic equation asks for particular inputs that satisfy an equality. To solve ax² + bx + c = 0 is to find where the graph crosses or touches the x-axis. These inputs are called roots or solutions.</p><p>Before solving, put all terms on one side. For example, x² + 2x = 8 becomes x² + 2x − 8 = 0. One useful method is to factor the expression.</p><div class="definition"><p><strong>Zero-product property:</strong> if AB = 0, then A = 0 or B = 0. It does not apply when AB equals a non-zero number.</p></div><div class="worked"><h3>Example: x² + 2x − 8 = 0</h3><p>Look for two numbers whose sum is 2 and product is −8: 4 and −2. Then</p><div class="equation">(x + 4)(x − 2) = 0<br/>x + 4 = 0 or x − 2 = 0<br/>x = −4 or x = 2</div><p>Check either value in the original equation. For x = 2, 4 + 4 − 8 = 0.</p><div aria-label="Parabola crossing the x-axis at minus four and two" class="graph" id="roots-example"></div></div><p>For a leading coefficient other than 1, factoring can require an extra step. For example, 2x² + 7x + 3 = (2x + 1)(x + 3). Expanding verifies the factors; the roots are −1/2 and −3. Not every quadratic factors into integer coefficients.</p><form class="exercise" data-exercise="factor">
+<div class="exercise-head"><h3>1. Factor and find roots</h3><span class="exercise-state"></span></div>
+<p>Factor x² + 3x − 10 and find both roots. Enter your own product of linear factors, such as (x+1)(x−4). Roots may be in either order.</p><div class="task-instructions"><strong>How to answer: </strong>Enter a product of two linear factors, then one root in each of the two boxes. The order of the roots does not matter.</div>
+<div class="fields"><label>Expression in x<input autocomplete="off" maxlength="60" name="expression" placeholder="Expression in x" required="" spellcheck="false"/></label><label>First root<input autocomplete="off" maxlength="60" name="r1" placeholder="One root" required="" spellcheck="false"/></label><label>Second root<input autocomplete="off" maxlength="60" name="r2" placeholder="One root" required="" spellcheck="false"/></label></div>
+<button class="primary" type="submit">Check answer</button><p class="feedback" role="status"></p>
+</form>
+</section>
+<section class="lesson-section" id="zero">
+<h2>2. Equations with a missing term</h2>
+<p>When c = 0, both terms contain x. Factor x out instead of dividing by it. Dividing by x assumes x ≠ 0, which can discard an actual solution.</p><div class="worked"><h3>Example: 2x² − 10x = 0</h3><div class="equation">2x(x − 5) = 0<br/>x = 0 or x = 5</div><p>Both values satisfy the equation. Dividing by x at the beginning would have left only x = 5.</p></div><p>When b = 0, isolate x². For instance, 3x² − 12 = 0 gives x² = 4, so x = ±2. If x² = 0, the only root is 0. If x² is negative, there is no real solution because the square of a real number is non-negative.</p><form class="exercise" data-exercise="zero">
+<div class="exercise-head"><h3>2. Solve a missing-term equation</h3><span class="exercise-state"></span></div>
+<p>Solve 3x² − 12x = 0. Give both roots.</p><div class="task-instructions"><strong>How to answer: </strong>Enter the two roots separately, in either order.</div>
+<div class="fields"><label>First root<input autocomplete="off" maxlength="60" name="r1" placeholder="One root" required="" spellcheck="false"/></label><label>Second root<input autocomplete="off" maxlength="60" name="r2" placeholder="One root" required="" spellcheck="false"/></label></div>
+<button class="primary" type="submit">Check answer</button><p class="feedback" role="status"></p>
+</form>
+</section>
+<section class="lesson-section" id="square">
+<h2>3. Solving by completing the square</h2>
+<p>Some equations do not factor neatly. Completing the square still works, because it reduces the problem to a squared expression equalling a constant.</p><div class="worked"><h3>Example: x² − 6x + 2 = 0</h3><div class="equation">(x − 3)² − 7 = 0<br/>(x − 3)² = 7<br/>x − 3 = ±√7<br/>x = 3 ± √7</div><p>Taking the square root introduces two signs. Both positive and negative numbers can have the same square. Keep the roots exact rather than rounding early.</p></div><p>For 2x² + 8x + 2 = 0, divide all terms by 2 first. Then x² + 4x + 1 = 0 becomes (x + 2)² = 3 and the roots are −2 ± √3.</p><form class="exercise" data-exercise="square">
+<div class="exercise-head"><h3>3. Solve using the square</h3><span class="exercise-state"></span></div>
+<p>Solve x² + 4x − 3 = 0. Enter the two exact roots separately. Use the square-root button in the answer field.</p><div class="task-instructions"><strong>How to answer: </strong>Use the √ button to enter an exact square root. Write one root per box, not ± in a single box.</div>
+<div class="fields"><label>First root<input autocomplete="off" maxlength="60" name="r1" placeholder="One root" required="" spellcheck="false"/></label><label>Second root<input autocomplete="off" maxlength="60" name="r2" placeholder="One root" required="" spellcheck="false"/></label></div>
+<button class="primary" type="submit">Check answer</button><p class="feedback" role="status"></p>
+</form>
+</section>
+<section class="lesson-section" id="formula">
+<h2>4. The quadratic formula</h2>
+<p>The quadratic formula is not an unrelated rule to memorise. It follows from completing the square in the general equation. For a ≠ 0, divide by a and move the constant to the right.</p><div class="equation">x² + (b/a)x = −c/a<br/>(x + b/(2a))² = b²/(4a²) − c/a<br/>(2ax + b)² = b² − 4ac</div><p>Multiplying by 4a² produces the last line. If the right-hand side is non-negative, take both square roots and solve for x.</p><div class="definition"><div class="equation">x = <span class="fraction"><span>−b ± √(b² − 4ac)</span><span>2a</span></span></div><p>Write D = b² − 4ac. This is the discriminant.</p></div><div class="worked"><h3>Example: 3x² − 5x − 2 = 0</h3><p>Identify a = 3, b = −5, c = −2. Keep the negative signs when substituting.</p><div class="equation">D = (−5)² − 4·3·(−2) = 49<br/>x = (5 ± 7)/6<br/>x = 2 or x = −1/3</div><p>Remember that 2a divides the entire numerator, not just the square root. Substituting each root gives zero.</p></div><form class="exercise" data-exercise="formula">
+<div class="exercise-head"><h3>4. Use the quadratic formula</h3><span class="exercise-state"></span></div>
+<p>Solve 2x² + 5x − 3 = 0 using the quadratic formula. Give the discriminant and both roots.</p><div class="task-instructions"><strong>How to answer: </strong>Enter the numerical discriminant D and both roots separately.</div>
+<div class="fields"><label>D (discriminant)<input inputmode="decimal" maxlength="60" name="d" required=""/></label><label>First root<input autocomplete="off" maxlength="60" name="r1" placeholder="One root" required="" spellcheck="false"/></label><label>Second root<input autocomplete="off" maxlength="60" name="r2" placeholder="One root" required="" spellcheck="false"/></label></div>
+<button class="primary" type="submit">Check answer</button><p class="feedback" role="status"></p>
+</form>
+</section>
+<section class="lesson-section" id="discriminant">
+<h2>5. The discriminant and the graph</h2>
+<p>From (2ax + b)² = D we can tell how many real roots exist without calculating them. When D &gt; 0 there are two possible signs of √D. When D = 0 both signs give the same repeated root. When D &lt; 0 the equality cannot hold for real x.</p><figure class="graph-figure"><div class="graph-toolbar"><span>Compare x² + c = 0</span><div class="segmented" id="discriminant-buttons"><button aria-pressed="true" data-c="-4" type="button">Two roots</button><button aria-pressed="false" data-c="0" type="button">One root</button><button aria-pressed="false" data-c="4" type="button">No real roots</button></div></div><div aria-label="Quadratic graphs with different numbers of real roots" class="graph" id="discriminant-graph"></div><figcaption id="discriminant-caption"></figcaption></figure><div class="worked"><h3>Example: find a parameter</h3><p>For what value of m does x² + 8x + m = 0 have exactly one real root? We need D = 0, so 64 − 4m = 0. Therefore m = 16. The equation becomes (x + 4)² = 0 and its repeated root is −4.</p></div><form class="exercise" data-exercise="discriminant">
+<div class="exercise-head"><h3>5. Analyse the discriminant</h3><span class="exercise-state"></span></div>
+<p>For x² − 6x + 11 = 0, find D and the number of distinct real roots. Then find m so x² − 6x + m = 0 has one repeated root.</p><div class="task-instructions"><strong>How to answer: </strong>The first two fields refer to the given equation. The last asks for the new constant m in the second equation.</div>
+<div class="fields"><label>D (discriminant)<input inputmode="decimal" maxlength="60" name="d" required=""/></label><label>Number of roots<input inputmode="decimal" maxlength="60" name="count" required=""/></label><label>m<input inputmode="decimal" maxlength="60" name="m" required=""/></label></div>
+<button class="primary" type="submit">Check answer</button><p class="feedback" role="status"></p>
+</form><div class="recap"><h3>Choosing a method</h3><p>First put the equation equal to zero. If a term is missing, isolate the square or factor out x. If integer factors are easy to find, use factorisation. Otherwise completing the square or the quadratic formula works for any quadratic. Use the discriminant to decide how many real roots to expect, and check your solutions.</p></div>
+</section>
+<section class="lesson-section assessment-section" id="assessment">
+<div class="assessment-heading"><p class="eyebrow">Independent work</p><h2>Lesson assessment</h2><p>Solve these five questions without the worked examples. Submit all your answers together. Solve every exercise and pass this assessment with 5/5 to complete the lesson.</p></div>
+<form id="assessment-form">
+<fieldset data-assessment="factor"><legend>1. Factor and solve</legend><p>Factor x² − 5x + 6 and find its roots.</p><p class="format-note">Enter one root per box, in either order. Use the √ button to enter an exact square root. Do not enter ± in a single box.</p><div class="fields"><label>Expression in x<input autocomplete="off" maxlength="60" name="expression" placeholder="Expression in x" required="" spellcheck="false"/></label><label>First root<input autocomplete="off" maxlength="60" name="r1" placeholder="One root" required="" spellcheck="false"/></label><label>Second root<input autocomplete="off" maxlength="60" name="r2" placeholder="One root" required="" spellcheck="false"/></label></div><p class="feedback" role="status"></p></fieldset>
+<fieldset data-assessment="zero"><legend>2. Keep both solutions</legend><p>Solve 5x² + 10x = 0.</p><p class="format-note">Enter one root per box, in either order. Use the √ button to enter an exact square root. Do not enter ± in a single box.</p><div class="fields"><label>First root<input autocomplete="off" maxlength="60" name="r1" placeholder="One root" required="" spellcheck="false"/></label><label>Second root<input autocomplete="off" maxlength="60" name="r2" placeholder="One root" required="" spellcheck="false"/></label></div><p class="feedback" role="status"></p></fieldset>
+<fieldset data-assessment="formula"><legend>3. Use the quadratic formula</legend><p>Solve 2x² + 3x − 2 = 0. Give D and both roots.</p><p class="format-note">Enter one root per box, in either order. Use the √ button to enter an exact square root. Do not enter ± in a single box.</p><div class="fields"><label>D (discriminant)<input inputmode="decimal" maxlength="60" name="d" required=""/></label><label>First root<input autocomplete="off" maxlength="60" name="r1" placeholder="One root" required="" spellcheck="false"/></label><label>Second root<input autocomplete="off" maxlength="60" name="r2" placeholder="One root" required="" spellcheck="false"/></label></div><p class="feedback" role="status"></p></fieldset>
+<fieldset data-assessment="irrational"><legend>4. Exact roots</legend><p>Solve x² − 2x − 4 = 0. Enter exact roots using the √ button.</p><p class="format-note">Enter one root per box, in either order. Use the √ button to enter an exact square root. Do not enter ± in a single box.</p><div class="fields"><label>First root<input autocomplete="off" maxlength="60" name="r1" placeholder="One root" required="" spellcheck="false"/></label><label>Second root<input autocomplete="off" maxlength="60" name="r2" placeholder="One root" required="" spellcheck="false"/></label></div><p class="feedback" role="status"></p></fieldset>
+<fieldset data-assessment="parameter"><legend>5. Repeated root</legend><p>Find m so x² + 4x + m = 0 has one distinct real root. Find that root too.</p><div class="fields"><label>m<input inputmode="decimal" maxlength="60" name="m" required=""/></label><label>Repeated root<input inputmode="decimal" maxlength="60" name="root" required=""/></label></div><p class="feedback" role="status"></p></fieldset>
+<button class="primary" type="submit">Submit assessment</button><p class="feedback" id="assessment-result" role="status"></p>
+</form>
+<div class="lesson-end"><p id="lesson-completion">Your results will be saved automatically.</p><a class="secondary" href="course-progress.html">View progress</a><a class="primary" href="quadratic-inequalities.html">Next lesson: Quadratic inequalities →</a></div>
+</section>
+</main>
+</div>
+</body>
+</html>

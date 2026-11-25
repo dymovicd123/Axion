@@ -1,5 +1,52 @@
-Axion.init('Home');
-const app=document.getElementById('app');
-const modules=[['limits-basics','Understanding limits','Approaching a point, tables, graphs and the difference between value and limit.'],['limits-sides','One-sided limits','Find out when the two sides of a function agree.'],['limits-continuity','Continuity','Discover what holes, jumps and asymptotes mean.'],['limits-algebra','Calculating limits','Use substitution, factoring and rationalization to solve limits.']];
-app.innerHTML=`<div class="hero"><div><p class="eyebrow">Calculus I</p><h1 class="page-heading">Calculus lessons and practice</h1><p class="lead" style="margin-bottom:18px">Study limits through explanations, worked examples and exercises. There are also introductory lessons on derivatives and integrals.</p><div class="actions"><a class="btn" id="continue-link" href="learn.html?lesson=limits-basics">Start with limits</a><a class="btn ghost" href="function-studio.html">Function Studio</a></div></div><div class="hero-illustration"><svg viewBox="0 0 280 220" role="img" aria-label="Line with an open circle illustrating a limit"><path d="M18 190H262M37 205V13" fill="none" stroke="currentColor" stroke-width="2" stroke-opacity=".5"/><path d="M28 177L238 34" stroke="currentColor" stroke-width="4" fill="none"/><circle cx="147" cy="96" r="9" fill="var(--accent-soft)" stroke="currentColor" stroke-width="3"/><path d="M147 18V192" stroke="#c38e4b" stroke-dasharray="5 6"/><circle cx="122" cy="113" r="5" fill="#2c86aa"/><circle cx="170" cy="79" r="5" fill="#c98b4c"/><text x="156" y="114" font-size="12" fill="currentColor">lim = 4</text></svg></div></div><div class="section-heading"><h2>Your progress</h2><p>Saved on the local server</p></div><div id="stats" class="stat-row"><div class="stat"><strong>—</strong><span>Lessons completed</span></div><div class="stat"><strong>—</strong><span>Problems solved</span></div><div class="stat"><strong>—</strong><span>Lab challenges</span></div></div><div class="section-heading"><h2>Limits</h2><p>Four lessons</p></div><div class="module-list">${modules.map(([id,title,summary],i)=>`<a href="learn.html?lesson=${id}" class="module-row"><span class="module-number">${String(i+1).padStart(2,'0')}</span><div><b>${title}</b><p>${summary}</p></div><span class="tag" data-status="${id}">Read lesson</span><span class="module-arrow">→</span></a>`).join('')}</div><div class="section-heading"><h2>Course materials</h2></div><div class="grid three"><a class="card" href="learn.html?lesson=limits-basics"><span class="card-kicker">Learn</span><h3>Lessons</h3><p>Explanations, examples and review questions.</p><span class="card-bottom">Read a lesson →</span></a><a class="card" href="practice.html"><span class="card-kicker">Practice</span><h3>Problem sets</h3><p>Numerical questions, algebraic steps and error analysis.</p><span class="card-bottom">Open practice →</span></a><a class="card" href="function-studio.html"><span class="card-kicker">Math Lab</span><h3>Function Studio</h3><p>Plot functions, examine limits and save your work.</p><span class="card-bottom">Open labs →</span></a></div><div class="section-heading"><h2>Other topics</h2><p>Introductory lessons</p></div><div class="grid"><a class="card" href="learn.html?lesson=derivatives"><span class="card-kicker">Derivatives</span><h3>Rates of change and tangent slopes</h3><p>Connect a limit to the instantaneous speed of motion.</p><span class="card-bottom">Read introduction →</span></a><a class="card" href="learn.html?lesson=integrals"><span class="card-kicker">Integrals</span><h3>Accumulation and area</h3><p>Understand why adding many small amounts gives a total.</p><span class="card-bottom">Read introduction →</span></a></div><footer class="footer">Axion · Web Programming Project</footer>`;
-Promise.all([Axion.api('/progress'),Axion.api('/study/status')]).then(([progress,state])=>{const lessonsDone=new Set(progress.map(p=>p.activity));const solved=new Set((state.attempts||[]).filter(a=>a.correct&&a.finished).map(a=>a.questionId));const labCount=(state.labs||[]).length;const lessonCount=Axion.lessons.filter(([id])=>lessonsDone.has('lesson:'+id)).length;document.getElementById('stats').innerHTML=`<div class="stat"><strong>${lessonCount}</strong><span>Lessons completed</span></div><div class="stat"><strong>${solved.size}</strong><span>Problems solved</span></div><div class="stat"><strong>${labCount}</strong><span>Lab challenges</span></div>`;const activities=['lesson:limits-basics','lesson:limits-sides','lesson:limits-continuity','lesson:limits-algebra'];modules.forEach(([id],i)=>{const el=document.querySelector(`[data-status="${id}"]`);if(lessonsDone.has(activities[i])){el.textContent='Completed';el.className='tag good'}});if(lessonsDone.has('lesson:limits-basics'))document.getElementById('continue-link').href='learn.html?lesson=limits-sides'}).catch(()=>{});
+Axion.init('Archive');
+const app = document.getElementById('app');
+const topics = [
+    {
+        title: 'Geometry', description: 'Construct circles, tangent lines and shortest paths.', projects: ['circumcircle', 'path', 'tangent'], lesson: null
+    },
+    {
+        title: 'Functions and limits', description: 'Describe shapes with functions and investigate their behavior.', projects: ['container'], lesson: 'limits-basics'
+    },
+    {
+        title: 'Differential calculus', description: 'Find optimal dimensions and study rates of change.', projects: ['box'], lesson: 'derivatives'
+    },
+    {
+        title: 'Integral calculus and 3D geometry',
+        description: 'Calculate volumes and explore cross-sections of solids.',
+        projects: ['container', 'section'],
+        lesson: 'integrals'
+    }
+];
+const featured = ['container', 'box', 'section'];
+app.innerHTML = `<h1 class="page-heading">Previous materials</h1>
+<p class="lead">Earlier lessons, projects and tools, kept separately from the new course.</p>
+<div class="section-heading"><h2>Projects</h2><a href="project.html">View all six →</a></div>
+<div class="module-list">${featured.map(id => {
+    const p = ProjectMath.projects.find(p => p.id === id);
+    return `<a class="module-row" href="project.html?id=${p.id}"><div><b>${p.title}</b><p>${p.description}</p></div><span class="tag" data-home-project="${p.id}">3D</span><span class="module-arrow">→</span></a>`;
+}).join('')}</div>
+<div class="section-heading"><h2>Geometry workshop</h2><a href="project.html">All constructions →</a></div>
+<div class="module-list">${ProjectMath.projects.filter(p => p.type === 'geometry').map(p => `<a class="module-row" href="project.html?id=${p.id}"><div><b>${p.title}</b><p>${p.description}</p></div><span class="tag" data-home-project="${p.id}">${p.level}</span><span class="module-arrow">→</span></a>`).join('')}</div>
+<div class="section-heading"><h2>Study by topic</h2></div>
+<div class="grid">${topics.map(t => `<section class="card"><h3>${t.title}</h3><p>${t.description}</p>${t.lesson ? `<p><a href="learn.html?lesson=${t.lesson}">Read lesson →</a></p>` : ''}${t.projects.map(id => {
+    const p = ProjectMath.projects.find(p => p.id === id);
+    return `<p><a href="project.html?id=${id}">${p.title} →</a></p>`;
+}).join('')}</section>`).join('')}</div>
+<div class="section-heading"><h2>Study record</h2><a href="my-progress.html">Progress →</a></div>
+<div class="stat-row" id="stats"><div class="stat"><strong>—</strong><span>Projects completed</span></div><div class="stat"><strong>—</strong><span>Lessons completed</span></div><div class="stat"><strong>—</strong><span>Problems solved</span></div></div>
+<div class="section-heading"><h2>Tools and practice</h2></div>
+<div class="grid"><a class="card" href="function-studio.html"><h3>Function Studio</h3><p>Plot your own functions and investigate limits.</p></a><a class="card" href="practice.html"><h3>Practice problems</h3><p>Calculation, algebra and concept exercises.</p></a></div>
+<footer class="footer">Axion · Web Programming Project</footer>`;
+Promise.all([Axion.api('/progress'), Axion.api('/study/status'), Axion.api('/projects/status')]).then(([progress, state, projects]) => {
+    const done = new Set(projects.filter(r => r.correct).map(r => r.project));
+    const lessons = new Set(progress.filter(p => Axion.lessons.some(l => 'lesson:' + l[0] === p.activity)).map(p => p.activity));
+    const solved = new Set(state.attempts.filter(a => a.correct && a.finished).map(a => a.questionId));
+    document.getElementById('stats').innerHTML = `<div class="stat"><strong>${done.size}/6</strong><span>Projects completed</span></div><div class="stat"><strong>${lessons.size}/6</strong><span>Lessons completed</span></div><div class="stat"><strong>${solved.size}/24</strong><span>Problems solved</span></div>`;
+    for (const id of done) {
+        const el = document.querySelector(`[data-home-project="${id}"]`);
+        if (el) {
+            el.textContent = 'Completed';
+            el.className = 'tag good';
+        }
+    }
+}).catch(() => { });
