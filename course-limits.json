@@ -1,0 +1,511 @@
+[
+    {
+        "id": "limits-1",
+        "title": "Understanding limits",
+        "practice": {
+            "linear": {
+                "keys": [
+                    "below",
+                    "above",
+                    "limit"
+                ],
+                "answer": [
+                    9.97,
+                    10.03,
+                    10
+                ],
+                "feedback": "The outputs are 9.97 and 10.03. Their distance from 10 is three times the distance of x from 4.",
+                "hint": "Substitute the two inputs separately."
+            },
+            "probe": {
+                "keys": [
+                    "limit",
+                    "value"
+                ],
+                "answer": [
+                    4,
+                    9
+                ],
+                "feedback": "The hidden rule is 4 + (x − 2)² + (x − 2)/2 except at x = 2, where it equals 9. Both variable terms tend to zero, so both sides approach 4.",
+                "hint": "Take measurements closer to 2 from both sides, and also query 2 itself."
+            },
+            "hole": {
+                "keys": [
+                    "limit",
+                    "value"
+                ],
+                "answer": [
+                    6,
+                    "undefined"
+                ],
+                "feedback": "For x ≠ 3, g(x) = x + 3. Its limit is 6, but the original denominator is zero at 3.",
+                "hint": "Factor the numerator; keep track of the excluded input."
+            },
+            "precision": {
+                "keys": [
+                    "delta"
+                ],
+                "answer": [
+                    0.04
+                ],
+                "feedback": "A valid radius is 0.04: the endpoint squares are 3.8416 and 4.1616, both inside the band. The largest possible radius is √4.2 − 2 ≈ 0.04939.",
+                "hint": "Check both ends of the interval, not just its centre.",
+                "limitModel": "precision"
+            }
+        },
+        "assessment": {
+            "direct": {
+                "keys": [
+                    "limit"
+                ],
+                "answer": [
+                    11
+                ],
+                "feedback": "Polynomials are continuous; substitution gives 3·4 − 1 = 11.",
+                "hint": null
+            },
+            "table": {
+                "keys": [
+                    "limit"
+                ],
+                "answer": [
+                    3
+                ],
+                "feedback": "The values approach 3 from both sides.",
+                "hint": null
+            },
+            "point": {
+                "keys": [
+                    "limit",
+                    "value"
+                ],
+                "answer": [
+                    5,
+                    -1
+                ],
+                "feedback": "The nearby values give the limit 5; the filled dot gives −1.",
+                "hint": null
+            },
+            "radius": {
+                "keys": [
+                    "delta"
+                ],
+                "answer": [
+                    0.02
+                ],
+                "feedback": "|5x − 5| = 5|x − 1|, so δ = 0.1/5 = 0.02.",
+                "hint": null
+            }
+        }
+    },
+    {
+        "id": "limits-2",
+        "title": "One-sided limits and continuity",
+        "practice": {
+            "sides": {
+                "keys": [
+                    "left",
+                    "right",
+                    "two"
+                ],
+                "answer": [
+                    7,
+                    6,
+                    "dne"
+                ],
+                "feedback": "The left expression tends to 7 and the right expression tends to 6. They disagree.",
+                "hint": "Use the correct branch on each side."
+            },
+            "repair": {
+                "keys": [
+                    "k"
+                ],
+                "answer": [
+                    8
+                ],
+                "feedback": "The nearby expression is x + 4, giving limit 8. Continuity requires f(4) = 8.",
+                "hint": "Factor the numerator before substituting."
+            },
+            "parameter": {
+                "keys": [
+                    "k"
+                ],
+                "answer": [
+                    2
+                ],
+                "feedback": "3k − 1 = 5, so k = 2.",
+                "hint": "Equate the two branch values at 3."
+            },
+            "construct": {
+                "keys": [
+                    "m1",
+                    "b1",
+                    "m2",
+                    "b2",
+                    "value"
+                ],
+                "answer": [
+                    1,
+                    1,
+                    -2,
+                    1,
+                    4
+                ],
+                "feedback": "The branches satisfy m₁ + b₁ = 2 and m₂ + b₂ = −1; the assigned value is 4. The slopes can vary, so many solutions are possible.",
+                "hint": "Use the equations m₁ + b₁ = 2 and m₂ + b₂ = −1; neither slope may be zero.",
+                "limitModel": "piecewise"
+            }
+        },
+        "assessment": {
+            "matching": {
+                "keys": [
+                    "limit"
+                ],
+                "answer": [
+                    -3
+                ],
+                "feedback": "The one-sided limits agree at −3, regardless of f(1).",
+                "hint": null
+            },
+            "jump": {
+                "keys": [
+                    "left",
+                    "right"
+                ],
+                "answer": [
+                    4,
+                    6
+                ],
+                "feedback": "Substitution into each branch gives 4 and 6.",
+                "hint": null
+            },
+            "continuous": {
+                "keys": [
+                    "k"
+                ],
+                "answer": [
+                    3
+                ],
+                "feedback": "−2 + k = 1, so k = 3.",
+                "hint": null
+            },
+            "classify": {
+                "keys": [
+                    "kind"
+                ],
+                "answer": [
+                    "removable"
+                ],
+                "feedback": "Defining f(a) = 6 repairs the discontinuity.",
+                "hint": null
+            }
+        }
+    },
+    {
+        "id": "limits-3",
+        "title": "Calculating limits",
+        "practice": {
+            "substitute": {
+                "keys": [
+                    "limit"
+                ],
+                "answer": [
+                    3
+                ],
+                "feedback": "The numerator tends to 6 and the denominator to 2, so the limit is 3.",
+                "hint": "First evaluate the denominator."
+            },
+            "steps": {
+                "keys": [
+                    "factor",
+                    "simplify",
+                    "limit"
+                ],
+                "answer": [
+                    {
+                        "type": "polynomial",
+                        "coefficients": [
+                            12,
+                            -7,
+                            1
+                        ],
+                        "factored": true
+                    },
+                    {
+                        "type": "polynomial",
+                        "coefficients": [
+                            -3,
+                            1
+                        ],
+                        "factored": false
+                    },
+                    1
+                ],
+                "feedback": "The numerator factors as (x − 4)(x − 3). Cancel x − 4 only for x ≠ 4. The remaining expression x − 3 approaches 1.",
+                "hint": "Find two numbers whose sum is −7 and product is 12."
+            },
+            "radical": {
+                "keys": [
+                    "conjugate",
+                    "limit"
+                ],
+                "answer": [
+                    8,
+                    0.125
+                ],
+                "feedback": "The conjugate is √(x + 16) + 4. After multiplication and cancellation the quotient is 1/(√(x + 16) + 4), with limit 1/8.",
+                "hint": "Multiply by the corresponding sum of the square roots."
+            },
+            "method": {
+                "keys": [
+                    "limit"
+                ],
+                "answer": [
+                    -0.25
+                ],
+                "feedback": "The numerator equals −x/[2(x + 2)]. Cancelling x gives −1/[2(x + 2)], with limit −1/4.",
+                "hint": "Combine the two fractions over a common denominator."
+            }
+        },
+        "assessment": {
+            "polynomial": {
+                "keys": [
+                    "limit"
+                ],
+                "answer": [
+                    22
+                ],
+                "feedback": "27 − 6 + 1 = 22.",
+                "hint": null
+            },
+            "factor": {
+                "keys": [
+                    "limit"
+                ],
+                "answer": [
+                    -4
+                ],
+                "feedback": "Cancel x + 2 for x ≠ −2; x − 2 tends to −4.",
+                "hint": null
+            },
+            "root": {
+                "keys": [
+                    "limit"
+                ],
+                "answer": [
+                    0.1
+                ],
+                "feedback": "Rationalising gives 1/(√(x + 25) + 5) → 1/10.",
+                "hint": null
+            },
+            "fraction": {
+                "keys": [
+                    "limit"
+                ],
+                "answer": [
+                    -0.1111111111111111
+                ],
+                "feedback": "Combining fractions gives −1/[3(x + 3)], whose limit is −1/9.",
+                "hint": null
+            }
+        }
+    },
+    {
+        "id": "limits-4",
+        "title": "Infinity and asymptotes",
+        "practice": {
+            "vertical": {
+                "keys": [
+                    "left",
+                    "right"
+                ],
+                "answer": [
+                    "+inf",
+                    "-inf"
+                ],
+                "feedback": "A negative numerator divided by a small negative denominator gives +∞; on the right it gives −∞.",
+                "hint": "Track the sign of x + 1 on each side."
+            },
+            "far": {
+                "keys": [
+                    "limit",
+                    "error"
+                ],
+                "answer": [
+                    5,
+                    0.2
+                ],
+                "feedback": "12/x tends to zero; at x = 60 its absolute value is 0.2.",
+                "hint": "Separate the constant term from the term that tends to zero."
+            },
+            "degrees": {
+                "keys": [
+                    "first",
+                    "second"
+                ],
+                "answer": [
+                    -2,
+                    0
+                ],
+                "feedback": "Equal degrees give −4/2 = −2. A lower numerator degree gives 0.",
+                "hint": "Compare the highest powers."
+            },
+            "design": {
+                "keys": [
+                    "A",
+                    "h",
+                    "k"
+                ],
+                "answer": [
+                    4,
+                    -2,
+                    3
+                ],
+                "feedback": "For h = −2 and k = 3, the condition is 3.5 ≤ 3 + A/4 ≤ 4.5, hence 2 ≤ A ≤ 6. Any value in this interval is valid.",
+                "hint": "Use the asymptotes to fix h and k, then solve the inequality for A.",
+                "limitModel": "asymptote"
+            }
+        },
+        "assessment": {
+            "both": {
+                "keys": [
+                    "left",
+                    "right"
+                ],
+                "answer": [
+                    "+inf",
+                    "+inf"
+                ],
+                "feedback": "The square makes the denominator positive on both sides.",
+                "hint": null
+            },
+            "asymptotes": {
+                "keys": [
+                    "h",
+                    "k"
+                ],
+                "answer": [
+                    4,
+                    2
+                ],
+                "feedback": "The denominator vanishes at 4, and the reciprocal term tends to zero far away.",
+                "hint": null
+            },
+            "equal": {
+                "keys": [
+                    "limit"
+                ],
+                "answer": [
+                    -2.5
+                ],
+                "feedback": "Divide by x²; the limit is −5/2.",
+                "hint": null
+            },
+            "bound": {
+                "keys": [
+                    "T"
+                ],
+                "answer": [
+                    120
+                ],
+                "feedback": "6/x < 0.05 is equivalent to x > 120.",
+                "hint": null
+            }
+        }
+    },
+    {
+        "id": "limits-final",
+        "title": "Final assessment",
+        "practice": {},
+        "assessment": {
+            "point": {
+                "keys": [
+                    "limit",
+                    "value"
+                ],
+                "answer": [
+                    -2,
+                    7
+                ],
+                "feedback": "The limit is −2 and the assigned value is 7.",
+                "hint": null
+            },
+            "precision": {
+                "keys": [
+                    "delta"
+                ],
+                "answer": [
+                    0.02
+                ],
+                "feedback": "The output error is 4 times the input error, so δ = 0.02.",
+                "hint": null
+            },
+            "sides": {
+                "keys": [
+                    "left",
+                    "right"
+                ],
+                "answer": [
+                    4,
+                    -1
+                ],
+                "feedback": "The branches approach 4 and −1 respectively.",
+                "hint": null
+            },
+            "continuity": {
+                "keys": [
+                    "k"
+                ],
+                "answer": [
+                    2
+                ],
+                "feedback": "2k + 2 = 6 gives k = 2.",
+                "hint": null
+            },
+            "factor": {
+                "keys": [
+                    "limit"
+                ],
+                "answer": [
+                    10
+                ],
+                "feedback": "Cancel x − 5 for x ≠ 5 to obtain x + 5.",
+                "hint": null
+            },
+            "radical": {
+                "keys": [
+                    "limit"
+                ],
+                "answer": [
+                    0.25
+                ],
+                "feedback": "Rationalise to get 1/(√(x + 4) + 2), giving 1/4.",
+                "hint": null
+            },
+            "infinity": {
+                "keys": [
+                    "limit"
+                ],
+                "answer": [
+                    3
+                ],
+                "feedback": "Equal degrees give 9/3 = 3.",
+                "hint": null
+            },
+            "asymptote": {
+                "keys": [
+                    "h",
+                    "k",
+                    "right"
+                ],
+                "answer": [
+                    -3,
+                    -4,
+                    "+inf"
+                ],
+                "feedback": "x = −3, y = −4; the denominator is positive and small on the right.",
+                "hint": null
+            }
+        }
+    }
+]

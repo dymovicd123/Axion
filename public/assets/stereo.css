@@ -1,0 +1,617 @@
+:root {
+    --surface-soft: var(--subtle);
+}
+#stereo-sidebar h3 {
+    margin-top: 24px;
+}
+.stereo-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    gap: 12px;
+    margin: 18px 0;
+}
+.stereo-controls label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: .9rem;
+}
+.stereo-controls select {
+    width: 100%;
+    padding: 7px;
+    background: var(--paper);
+    color: var(--ink);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+.stereo-controls input {
+    width: 100%;
+    accent-color: var(--accent);
+}
+.stereo-views {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+.stereo-views button {
+    min-height: 34px;
+    padding: 4px 10px;
+}
+#solid-canvas {
+    display: block;
+    width: 100%;
+    height: clamp(280px,45vw,440px);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    touch-action: none;
+}
+.stereo-measure {
+    padding: 12px;
+    margin-top: 10px;
+    background: var(--subtle);
+    border-radius: 6px;
+    font-variant-numeric: tabular-nums;
+}
+.stereo-question {
+    margin: 24px 0;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 18px;
+}
+.stereo-question legend {
+    font-weight: 600;
+    padding: 0 5px;
+}
+.stereo-question label {
+    display: block;
+    padding: 5px 0;
+}
+.stereo-feedback {
+    font-size: .92rem;
+}
+.stereo-feedback:empty {
+    display: none;
+}
+.correct {
+    color: var(--good);
+}
+.incorrect {
+    color: var(--bad);
+}
+#net:not(:empty) {
+    margin-top: 24px;
+}
+#net svg {
+    display: block;
+    width: 100%;
+    max-height: 260px;
+    margin: 12px auto;
+}
+.stereo-task-nav,.stereo-toolbar,.stereo-pointbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+}
+.stereo-task-nav {
+    margin: 10px 0 24px;
+}
+.stereo-toolbar button,.stereo-task-nav button,.stereo-pointbar button {
+    min-height: 34px;
+    padding: 6px 10px;
+    font-size: .85rem;
+}
+.stereo-toolbar button.active,.stereo-task-nav button.active,.stereo-pointbar button.active {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+.stereo-task-heading {
+    margin-bottom: 18px;
+}
+.stereo-work-grid {
+    display: grid;
+    grid-template-columns: minmax(0,1.65fr) minmax(0,1fr);
+    gap: 12px;
+    align-items: start;
+}
+.stereo-board,.stereo-flat,.stereo-solution {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px;
+    min-width: 0;
+}
+.stereo-scene {
+    position: relative;
+    width: 100%;
+    height: clamp(260px,38vw,420px);
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    touch-action: none;
+}
+.stereo-scene canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+}
+.stereo-labels {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+.stereo-labels span {
+    position: absolute;
+    transform: translate(6px,-16px);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink);
+    text-shadow: 0 0 3px var(--surface-soft);
+}
+.stereo-camera,.stereo-pointbar {
+    margin: 9px 0;
+}
+.stereo-pointbar button {
+    min-width: 32px;
+}
+.stereo-flat h3 {
+    margin-top: 0;
+}
+.stereo-flat svg,.stereo-study-example svg {
+    width: 100%;
+    display: block;
+    max-height: 250px;
+}
+.flat-side {
+    cursor: pointer;
+}
+.flat-empty {
+    min-height: 160px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: var(--muted);
+    border: 1px dashed var(--border);
+    border-radius: 6px;
+    padding: 10px;
+}
+.stereo-flat ul {
+    padding-left: 18px;
+    font-size: .85rem;
+}
+.stereo-solution {
+    margin-top: 14px;
+}
+.stereo-solution textarea,.stereo-answer input {
+    display: block;
+    width: 100%;
+    background: var(--surface);
+    color: var(--ink);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px;
+    font: inherit;
+}
+.stereo-solution textarea {
+    resize: vertical;
+    box-sizing: border-box;
+}
+.stereo-answer {
+    margin: 16px 0;
+}
+.stereo-answer>div {
+    display: flex;
+    gap: 8px;
+}
+.stereo-answer label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.stereo-answer p {
+    min-height: 1em;
+    margin: 4px 0;
+}
+.stereo-study-example {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    align-items: center;
+    gap: 18px;
+}
+.stereo-study-example p {
+    margin: 0;
+}
+#task-result,#worked-solution {
+    margin-top: 12px;
+}
+#worked-solution:not(:empty) {
+    background: var(--surface-soft);
+    padding: 12px;
+    border-radius: 6px;
+}
+@media(max-width:900px) {
+    .stereo-work-grid,.stereo-study-example {
+        grid-template-columns: 1fr;
+    }
+    .stereo-flat svg {
+        max-width: 420px;
+        margin: auto;
+    }
+}
+.stereo-work-page .lesson-shell {
+    max-width: 1600px;
+    grid-template-columns: 210px minmax(0,1fr);
+    gap: 20px;
+    padding-inline: 22px;
+}
+.stereo-work-page .lesson-main {
+    padding: 24px;
+    min-width: 0;
+}
+.stereo-work-grid {
+    grid-template-columns: minmax(0,1.6fr) minmax(0,1fr);
+    gap: 14px;
+}
+.stereo-scene {
+    height: clamp(350px,36vw,490px);
+}
+.stereo-board-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+.stereo-board-heading h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+.stereo-board-heading .small {
+    font-size: .76rem;
+}
+.stereo-givens {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-size: .88rem;
+}
+.stereo-givens span {
+    padding: 4px 9px;
+    background: var(--subtle);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-variant-numeric: tabular-nums;
+}
+.stereo-scale-note {
+    margin: 6px 0 12px;
+}
+.stereo-point-label {
+    font-weight: 600;
+}
+.stereo-pointbar {
+    margin: 5px 0 10px;
+}
+.stereo-toolbar button[hidden] {
+    display: none;
+}
+.stereo-toolbar button:disabled {
+    opacity: .42;
+    cursor: not-allowed;
+}
+.stereo-camera {
+    gap: 5px;
+}
+.stereo-camera #renderer-status {
+    margin-left: auto;
+}
+.stereo-labels .stereo-dimension {
+    transform: translate(-50%,-50%);
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 4px;
+    white-space: nowrap;
+    font-size: 11px;
+    text-shadow: none;
+}
+.diagram-label {
+    paint-order: stroke;
+    stroke: var(--paper);
+    stroke-width: 3px;
+    stroke-linejoin: round;
+}
+.stereo-flat svg {
+    max-height: 350px;
+}
+.stereo-inspector {
+    border: 1px solid var(--border);
+    padding: 10px;
+    border-radius: 6px;
+    margin: 8px 0;
+    background: var(--subtle);
+}
+.stereo-record {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+.stereo-record input {
+    min-width: 100px;
+    flex: 1;
+    width: 100px;
+    padding: 6px 8px;
+    font: inherit;
+    font-size: .85rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+.stereo-record button {
+    min-height: 32px;
+    padding: 4px 8px;
+    font-size: .8rem;
+}
+.stereo-inspector p {
+    margin: 6px 0 0;
+}
+.stereo-inspector p:empty {
+    display: none;
+}
+.stereo-log {
+    margin-top: 14px;
+    font-size: .85rem;
+}
+.stereo-log summary {
+    cursor: pointer;
+    color: var(--muted);
+}
+.flat-expanded {
+    grid-template-columns: 1fr;
+}
+.flat-expanded .stereo-flat svg {
+    max-width: 660px;
+    max-height: 460px;
+    margin: auto;
+}
+.flat-expanded .stereo-scene {
+    height: 350px;
+}
+@media(max-width:1150px) {
+    .stereo-work-grid {
+        grid-template-columns: 1fr;
+    }
+    .stereo-work-page .lesson-shell {
+        grid-template-columns: 180px minmax(0,1fr);
+    }
+    .stereo-flat svg {
+        max-width: 470px;
+        margin: auto;
+    }
+}
+@media(max-width:720px) {
+    .stereo-work-page .lesson-shell {
+        display: block;
+        padding: 12px;
+    }
+    .stereo-work-page .lesson-main {
+        padding: 15px;
+    }
+    .stereo-scene {
+        height: 360px;
+    }
+    .stereo-board,.stereo-flat {
+        padding: 10px;
+    }
+}
+.stereo-generator-panel {
+    display: flex;
+    align-items: end;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 16px;
+    margin-bottom: 18px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--subtle);
+}
+.stereo-generator-panel>div {
+    flex: 1;
+    min-width: 175px;
+}
+.stereo-generator-panel label {
+    display: block;
+    font-weight: 600;
+    font-size: .85rem;
+    margin-bottom: 5px;
+}
+.stereo-generator-panel p {
+    flex-basis: 100%;
+    margin: 0;
+}
+.stereo-generator-panel select,.geo-notebook-step select,.geo-flat-tools select,.geo-flat-tools input,.geo-notebook-step>input:not(.math-original) {
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--paper);
+    color: var(--ink);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px;
+    font: inherit;
+}
+.geo-notebook-rows {
+    display: grid;
+    gap: 12px;
+    margin: 12px 0;
+}
+.geo-notebook-step {
+    display: grid;
+    gap: 9px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--subtle);
+}
+.geo-step-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.geo-step-head .stereo-toolbar,.geo-attach {
+    margin: 0;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+.geo-attach select {
+    flex: 1;
+    min-width: 0;
+}
+.geo-notebook-figure {
+    max-width: 340px;
+    border: 1px solid var(--border);
+    background: var(--paper);
+    border-radius: 6px;
+}
+.geo-notebook-figure svg {
+    display: block;
+    width: 100%;
+}
+.geo-flat-tools {
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-top: 12px;
+}
+.geo-flat-tools .stereo-toolbar {
+    margin: 6px 0;
+}
+.geo-flat-tools input,.geo-flat-tools select {
+    margin: 4px 0;
+}
+.flat-vertex {
+    cursor: pointer;
+}
+.geo-notebook-step .math-editor {
+    min-width: 0;
+}
+.geo-step-head button {
+    padding: 5px 9px;
+    min-height: 30px;
+}
+.stereo-solution .math-editor input.math-run {
+    max-width: 100%;
+    width: auto;
+}
+.stereo-solution h4 {
+    margin-top: 24px;
+}
+.stereo-theory {
+    scroll-margin-top: 85px;
+}
+.stereo-theory h3 {
+    margin: 18px 0 8px;
+    font-size: 1.05rem;
+}
+.stereo-theory ol {
+    padding-left: 22px;
+    line-height: 1.65;
+}
+.stereo-theory li {
+    margin: 6px 0;
+}
+.stereo-goals ol {
+    padding-left: 22px;
+    margin-bottom: 0;
+}
+.stereo-goals li {
+    margin: 5px 0;
+}
+.stereo-theory-figure {
+    max-width: 530px;
+    margin: 20px auto;
+    text-align: center;
+}
+.stereo-theory-figure svg {
+    width: 100%;
+    max-height: 330px;
+    display: block;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 12px;
+    box-sizing: border-box;
+}
+.stereo-theory-figure figcaption {
+    font-size: .85rem;
+    color: var(--muted);
+    margin: 8px 0;
+    line-height: 1.5;
+}
+.stereo-theory-figure svg text {
+    font-size: 12px;
+    fill: var(--ink);
+    font-weight: 600;
+}
+.theory-face {
+    fill: var(--accent);
+    fill-opacity: .035;
+    stroke: none;
+}
+.theory-highlight {
+    fill: var(--accent);
+    fill-opacity: .15;
+    stroke: var(--accent);
+    stroke-width: 1.5;
+    stroke-linejoin: round;
+}
+.theory-edge,.theory-hidden,.theory-accent,.theory-second {
+    fill: none;
+    stroke: var(--ink);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.theory-hidden {
+    stroke-dasharray: 4 4;
+    stroke-opacity: .55;
+}
+.theory-accent {
+    stroke: var(--accent);
+    stroke-width: 3;
+}
+.theory-second {
+    stroke: #b77938;
+    stroke-width: 2.5;
+}
+.theory-point {
+    fill: var(--ink);
+}
+.stereo-self-check {
+    padding: 12px 15px;
+    margin: 18px 0;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+.stereo-self-check summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--accent);
+}
+.stereo-self-check p {
+    margin: 10px 0 0;
+}
+.stereo-theory .lesson-table {
+    font-size: .92rem;
+}
+.stereo-theory .worked h3:first-child {
+    margin-top: 0;
+}

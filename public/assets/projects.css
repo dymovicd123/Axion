@@ -1,0 +1,426 @@
+.project-page {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 26px 28px 56px;
+}
+.project-page h1 {
+    margin: 5px 0 10px;
+}
+.project-page h2, .project-page h3 {
+    margin: 0 0 10px;
+}
+.project-page p {
+    margin: 0 0 12px;
+}
+.project-page .brief {
+    max-width: 850px;
+    margin-bottom: 18px;
+}
+.project-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 18px;
+    align-items: start;
+}
+.project-main, .project-side {
+    min-width: 0;
+}
+.project-side {
+    display: grid;
+    gap: 14px;
+}
+.project-panel {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 14px;
+}
+.project-side .project-panel {
+    margin: 0;
+}
+.project-panel h2 {
+    font-size: 18px;
+}
+.project-panel h3 {
+    font-size: 15px;
+}
+.project-panel ul {
+    padding-left: 19px;
+    margin: 8px 0 0;
+}
+.project-panel li {
+    margin-bottom: 6px;
+}
+.project-crumb {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 12px 0 16px;
+}
+.project-tags span {
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 2px 8px;
+    font-size: 12px;
+    color: var(--muted);
+}
+.model-toolbar, .construction-controls, .geometry-toolbar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+}
+.model-toolbar label, .construction-controls label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+}
+.project-page input, .project-page select, .project-page textarea {
+    border: 1px solid var(--line);
+    color: var(--ink);
+    background: var(--surface);
+    border-radius: 6px;
+    padding: 7px 9px;
+    min-width: 0;
+    max-width: 100%;
+    font: inherit;
+}
+.project-page input[type=number] {
+    width: 94px;
+}
+.project-page textarea {
+    display: block;
+    width: 100%;
+    resize: vertical;
+    min-height: 85px;
+}
+.formula-editor {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+.formula-editor input {
+    flex: 1;
+    font-family: Consolas, monospace;
+    min-width: 170px;
+}
+.formula-editor label {
+    font-family: Georgia, serif;
+    font-size: 19px;
+}
+.solid-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+    gap: 12px;
+}
+.solid-layout > div {
+    min-width: 0;
+}
+.model-view {
+    display: block;
+    width: 100%;
+    height: 350px;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    touch-action: none;
+    cursor: grab;
+}
+.model-view:active {
+    cursor: grabbing;
+}
+.plot-view {
+    width: 100%;
+    height: 260px;
+    display: block;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    background: var(--surface);
+}
+.net-view {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    background: var(--surface);
+    touch-action: none;
+}
+.net-view circle {
+    cursor: nwse-resize;
+}
+.workspace-caption {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 7px 0;
+}
+.metric-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px,1fr));
+    gap: 8px;
+    margin: 12px 0;
+}
+.metric-cell {
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 9px 10px;
+    min-width: 0;
+}
+.metric-cell strong {
+    display: block;
+    font-size: 18px;
+    font-variant-numeric: tabular-nums;
+    overflow-wrap: anywhere;
+}
+.metric-cell span {
+    font-size: 12px;
+    color: var(--muted);
+}
+.trial-table {
+    overflow-x: auto;
+}
+.trial-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+.trial-table th, .trial-table td {
+    padding: 8px 9px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+}
+.trial-table td:first-child {
+    overflow-wrap: anywhere;
+}
+.trial-table button {
+    color: var(--accent);
+    background: transparent;
+    border: 0;
+    text-decoration: underline;
+}
+.tool-button {
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 7px 9px;
+    background: var(--surface);
+    color: var(--ink);
+    font-size: 12px;
+}
+.tool-button[aria-pressed=true], .object-button.selected {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+.geo-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 140px;
+    gap: 10px;
+}
+.geometry-canvas {
+    width: 100%;
+    height: 430px;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    display: block;
+    cursor: crosshair;
+}
+.object-panel {
+    background: var(--surface-soft);
+    padding: 9px;
+    border-radius: 7px;
+    min-width: 0;
+}
+.object-panel h3 {
+    font-size: 13px;
+}
+#object-list {
+    max-height: 390px;
+    overflow-y: auto;
+}
+.object-button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 6px;
+    border-radius: 5px;
+    margin: 4px 0;
+}
+.object-button span {
+    display: block;
+    font-size: 11px;
+    color: var(--muted);
+    overflow-wrap: anywhere;
+}
+.measurement-log {
+    font-size: 13px;
+    color: var(--accent);
+    overflow-wrap: anywhere;
+}
+.criteria-list {
+    display: grid;
+    gap: 8px;
+    margin: 10px 0;
+}
+.criterion-row {
+    display: grid;
+    grid-template-columns: 17px minmax(0,1fr);
+    align-items: start;
+    gap: 6px;
+    font-size: 13px;
+    border-top: 1px solid var(--line);
+    padding-top: 8px;
+}
+.criterion-row span:first-child {
+    color: var(--red);
+}
+.criterion-row.pass span:first-child {
+    color: var(--green);
+}
+.criterion-row small {
+    display: block;
+    color: var(--muted);
+}
+.project-page details {
+    border-top: 1px solid var(--line);
+    padding-top: 10px;
+    margin-top: 10px;
+}
+.project-page summary {
+    cursor: pointer;
+    color: var(--accent);
+    font-size: 13px;
+}
+.project-page details p {
+    margin-top: 10px;
+}
+.point-row {
+    display: grid;
+    grid-template-columns: 34px repeat(3,minmax(0,1fr));
+    align-items: center;
+    gap: 5px;
+    margin: 6px 0;
+}
+.point-row input[type=number] {
+    width: 100%;
+}
+.project-index {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 12px;
+}
+.project-link {
+    display: grid;
+    grid-template-columns: 100px minmax(0,1fr);
+    gap: 14px;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    background: var(--surface);
+    color: var(--ink);
+}
+.project-link:hover {
+    border-color: var(--accent);
+    text-decoration: none;
+}
+.project-link h3 {
+    margin: 0 0 5px;
+    font-size: 17px;
+}
+.project-link p {
+    margin: 0 0 6px;
+    font-size: 13px;
+    color: var(--muted);
+}
+.project-link .project-tags {
+    margin: 6px 0;
+}
+.project-icon {
+    width: 100%;
+    height: auto;
+    color: var(--accent);
+    background: var(--surface-soft);
+    border-radius: 7px;
+    padding: 5px;
+}
+.project-index-label {
+    font-size: 12px;
+    color: var(--muted);
+}
+.project-page .btn {
+    padding: 8px 12px;
+    font-size: 13px;
+}
+.project-page .feedback {
+    overflow-wrap: anywhere;
+}
+@media(max-width:1050px) {
+    .project-layout {
+        grid-template-columns: minmax(0,1fr);
+    }
+    .project-side {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+@media(max-width:650px) {
+    .project-page {
+        padding: 16px 12px 35px;
+    }
+    .solid-layout,.project-side,.project-index,.geo-layout {
+        grid-template-columns: minmax(0,1fr);
+    }
+    .model-view {
+        height: 300px;
+    }
+    .geometry-canvas {
+        height: 350px;
+    }
+    #object-list {
+        display: flex;
+        overflow-x: auto;
+        max-height: 100px;
+        gap: 5px;
+    }
+    .object-button {
+        min-width: 85px;
+    }
+    .project-link {
+        grid-template-columns: 70px minmax(0,1fr);
+        padding: 12px;
+    }
+    .project-panel {
+        padding: 12px;
+    }
+}
+.project-layout {
+    grid-template-areas: "main brief" "main side";
+    grid-template-rows: auto 1fr;
+}
+.project-main {
+    grid-area: main;
+}
+.project-brief-panel {
+    grid-area: brief;
+    margin: 0;
+}
+.project-side {
+    grid-area: side;
+}
+@media(max-width:1050px) {
+    .project-layout {
+        grid-template-areas: "brief" "main" "side";
+        grid-template-rows: auto auto auto;
+    }
+}

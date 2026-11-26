@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><title>Calculating limits | Axion</title>
+<link href="assets/course.css" rel="stylesheet"/>
+<link href="assets/math-field.css" rel="stylesheet"/>
+<link href="assets/course-limits.css" rel="stylesheet"/>
+<script defer="" src="assets/course-limits-meta.js"></script>
+<script defer="" src="assets/course-limits-ui.js"></script>
+<script defer="" src="assets/expression.js"></script>
+<script defer="" src="assets/math-field.js"></script>
+<script defer="" src="assets/course-notebook-ui.js"></script>
+<script defer="" src="assets/course.js"></script></head>
+<body data-lesson="limits-3" data-page="lesson">
+<header id="course-header"></header>
+<div class="lesson-shell">
+<aside class="course-sidebar">
+<a class="back-link" href="index.html">← All courses</a>
+<details class="course-outline" open="">
+<summary>Limits and continuity</summary><ol class="outline-lessons">
+<li>
+<a href="limits-1.html">1. Understanding limits</a></li>
+<li>
+<a href="limits-2.html">2. One-sided limits and continuity</a></li>
+<li class="current">
+<a href="#top">3. Calculating limits</a>
+<nav aria-label="Lesson sections" class="lesson-outline">
+<a href="#laws">Substitution and limit laws</a>
+<a href="#factor">The indeterminate form 0/0</a>
+<a href="#rationalize">Rationalising a square root</a>
+<a href="#method">Choose the method before calculating</a>
+<a href="#assessment">Assessment</a></nav></li>
+<li>
+<a href="limits-4.html">4. Infinity and asymptotes</a></li>
+<li>
+<a href="limits-final.html">Final assessment</a></li></ol></details>
+<div class="sidebar-progress"><span id="sidebar-status">Loading progress…</span>
+<progress id="lesson-progress" max="5" value="0"></progress>
+<small id="sidebar-assessment">Assessment not completed</small></div></aside>
+<main class="lesson-main" id="top">
+<div class="lesson-header">
+<div class="breadcrumb">
+<a href="index.html">Mathematics</a> / Limits and continuity</div>
+<p class="eyebrow">Lesson 3 of 4</p>
+<h1>Calculating limits</h1>
+<p class="lead">Choose a valid algebraic method, simplify expressions without changing the nearby function, and distinguish an indeterminate form from a limit.</p>
+<p class="connection-status" id="connection-status" role="status"></p></div>
+<section class="lesson-section" id="laws">
+<h2>1. Substitution and limit laws</h2>
+<p>If f and g approach finite limits A and B, their sum approaches A + B and their product approaches AB. A quotient approaches A/B provided B ≠ 0. Polynomials are continuous everywhere, so evaluating a polynomial limit usually means direct substitution. Rational functions are continuous wherever their denominator is nonzero.</p>
+<div class="worked">
+<h3>Worked example</h3>
+<div class="equation">lim<sub>x→2</sub> (x² + 3)/(x + 1) = (4 + 3)/3 = 7/3</div>
+<p>The denominator tends to 3, so the quotient law applies. There is no reason to factor or rationalise.</p></div>
+<h3>Which operation is allowed?</h3><div class="math-table-scroll"><table class="lesson-table"><thead><tr><th>Expression</th><th>Limit if f → A and g → B</th></tr></thead><tbody><tr><td>f + g</td><td>A + B</td></tr><tr><td>f − g</td><td>A − B</td></tr><tr><td>fg</td><td>AB</td></tr><tr><td>f/g</td><td>A/B, only if B ≠ 0</td></tr></tbody></table></div><p>Start by substituting the target into the numerator and denominator separately. For example, in (x² − 4)/(x + 3) as x → 1, the numerator approaches −3 and the denominator approaches 4. Since 4 is not zero, the limit is −3/4. We did not need to change the expression.</p><form class="exercise" data-exercise="substitute">
+<div class="exercise-head">
+<h3>1. Use direct substitution</h3><span class="exercise-state"></span></div>
+<p>Compute lim x→−1 of (2x² − x + 3)/(x + 3).</p><div class="task-instructions"><strong>How to answer: </strong>Enter the resulting number or fraction only.</div>
+<div class="fields">
+<label>Limit (number or fraction)<input autocomplete="off" maxlength="60" name="limit" required="" spellcheck="false"/></label></div>
+<button class="primary" type="submit">Check answer</button>
+<p class="feedback" role="status"></p>
+</form></section>
+<section class="lesson-section" id="factor">
+<h2>2. The indeterminate form 0/0</h2>
+<p>Substitution sometimes produces 0/0. This is not a number and does not specify the limit. For example, x/x tends to 1 at zero while x²/x tends to 0; both initially give 0/0. Simplify the expression for nearby nonzero denominators, then evaluate the resulting limit.</p>
+<div class="worked">
+<h3>Worked example</h3>
+<div class="equation">(x² − 5x + 6)/(x − 2) = (x − 2)(x − 3)/(x − 2) = x − 3, x ≠ 2</div>
+<p>The limit at 2 is −1. The condition x ≠ 2 is essential: the original expression is undefined there.</p></div>
+<h3>Why we can cancel here</h3><p>If substitution gives 0/0, first ask whether numerator and denominator share a factor. In a quadratic x² + bx + c, find two numbers whose sum is b and whose product is c. In x² − 5x + 6 these are −2 and −3.</p><div class="equation">(x − 2)(x − 3)/(x − 2) = x − 3   (x ≠ 2)</div><p>We are allowed to cancel x − 2 for nearby x because those inputs are not 2. Taking the limit of x − 3 then gives −1. The original function has a hole at 2, so its value at 2 remains undefined.</p><p>Do not cancel terms in a sum: (x + 2)/x does not simplify to 2. Only a common multiplicative factor can be cancelled. The form 0/0 alone does not tell us that the limit exists.</p><form class="exercise" data-exercise="steps">
+<div class="exercise-head">
+<h3>2. Factor, cancel, evaluate</h3><span class="exercise-state"></span></div>
+<p>Complete each algebraic step for lim x→4 of (x² − 7x + 12)/(x − 4). Type expressions using x, ^ and parentheses.</p><div class="task-instructions"><strong>How to answer: </strong>Write the numerator as a product in step 1; do not include the denominator. In step 2 enter the simplified expression in x. In step 3 enter the numerical limit. Check step tests that line only; Submit solution checks the complete answer.</div>
+<div class="fields">
+<label>1. Factor the numerator<input autocomplete="off" maxlength="60" name="factor" placeholder="Expression in x" required="" spellcheck="false"/></label>
+<label>2. Expression after cancellation<input autocomplete="off" maxlength="60" name="simplify" placeholder="Expression in x" required="" spellcheck="false"/></label>
+<label>3. Limit<input autocomplete="off" maxlength="60" name="limit" required="" spellcheck="false"/></label></div>
+<div class="limit-activity" data-activity="steps"></div>
+<button class="primary" type="submit">Submit solution</button>
+<p class="feedback" role="status"></p>
+</form></section>
+<section class="lesson-section" id="rationalize">
+<h2>3. Rationalising a square root</h2>
+<p>When a difference of square roots tends to zero, multiplying by its conjugate can remove the troublesome difference. The identity (u − v)(u + v) = u² − v² makes this work. Multiplying both numerator and denominator by the same nonzero expression preserves the quotient.</p>
+<div class="worked">
+<h3>Worked example</h3>
+<div class="equation">(√(x + 9) − 3)/x = (x + 9 − 9)/(x(√(x + 9) + 3))</div>
+<div class="equation">= 1/(√(x + 9) + 3), x ≠ 0</div>
+<p>The limit at zero is 1/6. The conjugate tends to 6 and is nonzero near zero.</p></div>
+<h3>What is a conjugate?</h3><p>For a difference u − v, its conjugate is u + v. Their product is u² − v², because the middle terms cancel. For example, (√(x + 1) − 1)(√(x + 1) + 1) = x.</p><p>In the worked example above, direct substitution makes both the numerator and denominator zero. Multiplying by the conjugate divided by itself changes neither the quotient nor its nearby values. The numerator becomes x, which cancels with the denominator's x for x ≠ 0. Now the denominator approaches 3 + 3 = 6, so substitution is safe and gives 1/6.</p><p>Notice that a conjugate is an expression, not a numerical answer until an input is chosen. The next exercise asks for its value at the target as well as the final limit.</p><form class="exercise" data-exercise="radical">
+<div class="exercise-head">
+<h3>3. Use a conjugate</h3><span class="exercise-state"></span></div>
+<p>Compute lim x→0 of (√(x + 16) − 4)/x. Give the conjugate evaluated at 0 and the limit.</p><div class="task-instructions"><strong>How to answer: </strong>Enter the numerical value of the conjugate at x = 0 in the first field and the final limit in the second. Do not type the conjugate expression itself.</div>
+<div class="fields">
+<label>Conjugate at 0<input autocomplete="off" maxlength="60" name="conjugate" required="" spellcheck="false"/></label>
+<label>Limit (number or fraction)<input autocomplete="off" maxlength="60" name="limit" required="" spellcheck="false"/></label></div>
+<button class="primary" type="submit">Check answer</button>
+<p class="feedback" role="status"></p>
+</form></section>
+<section class="lesson-section" id="method">
+<h2>4. Choose the method before calculating</h2>
+<p>Start with substitution. If the denominator is nonzero, use the quotient law. For 0/0, look for a common factor, a conjugate, or a common denominator. If only the denominator tends to zero, cancellation is not automatically possible; the function may grow without bound, a topic in the next lesson.</p>
+<div class="worked">
+<h3>Worked example</h3>
+<div class="equation">(1/(x + 1) − 1)/x = (1 − (x + 1))/(x(x + 1)) = −1/(x + 1)</div>
+<p>This limit at zero equals −1. Here a common denominator is more useful than factoring a quadratic.</p></div>
+<h3>Fractions within a fraction</h3><p>When two fractions are subtracted, use a common denominator before attempting cancellation. For example, 1/(x + 1) − 1 = [1 − (x + 1)]/(x + 1) = −x/(x + 1). Dividing this by x gives −1/(x + 1), provided x ≠ 0 and x ≠ −1. Substitution at zero now gives −1.</p><div class="definition"><h3>Choosing a method</h3><ul><li>Nonzero denominator after substitution: substitute directly.</li><li>0/0 with polynomial factors: factor and cancel.</li><li>0/0 with a difference of square roots: try the conjugate.</li><li>0/0 with a difference of fractions: combine the fractions first.</li><li>Nonzero numerator over a denominator approaching zero: examine signs on both sides instead of cancelling.</li></ul></div><form class="exercise" data-exercise="method">
+<div class="exercise-head">
+<h3>4. Simplify a complex fraction</h3><span class="exercise-state"></span></div>
+<p>Compute lim x→0 of (1/(x + 2) − 1/2)/x.</p><div class="task-instructions"><strong>How to answer: </strong>Enter the numerical limit only, preferably as an exact fraction.</div>
+<div class="fields">
+<label>Limit (number or fraction)<input autocomplete="off" maxlength="60" name="limit" required="" spellcheck="false"/></label></div>
+<button class="primary" type="submit">Check answer</button>
+<p class="feedback" role="status"></p>
+</form></section>
+<div class="recap limits-recap"><h3>Before the assessment</h3><p>Substitution works for continuous functions. For 0/0, simplify using valid algebra for nearby inputs; keep track of excluded points.</p></div><section class="lesson-section" id="assessment">
+<div class="assessment-heading">
+<h2>Lesson assessment</h2>
+<p>Work independently. Enter numbers or exact fractions such as 1/3 unless the question asks for a selection. Fill in every answer, then select Submit assessment. You can revise and submit again after seeing feedback.</p></div>
+<form id="assessment-form">
+<fieldset data-assessment="polynomial"><legend>Problem 1</legend>
+<p>Find lim x→3 of (x³ − 2x + 1).</p>
+<div class="fields">
+<label>Limit (number or fraction)<input autocomplete="off" maxlength="60" name="limit" required="" spellcheck="false"/></label></div>
+<p class="feedback" role="status"></p></fieldset>
+<fieldset data-assessment="factor"><legend>Problem 2</legend>
+<p>Find lim x→−2 of (x² − 4)/(x + 2).</p>
+<div class="fields">
+<label>Limit (number or fraction)<input autocomplete="off" maxlength="60" name="limit" required="" spellcheck="false"/></label></div>
+<p class="feedback" role="status"></p></fieldset>
+<fieldset data-assessment="root"><legend>Problem 3</legend>
+<p>Find lim x→0 of (√(x + 25) − 5)/x.</p>
+<div class="fields">
+<label>Limit (number or fraction)<input autocomplete="off" maxlength="60" name="limit" required="" spellcheck="false"/></label></div>
+<p class="feedback" role="status"></p></fieldset>
+<fieldset data-assessment="fraction"><legend>Problem 4</legend>
+<p>Find lim x→0 of (1/(x + 3) − 1/3)/x.</p>
+<div class="fields">
+<label>Limit (number or fraction)<input autocomplete="off" maxlength="60" name="limit" required="" spellcheck="false"/></label></div>
+<p class="feedback" role="status"></p></fieldset>
+<button class="primary" type="submit">Submit assessment</button>
+<p class="feedback" id="assessment-result" role="status"></p></form></section>
+<div class="lesson-end">
+<p aria-live="polite" id="lesson-completion">Progress is saved automatically.</p>
+<a class="secondary" href="limits-2.html">← Previous lesson</a>
+<a class="primary" href="limits-4.html">Next: Infinity and asymptotes →</a></div></main></div></body></html>
+

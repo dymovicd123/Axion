@@ -1,0 +1,177 @@
+{
+    "limits-1": {
+        "practice": {
+            "linear": {
+                "below": 9.97,
+                "above": 10.03,
+                "limit": 10
+            },
+            "probe": {
+                "limit": 4,
+                "value": 9
+            },
+            "hole": {
+                "limit": 6,
+                "value": "undefined"
+            },
+            "precision": {
+                "delta": 0.04
+            }
+        },
+        "assessment": {
+            "direct": {
+                "limit": 11
+            },
+            "table": {
+                "limit": 3
+            },
+            "point": {
+                "limit": 5,
+                "value": -1
+            },
+            "radius": {
+                "delta": 0.02
+            }
+        }
+    },
+    "limits-2": {
+        "practice": {
+            "sides": {
+                "left": 7,
+                "right": 6,
+                "two": "dne"
+            },
+            "repair": {
+                "k": 8
+            },
+            "parameter": {
+                "k": 2
+            },
+            "construct": {
+                "m1": 1,
+                "b1": 1,
+                "m2": -2,
+                "b2": 1,
+                "value": 4
+            }
+        },
+        "assessment": {
+            "matching": {
+                "limit": -3
+            },
+            "jump": {
+                "left": 4,
+                "right": 6
+            },
+            "continuous": {
+                "k": 3
+            },
+            "classify": {
+                "kind": "removable"
+            }
+        }
+    },
+    "limits-3": {
+        "practice": {
+            "substitute": {
+                "limit": 3
+            },
+            "steps": {
+                "factor": "(x-4)(x-3)",
+                "simplify": "x-3",
+                "limit": 1
+            },
+            "radical": {
+                "conjugate": 8,
+                "limit": 0.125
+            },
+            "method": {
+                "limit": -0.25
+            }
+        },
+        "assessment": {
+            "polynomial": {
+                "limit": 22
+            },
+            "factor": {
+                "limit": -4
+            },
+            "root": {
+                "limit": 0.1
+            },
+            "fraction": {
+                "limit": -0.1111111111111111
+            }
+        }
+    },
+    "limits-4": {
+        "practice": {
+            "vertical": {
+                "left": "+inf",
+                "right": "-inf"
+            },
+            "far": {
+                "limit": 5,
+                "error": 0.2
+            },
+            "degrees": {
+                "first": -2,
+                "second": 0
+            },
+            "design": {
+                "A": 4,
+                "h": -2,
+                "k": 3
+            }
+        },
+        "assessment": {
+            "both": {
+                "left": "+inf",
+                "right": "+inf"
+            },
+            "asymptotes": {
+                "h": 4,
+                "k": 2
+            },
+            "equal": {
+                "limit": -2.5
+            },
+            "bound": {
+                "T": 120
+            }
+        }
+    },
+    "limits-final": {
+        "practice": {},
+        "assessment": {
+            "point": {
+                "limit": -2,
+                "value": 7
+            },
+            "precision": {
+                "delta": 0.02
+            },
+            "sides": {
+                "left": 4,
+                "right": -1
+            },
+            "continuity": {
+                "k": 2
+            },
+            "factor": {
+                "limit": 10
+            },
+            "radical": {
+                "limit": 0.25
+            },
+            "infinity": {
+                "limit": 3
+            },
+            "asymptote": {
+                "h": -3,
+                "k": -4,
+                "right": "+inf"
+            }
+        }
+    }
+}
